@@ -19,7 +19,7 @@ Python tiene varias características que lo hacen muy atractivo para una amplia 
 3. **Gestión automática de memoria:** Python maneja automáticamente la memoria, lo que significa que el programador no tiene que preocuparse por detalles complejos como la asignación y liberación de memoria.
 4. **Bibliotecas extensas:** Python viene con una gran biblioteca estándar que incluye módulos para realizar una gran variedad de tareas, desde expresiones regulares hasta la creación de servidores web. Además, hay muchas más bibliotecas disponibles que extienden aún más las capacidades de Python.
 5. **Multiparadigma:** Aunque es principalmente un lenguaje de programación orientado a objetos, Python también soporta otros paradigmas de programación, como la programación imperativa y funcional.
-6. **Portabilidad:** Los programas escritos en Python pueden ejecutarse en múltiples plataformas sin necesidad de cambiar el código. Python es compatible con sistemas operativoss como Windows, MacOS, Linux, entre otros.
+6. **Portabilidad:** Los programas escritos en Python pueden ejecutarse en múltiples plataformas sin necesidad de cambiar el código. Python es compatible con sistemas operativos como Windows, MacOS, Linux, entre otros.
 7. **Interpretado:** Python es un lenguaje interpretado, lo que significa que los programas se ejecutan directamente desde el código fuente, sin necesidad de un paso de compilación previo.
 8. **Extensible:** Si necesitas un bloque de código que debe ejecutarse muy rápido o quieres reutilizar bibliotecas de otros lenguajes como C o C++, Python permite integrar estas partes fácilmente.
 9. **Comunidad grande y activa:** Python tiene una comunidad muy grande y activa de desarrolladores y usuarios que contribuyen regularmente con herramientas, documentación y soporte, lo que facilita encontrar recursos y aprender.
@@ -112,4 +112,28 @@ En Python, cada vez que creamos una variable y le asignamos un valor, estamos re
 | 1    | edad = 30          | 30   | 0x333              |
 | 2    | edad=60.5          | 60.5 | 0x444              |
 | 3    | edad = 32          | 32   | ...                |
+
+### Variables y la Memoria RAM
+
+En Python, cada vez que creamos una variable y le asignamos un valor, estamos reservando espacio en la memoria RAM.
+
+**Ejemplo:**
+
+````python
+edad = 30
+altura = 1.75
+````
+
+![img_1.png](img_1.png)
+
+#### Variables y Memoria Simplificado
+
+Para simplificar la explicación de creación de variables, de momento usaremos la siguiente explicación:
+
+````python
+edad = 30
+altura = 1.68
+````
+ 
+![img_2.png](img_2.png)
 
