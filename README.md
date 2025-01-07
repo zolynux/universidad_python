@@ -37,11 +37,14 @@ Instalar Python en tu computadora es un proceso bastante sencillo.
 **Código 📄:**
 
 ```python
+# Programa de Hola Mundo con Python
 print("Hola Mundo")
+print("Saludos")
 ```
 
 **🟢 Ejecutar:**
 
 ```console
 Hola Mundo
+Saludos
 ```
