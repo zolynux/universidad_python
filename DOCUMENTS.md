@@ -46,3 +46,32 @@ print("Saludos")
 Hola Mundo
 Saludos
 ```
+
+### Ejercicio Preséntate
+
+Realizar un programa un Python para presentarte.
+
+La salida de tu programa debe ser similar al siguiente:
+
+````text
+Nombre: Juan 
+Edad: 29
+Pais: Colombia
+````
+
+**Código 📄:**
+
+````python
+# Ejercicio de Presentación con Python
+print("Nombre: Juan")
+print("Edad: 29")
+print("País: Colombia")
+````
+
+**🟢 Ejecutar:**
+
+```console
+Nombre: Juan 
+Edad: 29
+Pais: Colombia
+```
