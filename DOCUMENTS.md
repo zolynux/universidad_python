@@ -25,3 +25,21 @@ Python tiene varias características que lo hacen muy atractivo para una amplia 
 9. **Comunidad grande y activa:** Python tiene una comunidad muy grande y activa de desarrolladores y usuarios que contribuyen regularmente con herramientas, documentación y soporte, lo que facilita encontrar recursos y aprender.
 
 Estas características hacen que python sea una opción muy popular para todo tipo de proyectos, desde aplicaciones web simples hasta sistemas complejos de aprendizaje automático.
+
+### Instalación de Python
+
+Instalar Python en tu computadora es un proceso bastante sencillo, y lo mejor de todo es que puedes comenzar a programar rápidamente después de la instalación.
+
+### Hola Mundo con Python
+
+**Código 📄:**
+
+```python
+print("Hola Mundo")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Hola Mundo
+```
