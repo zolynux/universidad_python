@@ -657,3 +657,34 @@ Hola Mundo
 H
 o
 ```
+
+### Inmutabilidad de una Cadena
+
+Una vez que se crea una cadena, los caractéres dentro de ella no pueden ser modificados
+
+Si deseamos modificar una cadena, entonces tenemos que crear una nueva cadena.
+
+Las cadenas no se pueden modificar, son inmutables:
+
+![img_5.png](img_5.png)
+
+Nuevo valor.
+
+**📄 Código :**
+
+```python
+# Inmutabilidad en cadenas
+cadena1 = "Hola Mundo"
+# cadena1 [0] = 'h' # no podemos modificar los carateres
+cadena2 = cadena1
+cadena1 = "Adios"
+print(cadena1)
+print(cadena2)
+```
+
+**🟢 Ejecutar:**
+
+```console
+Adios
+Hola Mundo
+```
