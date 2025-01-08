@@ -5,34 +5,39 @@ from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
 ## Tabla de Contenido
 
 - [Universidad Python - Cero a Experto (+86 horas) 🐍](#universidad-python---cero-a-experto-86-horas-)
-    - [Tabla de Contenido](#tabla-de-contenido)
-    - [Introducción a Python](#introducción-a-python)
-        - [Instalación de Python](#instalación-de-python)
-        - [Hola Mundo con Python](#hola-mundo-con-python)
-        - [Ejercicio Preséntate](#ejercicio-preséntate)
-    - [Variables](#variables)
-        - [Sintaxis para definir una variable](#sintaxis-para-definir-una-variable)
-            - [Variables y la Memoria RAN](#variables-y-la-memoria-ran)
-        - [Variables y la Memoria RAM](#variables-y-la-memoria-ram)
-            - [Variables y Memoria Simplificado](#variables-y-memoria-simplificado)
-        - [Ejemplo de Variables](#ejemplo-de-variables)
-        - [Modificar Variables](#modificar-variables)
-        - [Modificar variables](#modificar-variables-1)
-        - [Reglas y buenas prácticas en nombres de variables](#reglas-y-buenas-prácticas-en-nombres-de-variables)
-            - [Convenciones y buenas prácticas](#convenciones-y-buenas-prácticas)
-        - [Ejemplo de regla de nombre de variables](#ejemplo-de-regla-de-nombre-de-variables)
-        - [Tipos de datos](#tipos-de-datos)
-        - [Ejemplo de Tipos de datos](#ejemplo-de-tipos-de-datos)
-        - [Sistema de Reserva de Hoteles](#sistema-de-reserva-de-hoteles)
-        - [Sistema Tienda Online](#sistema-tienda-online)
-        - [Constantes](#constantes)
-    - [Manejo de Cadenas](#manejo-de-cadenas)
-        - [Detalle de una Cadena](#detalle-de-una-cadena)
-        - [Inmutabilidad de una Cadena](#inmutabilidad-de-una-cadena)
-        - [Caractéres Especiales](#caractéres-especiales)
-        - [Concatenación de Cadenas](#concatenación-de-cadenas)
-        - [Formateo de Cadenas](#formateo-de-cadenas)
-        - [Métodos de cadenas](#métodos-de-cadenas)
+  - [Tabla de Contenido](#tabla-de-contenido)
+  - [Introducción a Python](#introducción-a-python)
+    - [Instalación de Python](#instalación-de-python)
+    - [Hola Mundo con Python](#hola-mundo-con-python)
+    - [Ejercicio Preséntate](#ejercicio-preséntate)
+  - [Variables](#variables)
+    - [Sintaxis para definir una variable](#sintaxis-para-definir-una-variable)
+      - [Variables y la Memoria RAN](#variables-y-la-memoria-ran)
+    - [Variables y la Memoria RAM](#variables-y-la-memoria-ram)
+      - [Variables y Memoria Simplificado](#variables-y-memoria-simplificado)
+    - [Ejemplo de Variables](#ejemplo-de-variables)
+    - [Modificar Variables](#modificar-variables)
+    - [Modificar variables](#modificar-variables-1)
+    - [Reglas y buenas prácticas en nombres de variables](#reglas-y-buenas-prácticas-en-nombres-de-variables)
+      - [Convenciones y buenas prácticas](#convenciones-y-buenas-prácticas)
+    - [Ejemplo de regla de nombre de variables](#ejemplo-de-regla-de-nombre-de-variables)
+    - [Tipos de datos](#tipos-de-datos)
+    - [Ejemplo de Tipos de datos](#ejemplo-de-tipos-de-datos)
+    - [Sistema de Reserva de Hoteles](#sistema-de-reserva-de-hoteles)
+    - [Sistema Tienda Online](#sistema-tienda-online)
+    - [Constantes](#constantes)
+  - [Manejo de Cadenas](#manejo-de-cadenas)
+    - [Detalle de una Cadena](#detalle-de-una-cadena)
+    - [Inmutabilidad de una Cadena](#inmutabilidad-de-una-cadena)
+    - [Caractéres Especiales](#caractéres-especiales)
+    - [Concatenación de Cadenas](#concatenación-de-cadenas)
+    - [Formateo de Cadenas](#formateo-de-cadenas)
+    - [Métodos de cadenas](#métodos-de-cadenas)
+    - [Largo de una cadena](#largo-de-una-cadena)
+    - [Subcadenas](#subcadenas)
+    - [Búsqueda de subcadenas](#búsqueda-de-subcadenas)
+    - [Reemplazar subcadena](#reemplazar-subcadena)
+    - [Separar en Subcadenas](#separar-en-subcadenas)
 
 ## Introducción a Python
 
@@ -160,7 +165,7 @@ Access Memory) o memoria de corto plazo
 **Ejemplo:**
 
 | Paso | Variable y valores | RAM  | Dir. Memoria (hex) |
-|------|--------------------|------|--------------------|
+| ---- | ------------------ | ---- | ------------------ |
 | 1    | edad = 30          | 30   | 0x333              |
 | 2    | edad=60.5          | 60.5 | 0x444              |
 | 3    | edad = 32          | 32   | ...                |
@@ -922,4 +927,47 @@ print(f"Indice la subcadena de Hola: {indice}")
 ```console
 Indice de la subcadena mundo: 6
 Indice la subcadena de Hola: 0
+```
+
+### Reemplazar subcadena
+
+- **Reemplazar subcadena (`replace`)** El método `replace()` reemplaza una subcadena por otra dentro de una cadena principaal
+
+```python
+cadena = 'Hola mundo'
+nueva_cadena = cadena.replace('mundo', 'a todos')
+print(nueva_cadena) # 'Hola a todos'
+```
+
+**📄 Código :**
+
+```python
+# Reemplazar subcadenas
+cadena = 'Hola, mundo!'
+print(f'Cadena original: {cadena}')
+nueva_cadena = cadena.replace('mundo', 'a todos')
+print(f'Nueva cadena reemplazada:  {nueva_cadena}')
+# Sustituir hola por adios
+nueva_cadena = cadena.replace('Hola', 'Adiós')
+print(f'Nueva cadena reemplazada: {nueva_cadena}')
+```
+
+**🟢 Ejecutar:**
+
+```console
+Cadena original: Hola, mundo!
+Nueva cadena reemplazada:  Hola, a todos!
+Nueva cadena reemplazada: Adiós, mundo!
+```
+
+### Separar en Subcadenas
+
+- **Extraer subcadenas por separadores (`split`):** La función `split()` permite dividir una cadena en una lista de subcadenas basadas en un caracter separador.
+
+**Ejemplo:**
+
+```python
+datos = 'Juan, 30, Colombia'
+lista = datos.split(',')
+print(lista) # ['Juan', '30', 'Colombia']
 ```
