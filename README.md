@@ -724,3 +724,52 @@ Juan ' "Perez
 Karla " Gomez
 Caracter \ diagonal invertida
 ```
+
+### Concatenación de Cadenas
+
+La concatenación de cadenas es una operación que permite combinar dos o más cadenas para formar una nueva cadena.
+
+En python existen varias formas, vamos a ver varias.
+
+- **Uso del operador +:** El operador `+` es el más directo para concatenas. Simplemente tenemos que poner el operador `+` entre las cadenas que deseamos unir.
+
+**Ejemplo:**
+
+```python
+concatenacion = "Hola" + "Mundo"
+```
+
+- **Uso de la función `join`:** La función `join` nos permite unir tantas cadenas como necesitemos. Solo necesitamos pasar cada cadena a concatenar separadas por coma y entre paréntesis.
+
+**Ejemplo:**
+
+```python
+"".join(["cadena1","cadena2","cadena3"])
+```
+
+--
+
+**📄 Código :**
+
+```python
+# Concatenación de Cadenas
+cadena1 = "Hola"
+cadena2 = "Mundo"
+concatenacion = cadena1 + " " + cadena2
+
+print(concatenacion)
+
+# Utilizando el metodo join
+
+concatenacion = "".join([cadena1, " ", cadena2])
+print(concatenacion)
+```
+
+**🟢 Ejecutar:**
+
+```console
+Hola Mundo
+Hola Mundo
+```
+
+
