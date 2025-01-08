@@ -30,6 +30,7 @@
     - [Caractéres Especiales](#caractéres-especiales)
     - [Concatenación de Cadenas](#concatenación-de-cadenas)
     - [Formateo de Cadenas](#formateo-de-cadenas)
+    - [Métodos de cadenas](#métodos-de-cadenas)
 
 ## Introducción a Python
 
@@ -787,4 +788,37 @@ resultado = f'hola {variable}'
 
 ```python
 resultado = 'Hola {}'.format(variable)
+```
+
+### Métodos de cadenas
+
+Las cadenas en Python vienen con una serie de métodos útiles que facilitan su manipulación. Por ejemplo:
+
+- `upper()` -> Cambiar las letras a mayúsculas.
+- `lower()` -> Cambiar las letras a minúsculas.
+- `strip()` -> Elimina espacios en blanco al inicio y al final de la cadena
+
+**📄 Código :**
+
+```python
+# Método de cadenas
+
+cadena1 = 'Hola Mundo'
+print(f'Cadena original: {cadena1}')
+mayusculas = cadena1.upper() # Convertir a mayúsculas
+print(f'Cadena en mayúsculas: {mayusculas}')
+print(f'Cadena en minúsculas: {cadena1.lower()}') # Convertir a minúsculas
+cadena2 = ' Juan Perez '
+print(f'Cadena con espacios: {cadena2}')
+print(f'Cadena sin espacios: {cadena2.strip()}') # Eliminar espacio al inicio y al final
+```
+
+**🟢 Ejecutar:**
+
+```console
+Cadena original: Hola Mundo
+Cadena en mayúsculas: HOLA MUNDO
+Cadena en minúsculas: hola mundo
+Cadena con espacios:  Juan Perez 
+Cadena sin espacios: Juan Perez
 ```
