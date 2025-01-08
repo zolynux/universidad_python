@@ -859,4 +859,35 @@ Cadena original: Hola, mundo!
 Largo de la cadena: 12
 ```
 
+### Subcadenas
 
+Una subcadena es una parte de una cadena principal, y hay varias maneras de extraer subcadenas en Python
+
+Podemos extraer subcadenas, buscarlas, reemplazarlas, entre otras operaciones.
+
+- **Extracción cadenas (Slicing):** El slicing o segmentación permite indicar el índice de inicio y el índice final (sin
+  incluir este último caracter)
+
+```python
+subcadena = cadena[inicio:fin]
+```
+
+**📄 Código :**
+
+```python
+# Manejo de subcadenas
+cadena = "Hola, Mundo!"
+# Obtenemos la subcadena de hola[inicio:fin (sin incluirlo)]
+subcadena_hola = cadena[0:4]
+print(f"Subcadena de hola: {subcadena_hola}")
+# Obtene la subcadena de mundo
+subcadena_mundo = cadena[6:11]
+print(f"Subcadena de mundo: {subcadena_mundo}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Subcadena de hola: Hola
+Subcadena de mundo: Mundo
+```
