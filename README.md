@@ -688,3 +688,39 @@ print(cadena2)
 Adios
 Hola Mundo
 ```
+
+### Caractéres Especiales
+
+Las cadenas pueden incluir caractéres especiales
+
+Estos caracteres se introducen usando el caracter de diagonal invertida (`\`). Ejemplo:
+
+- **Nueva línea: `\n`** Inserta un salto de línea
+- **Tabulación: `\t`** Inserta un tabulador horizontal, útil para alinear texto.
+- **Comilla Simple: `\'`** Permite incluir comillas Simples en una cadena delimitada por comillas simples.
+- **Comilla Doble: `\"`** Permite incluir comillas Dobles en una cadena delimitada por comillas simples.
+- **Barra invertida:  `\\`** Permite incluir una barra invertida en la cadena
+
+Existen más caracteres especiales, pero esto son los esenciales.
+
+**📄 Código :**
+
+```python
+# Caracteres Especiales
+print("Hola \nMundo")  # \n salto de linea
+print("\t\tPython \t\tes genial")  # \t agrega un tabulador
+print("Juan ' \"Perez")
+print('Karla " Gomez')
+print("Caracter \\ diagonal invertida")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Hola 
+Mundo
+		Python 		es genial
+Juan ' "Perez
+Karla " Gomez
+Caracter \ diagonal invertida
+```
