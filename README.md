@@ -3,34 +3,34 @@
 ## Tabla de Contenido
 
 - [Universidad Python - Cero a Experto (+86 horas) 🐍](#universidad-python---cero-a-experto-86-horas-)
-  - [Tabla de Contenido](#tabla-de-contenido)
-  - [Introducción a Python](#introducción-a-python)
-    - [Instalación de Python](#instalación-de-python)
-    - [Hola Mundo con Python](#hola-mundo-con-python)
-    - [Ejercicio Preséntate](#ejercicio-preséntate)
-  - [Variables](#variables)
-    - [Sintaxis para definir una variable](#sintaxis-para-definir-una-variable)
-      - [Variables y la Memoria RAN](#variables-y-la-memoria-ran)
-    - [Variables y la Memoria RAM](#variables-y-la-memoria-ram)
-      - [Variables y Memoria Simplificado](#variables-y-memoria-simplificado)
-    - [Ejemplo de Variables](#ejemplo-de-variables)
-    - [Modificar Variables](#modificar-variables)
-    - [Modificar variables](#modificar-variables-1)
-    - [Reglas y buenas prácticas en nombres de variables](#reglas-y-buenas-prácticas-en-nombres-de-variables)
-      - [Convenciones y buenas prácticas](#convenciones-y-buenas-prácticas)
-    - [Ejemplo de regla de nombre de variables](#ejemplo-de-regla-de-nombre-de-variables)
-    - [Tipos de datos](#tipos-de-datos)
-    - [Ejemplo de Tipos de datos](#ejemplo-de-tipos-de-datos)
-    - [Sistema de Reserva de Hoteles](#sistema-de-reserva-de-hoteles)
-    - [Sistema Tienda Online](#sistema-tienda-online)
-    - [Constantes](#constantes)
-  - [Manejo de Cadenas](#manejo-de-cadenas)
-    - [Detalle de una Cadena](#detalle-de-una-cadena)
-    - [Inmutabilidad de una Cadena](#inmutabilidad-de-una-cadena)
-    - [Caractéres Especiales](#caractéres-especiales)
-    - [Concatenación de Cadenas](#concatenación-de-cadenas)
-    - [Formateo de Cadenas](#formateo-de-cadenas)
-    - [Métodos de cadenas](#métodos-de-cadenas)
+    - [Tabla de Contenido](#tabla-de-contenido)
+    - [Introducción a Python](#introducción-a-python)
+        - [Instalación de Python](#instalación-de-python)
+        - [Hola Mundo con Python](#hola-mundo-con-python)
+        - [Ejercicio Preséntate](#ejercicio-preséntate)
+    - [Variables](#variables)
+        - [Sintaxis para definir una variable](#sintaxis-para-definir-una-variable)
+            - [Variables y la Memoria RAN](#variables-y-la-memoria-ran)
+        - [Variables y la Memoria RAM](#variables-y-la-memoria-ram)
+            - [Variables y Memoria Simplificado](#variables-y-memoria-simplificado)
+        - [Ejemplo de Variables](#ejemplo-de-variables)
+        - [Modificar Variables](#modificar-variables)
+        - [Modificar variables](#modificar-variables-1)
+        - [Reglas y buenas prácticas en nombres de variables](#reglas-y-buenas-prácticas-en-nombres-de-variables)
+            - [Convenciones y buenas prácticas](#convenciones-y-buenas-prácticas)
+        - [Ejemplo de regla de nombre de variables](#ejemplo-de-regla-de-nombre-de-variables)
+        - [Tipos de datos](#tipos-de-datos)
+        - [Ejemplo de Tipos de datos](#ejemplo-de-tipos-de-datos)
+        - [Sistema de Reserva de Hoteles](#sistema-de-reserva-de-hoteles)
+        - [Sistema Tienda Online](#sistema-tienda-online)
+        - [Constantes](#constantes)
+    - [Manejo de Cadenas](#manejo-de-cadenas)
+        - [Detalle de una Cadena](#detalle-de-una-cadena)
+        - [Inmutabilidad de una Cadena](#inmutabilidad-de-una-cadena)
+        - [Caractéres Especiales](#caractéres-especiales)
+        - [Concatenación de Cadenas](#concatenación-de-cadenas)
+        - [Formateo de Cadenas](#formateo-de-cadenas)
+        - [Métodos de cadenas](#métodos-de-cadenas)
 
 ## Introducción a Python
 
@@ -158,7 +158,7 @@ Access Memory) o memoria de corto plazo
 **Ejemplo:**
 
 | Paso | Variable y valores | RAM  | Dir. Memoria (hex) |
-| ---- | ------------------ | ---- | ------------------ |
+|------|--------------------|------|--------------------|
 | 1    | edad = 30          | 30   | 0x333              |
 | 2    | edad=60.5          | 60.5 | 0x444              |
 | 3    | edad = 32          | 32   | ...                |
@@ -733,7 +733,8 @@ La concatenación de cadenas es una operación que permite combinar dos o más c
 
 En python existen varias formas, vamos a ver varias.
 
-- **Uso del operador +:** El operador `+` es el más directo para concatenas. Simplemente tenemos que poner el operador `+` entre las cadenas que deseamos unir.
+- **Uso del operador +:** El operador `+` es el más directo para concatenas. Simplemente tenemos que poner el operador
+  `+` entre las cadenas que deseamos unir.
 
 **Ejemplo:**
 
@@ -741,12 +742,13 @@ En python existen varias formas, vamos a ver varias.
 concatenacion = "Hola" + "Mundo"
 ```
 
-- **Uso de la función `join`:** La función `join` nos permite unir tantas cadenas como necesitemos. Solo necesitamos pasar cada cadena a concatenar separadas por coma y entre paréntesis.
+- **Uso de la función `join`:** La función `join` nos permite unir tantas cadenas como necesitemos. Solo necesitamos
+  pasar cada cadena a concatenar separadas por coma y entre paréntesis.
 
 **Ejemplo:**
 
 ```python
-"".join(["cadena1","cadena2","cadena3"])
+"".join(["cadena1", "cadena2", "cadena3"])
 ```
 
 --
@@ -776,7 +778,8 @@ Hola Mundo
 
 ### Formateo de Cadenas
 
-Python ofrece varias maneras de formatear cadenas, que incluyen la capacidad de concatenar texto, variables e incluso dar indicar el número de decimales a utilizar en el formato.
+Python ofrece varias maneras de formatear cadenas, que incluyen la capacidad de concatenar texto, variables e incluso
+dar indicar el número de decimales a utilizar en el formato.
 
 - **f-string (Python 3.6+)**: Esta es la opción más recomendan, por ser la más sencilla, rápida y legible.
 
@@ -805,12 +808,12 @@ Las cadenas en Python vienen con una serie de métodos útiles que facilitan su 
 
 cadena1 = 'Hola Mundo'
 print(f'Cadena original: {cadena1}')
-mayusculas = cadena1.upper() # Convertir a mayúsculas
+mayusculas = cadena1.upper()  # Convertir a mayúsculas
 print(f'Cadena en mayúsculas: {mayusculas}')
-print(f'Cadena en minúsculas: {cadena1.lower()}') # Convertir a minúsculas
+print(f'Cadena en minúsculas: {cadena1.lower()}')  # Convertir a minúsculas
 cadena2 = ' Juan Perez '
 print(f'Cadena con espacios: {cadena2}')
-print(f'Cadena sin espacios: {cadena2.strip()}') # Eliminar espacio al inicio y al final
+print(f'Cadena sin espacios: {cadena2.strip()}')  # Eliminar espacio al inicio y al final
 ```
 
 **🟢 Ejecutar:**
@@ -822,3 +825,38 @@ Cadena en minúsculas: hola mundo
 Cadena con espacios:  Juan Perez 
 Cadena sin espacios: Juan Perez
 ```
+
+### Largo de una cadena
+
+**Obtener el largo de una cadena:**
+
+Para obtener la longitud de una cadena, utilizamos la función incorporada `len()`
+
+La función `len` funciona con varios tipos de datos incluyendo cadenas, listas, etc.
+
+Cuando se calcula el largo de una cadena se toman en cuenta todos los caracteres de una cena, incluyendo espacios en
+blanco, caracteres especiales, etc.
+
+````python
+cadena1 = 'Hola, Mundo!'
+longitud = len(cadena1)  # -> devuelve largo de 12
+````
+
+**📄 Código :**
+
+```python
+# Largo de una cadena
+cadena = "Hola, mundo!"
+largo_cadena = len(cadena)
+print(f"Cadena original: {cadena}")
+print(f"Largo de la cadena: {largo_cadena}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Cadena original: Hola, mundo!
+Largo de la cadena: 12
+```
+
+
