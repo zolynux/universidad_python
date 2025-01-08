@@ -1,3 +1,5 @@
+from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
+
 # Universidad Python - Cero a Experto (+86 horas) 🐍
 
 ## Tabla de Contenido
@@ -890,4 +892,34 @@ print(f"Subcadena de mundo: {subcadena_mundo}")
 ```console
 Subcadena de hola: Hola
 Subcadena de mundo: Mundo
+```
+
+### Búsqueda de subcadenas
+
+- **Buscar subcadenas (`find`):** El método `find()` devuelve el índice de la primera aparición de la subcadena. Si no
+  encuentra la subcadena, devuelve -1
+
+```python
+cadena = 'Hola Mundo'
+posicion = cadena.find("Mundo")
+print(posicion)  # Imprime 5
+```
+
+**📄 Código :**
+
+```python
+# Buscar subcadenas
+cadena = "Hola, mundo"
+indice = cadena.find("mundo")
+print(f"Indice de la subcadena mundo: {indice}")
+# Obtener el indicie de la subcadena de Hola
+indice = cadena.find("Hola")
+print(f"Indice la subcadena de Hola: {indice}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Indice de la subcadena mundo: 6
+Indice la subcadena de Hola: 0
 ```
