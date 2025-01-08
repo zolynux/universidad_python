@@ -38,6 +38,7 @@ from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
     - [Búsqueda de subcadenas](#búsqueda-de-subcadenas)
     - [Reemplazar subcadena](#reemplazar-subcadena)
     - [Separar en Subcadenas](#separar-en-subcadenas)
+    - [Multiplicación de cadenas](#multiplicación-de-cadenas)
 
 ## Introducción a Python
 
@@ -990,4 +991,25 @@ print(lista)
 ```console
 ['Hola', 'Mundo']
 ['Juan', '30', 'Colombia']
+```
+
+### Multiplicación de cadenas
+
+**📄 Código :**
+
+```python
+print("*** Multiplicación de Cadenas ***")
+
+texto = "Hola"
+veces = 4
+
+resultado = texto * veces
+print(resultado)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Multiplicación de Cadenas ***
+HolaHolaHolaHola
 ```
