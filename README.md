@@ -2,32 +2,31 @@
 
 ## Tabla de Contenido
 
-<!-- TOC -->
-
-- [Universidad Python - Cero a Experto (+86 horas) 🐍](#universidad-python---cero-a-experto-86-horas-)
-  - [Tabla de Contenido](#tabla-de-contenido)
-  - [Introducción a Python](#introducción-a-python)
-    - [Instalación de Python](#instalación-de-python)
-    - [Hola Mundo con Python](#hola-mundo-con-python)
-    - [Ejercicio Preséntate](#ejercicio-preséntate)
-  - [Variables](#variables)
-    - [Sintaxis para definir una variable](#sintaxis-para-definir-una-variable)
-      - [Variables y la Memoria RAN](#variables-y-la-memoria-ran)
-    - [Variables y la Memoria RAM](#variables-y-la-memoria-ram)
-      - [Variables y Memoria Simplificado](#variables-y-memoria-simplificado)
-    - [Ejemplo de Variables](#ejemplo-de-variables)
-    - [Modificar Variables](#modificar-variables)
-    - [Modificar variables](#modificar-variables-1)
-    - [Reglas y buenas prácticas en nombres de variables](#reglas-y-buenas-prácticas-en-nombres-de-variables)
-      - [Convenciones y buenas prácticas](#convenciones-y-buenas-prácticas)
-    - [Ejemplo de regla de nombre de variables](#ejemplo-de-regla-de-nombre-de-variables)
-    - [Tipos de datos](#tipos-de-datos)
-    - [Ejemplo de Tipos de datos](#ejemplo-de-tipos-de-datos)
-    - [Sistema de Reserva de Hoteles](#sistema-de-reserva-de-hoteles)
-    - [Sistema Tienda Online](#sistema-tienda-online)
-    - [Constantes](#constantes)
-
-<!-- TOC -->
+* [Universidad Python - Cero a Experto (+86 horas) 🐍](#universidad-python---cero-a-experto-86-horas-)
+    * [Tabla de Contenido](#tabla-de-contenido)
+    * [Introducción a Python](#introducción-a-python)
+        * [Instalación de Python](#instalación-de-python)
+        * [Hola Mundo con Python](#hola-mundo-con-python)
+        * [Ejercicio Preséntate](#ejercicio-preséntate)
+    * [Variables](#variables)
+        * [Sintaxis para definir una variable](#sintaxis-para-definir-una-variable)
+            * [Variables y la Memoria RAN](#variables-y-la-memoria-ran)
+        * [Variables y la Memoria RAM](#variables-y-la-memoria-ram)
+            * [Variables y Memoria Simplificado](#variables-y-memoria-simplificado)
+        * [Ejemplo de Variables](#ejemplo-de-variables)
+        * [Modificar Variables](#modificar-variables)
+        * [Modificar variables](#modificar-variables-1)
+        * [Reglas y buenas prácticas en nombres de variables](#reglas-y-buenas-prácticas-en-nombres-de-variables)
+            * [Convenciones y buenas prácticas](#convenciones-y-buenas-prácticas)
+        * [Ejemplo de regla de nombre de variables](#ejemplo-de-regla-de-nombre-de-variables)
+        * [Tipos de datos](#tipos-de-datos)
+        * [Ejemplo de Tipos de datos](#ejemplo-de-tipos-de-datos)
+        * [Sistema de Reserva de Hoteles](#sistema-de-reserva-de-hoteles)
+        * [Sistema Tienda Online](#sistema-tienda-online)
+        * [Constantes](#constantes)
+    * [Manejo de Cadenas](#manejo-de-cadenas)
+        * [Manejo de Cadenas](#manejo-de-cadenas-1)
+        * [Detalle de una Cadena](#detalle-de-una-cadena)
 
 ## Introducción a Python
 
@@ -155,7 +154,7 @@ Access Memory) o memoria de corto plazo
 **Ejemplo:**
 
 | Paso | Variable y valores | RAM  | Dir. Memoria (hex) |
-| ---- | ------------------ | ---- | ------------------ |
+|------|--------------------|------|--------------------|
 | 1    | edad = 30          | 30   | 0x333              |
 | 2    | edad=60.5          | 60.5 | 0x444              |
 | 3    | edad = 32          | 32   | ...                |
@@ -296,8 +295,11 @@ Edad: treinta
 
 #### Convenciones y buenas prácticas
 
-- **snake case:** Es recomendable usar la notación de snake case, es decir, palabras en minúsculas separadas por guion bajo. Ejemplo: nombre_usuario, nombre_completo, etc.
-- Nombres descriptivos: Los nombres de las variables deben reflejar el contenido de la variable. Ejemplo; no usar e,sino edad. No usar n, sino nombre, etc.
+- **snake case:** Es recomendable usar la notación de snake case, es decir, palabras en minúsculas separadas por guion
+  bajo. Ejemplo: nombre_usuario, nombre_completo, etc.
+- Nombres descriptivos: Los nombres de las variables deben reflejar el contenido de la variable. Ejemplo; no usar e,
+  sino
+  edad. No usar n, sino nombre, etc.
 - Evitar nombres de un sólo caracter, ya que no son descriptivos y pueden ser confusos.
 
 ### Ejemplo de regla de nombre de variables
@@ -344,10 +346,11 @@ declararla.
 
 Los valores que pueden almacenar las variables son de distintos tipos, como:
 
-- **Número (`int`):** Son números sin la parte decimal, ej: 43, -34
-- **Número con punto flotante (`float`):** Ej: 3.1416, -0.032
-- **Cadenas de texto (`str`):** Secuencia de caracteres, ej, 'Hola Mundo'
-- **Booleanos:** Almacenan un valor lógico de verdadero (`True`) o falso (`False`). Este tipo de valores los usaremos para controlar el flujo de programas
+- **Número (`int`):** Son números sin la parte decimal, Ej: 43, -34
+- **Número con punto flotante (`float`):** Ejemplo, 3.1416, -0.032
+- **Cadenas de texto (`str`):** Secuencia de caracteres, Ejemplo, 'Hola Mundo'
+- **Booleanos:** Almacenan un valor lógico de verdadero (`True`) o falso (`False`). Este tipo de valores los usaremos
+  para controlar el flujo de programas
 - **`None`:** Es un tipo especial en Pytho que representa ausencia de valor
 
 Estos son los tipos más básicos y estudiaremos más tipos posteriormente.
@@ -496,10 +499,10 @@ cantidad_inventario = 20
 disponible_producto = True
 
 # Mostrar información del producto
-print('Producto:',nombre_producto)
-print('Precio: $',precion_producto)
-print('Cantidad en el Inventario:',cantidad_inventario)
-print('Disponible:',disponible_producto)
+print('Producto:', nombre_producto)
+print('Precio: $', precion_producto)
+print('Cantidad en el Inventario:', cantidad_inventario)
+print('Disponible:', disponible_producto)
 
 # Hacemos algunos cambio
 precion_producto = 399.9
@@ -508,10 +511,10 @@ disponible_producto = True
 
 # MOstrar información del producto
 print()
-print('Producto:',nombre_producto)
-print('Precio: $',precion_producto)
-print('Cantidad en el Inventario:',cantidad_inventario)
-print('Disponible:',disponible_producto)
+print('Producto:', nombre_producto)
+print('Precio: $', precion_producto)
+print('Cantidad en el Inventario:', cantidad_inventario)
+print('Disponible:', disponible_producto)
 ```
 
 **🟢 Ejecutar:**
@@ -531,9 +534,12 @@ Disponible: True
 
 ### Constantes
 
-A diferencia de otros lenguajes de programación, en Python no existe un tipo específico para definir una constante de manera estricta. Sólo es una convención
+A diferencia de otros lenguajes de programación, en Python no existe un tipo específico para definir una constante de
+manera estricta. Sólo es una convención
 
-Python no impide cambiar el valor de una variable, pero podemos seguir la siguiente convención de declarar el nombre de una variable en mayúsculas y con ello indicamos que el valor de esta variable NO debe modificarse una vez inicializada, es decir, esta variable se debe tratar como una constatne.
+Python no impide cambiar el valor de una variable, pero podemos seguir la siguiente convención de declarar el nombre de
+una variable en mayúsculas y con ello indicamos que el valor de esta variable NO debe modificarse una vez inicializada,
+es decir, esta variable se debe tratar como una constante.
 
 ```python
 # Sintaxis para una constante
@@ -553,7 +559,6 @@ NOMBRE_USUARIO_VALIDO = 'admin'
 
 ```python
 import math
-
 
 print('*** Constantes en Python ***')
 
@@ -579,4 +584,76 @@ El valor de PI es: 3.14159
 Nombre de la base de datos: clientes_db
 No cambiar el valor de una constante: listado_cliente_db 
 Valor de math.pi 3.141592653589793
+```
+
+## Manejo de Cadenas
+
+Una cadena o string en inglés es un tipo de dato que se utiliza para almacenar una secuencia de caracteres
+
+Las cadenas se deben encerrar entra comillas dobles o comillas simples.
+
+Los caracteres pueden ser letras, números, símbolos o espacios.
+
+```python
+# Cadenas en Python
+cadena1 = "Hola Mundo"
+```
+
+![img_3.png](img_3.png)
+
+### Manejo de Cadenas
+
+**Código 📄:**
+
+```python
+# Cadenas en Python
+cadena1 = "Hola Mundo"
+cadena1 = "Adios"
+cadena2 = "Python es Genial"
+cadena3 = """Este es un ejemplo
+de multiples líneas
+en una cadena"""
+
+print(cadena1)
+print(cadena2)
+print(cadena3)
+```
+
+**🟢 Ejecutar:**
+
+```console
+Adios
+Python es Genial
+Este es un ejemplo
+de multiples líneas
+en una cadena
+```
+
+### Detalle de una Cadena
+
+Los caracteres de una cadena están indexados de manera secuencial.
+
+Por lo tanto, podemos acceder cada caracter indicando el índice del caracter que deseamos recuperar
+
+![img_4.png](img_4.png)
+
+**📄 Código :**
+
+```python
+# Manejo de índice en una cadena
+cadena1 = "Hola Mundo"
+print(cadena1)
+# Recuperara el primer caracter
+primer_caracter = cadena1[0]  # recuperar 'H'
+print(primer_caracter)
+ultimo_caracter = cadena1[9]  # recuperar 'o'
+print(ultimo_caracter)
+```
+
+**🟢 Ejecutar:**
+
+```console
+Hola Mundo
+H
+o
 ```
