@@ -39,6 +39,7 @@ from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
     - [Reemplazar subcadena](#reemplazar-subcadena)
     - [Separar en Subcadenas](#separar-en-subcadenas)
     - [Multiplicación de cadenas](#multiplicación-de-cadenas)
+    - [Generador de Email](#generador-de-email)
 
 ## Introducción a Python
 
@@ -1012,4 +1013,66 @@ print(resultado)
 ```console
 *** Multiplicación de Cadenas ***
 HolaHolaHolaHola
+```
+
+### Generador de Email
+
+Crea un programa para generar un email a partir de los siguientes datos:
+
+- **Nombre:** Ubaldo Acosta Soto
+- **Empresa:** Global Mentoring
+- **Dominio:** com.mx
+
+Resutlado Final:
+
+**Email:** `ubaldo.acosta.soto@globalmentoring.com.mx`
+
+Este es el resultado del programa:
+
+```console
+*** Generador de Email ***
+Nombre Usuario: Ubaldo Acosta Soto
+Nombre Usuario normalizado: ubaldo.acosta.soto
+
+Nombre Empresa: Global Mentoring
+Extensión del dominio: com.mx
+Dominio de email normalizado: @globalmentoringcom.mx  
+
+Email final generado: ubaldo.acosta.soto@globalmentoringcom.mx
+```
+
+**📄 Código :**
+
+```python
+# Generador de Email
+print("*** Generador de Email ***")
+
+nombre_completo = "Ubaldo Acosta Soto"
+print(f"Nombre Usuario: {nombre_completo}")
+nombre_normalizado = nombre_completo.strip().lower().replace(" ", ".")
+print(f"Nombre Usuario normalizado: {nombre_normalizado}")
+print()
+empresa = "Global Mentoring"
+print(f"Nombre Empresa: {empresa}")
+empresa_normalizado = empresa.strip().lower().replace(" ", "")
+dominio = "com.mx"
+print(f"Extensión del dominio: {dominio}")
+dominio_email = "".join(["@", empresa_normalizado, dominio])
+print(f"Dominio de email normalizado: {dominio_email}")
+print()
+print(f"Email final generado: {nombre_normalizado + dominio_email}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Generador de Email ***
+Nombre Usuario: Ubaldo Acosta Soto
+Nombre Usuario normalizado: ubaldo.acosta.soto
+
+Nombre Empresa: Global Mentoring
+Extensión del dominio: com.mx
+Dominio de email normalizado: @globalmentoringcom.mx  
+
+Email final generado: ubaldo.acosta.soto@globalmentoringcom.mx
 ```
