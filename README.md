@@ -1267,3 +1267,49 @@ Edad: 32
 Salario: 34223.25
 Jefe de departamento es: False
 ```
+
+### Receta de Cocina
+
+Crear un programa para solicitar algunos valores importante para una receta de cocina.
+
+Los valores que debe introducir el usuario son:
+
+- Nombre de la receta
+- Ingredientes
+- Tiempo de preparación (en minutos)
+- Dificultad (Facil, Media, Alta)
+
+Mandar a imprimir la receta
+
+**📄 Código :**
+
+```python
+estrella = "*" * 3
+print(f"{estrella} Receta de Cocina {estrella}")
+nombre_receta = str(input("Ingresa el nombre de la receta: "))
+ingredientes = str(input("Ingresa los ingredientes: "))
+tiempo_preparacion = int(input("Ingresa el tiempo de preparación (min): "))
+dificultad = str(input("Ingresa la dificultad: "))
+
+print("-" * 20)
+print(f"Nombre receta: {nombre_receta}")
+print(f"Ingredientes: {ingredientes}")
+print(f"Tiempo de preparación: {tiempo_preparacion}")
+print(f"Dificultad: {nombre_receta}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Receta de Cocina ***
+Ingresa el nombre de la receta: Pasta con brocolis
+Ingresa los ingredientes: Pasta fusili, brocoli, nueces de brasil espinaca y aceite de oli
+va
+Ingresa el tiempo de preparación (min): 10
+Ingresa la dificultad: Fácil
+--------------------
+Nombre receta: Pasta con brocolis
+Ingredientes: Pasta fusili, brocoli, nueces de brasil espinaca y aceite de oliva
+Tiempo de preparación: 10
+Dificultad: Pasta con brocolis
+```
