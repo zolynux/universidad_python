@@ -1219,3 +1219,51 @@ Introduce tu edad: 32
 Tu edad es: 32, y en un año tendras 33
 ```
 
+### Sistema de Empleados
+
+Crea un programa para solicitar la información de un empleado, introduciendo los datos por consola.
+
+- Nombre Empleado
+- Edad del Empleado (convertir a entero)
+- Salario del Empleado (convertir a flotante)
+- Es jefe de departamento (Si/No)
+
+**📄 Código :**
+
+```python
+estrella = "*" * 3
+print(estrella, "Sistema de Empleado", estrella)
+
+nombre_empleado = input("Nombre del empleado: ")
+edad_empleado = int(input("Edad del empleado: "))
+salario_empleado = float(input("Salario de empleado: "))
+es_jefe_departamento = str(input("¿Es jefe de departamento (Si/No)? "))
+
+
+# Vamos a convertir a un tipo bool la variable es_jefe_departamento
+es_jefe_departamento = es_jefe_departamento.lower() == "si"
+
+# Imprimir los valores del Empleado
+print()
+print(estrella, "Datos del Empleado", estrella)
+print(f"Nombre: {nombre_empleado}")
+print(f"Edad: {edad_empleado}")
+print(f"Salario: {salario_empleado:.2f}")
+print(f"Jefe de departamento es: {es_jefe_departamento}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema de Empleado ***
+Nombre del empleado: Juan Gomez
+Edad del empleado: 32
+Salario de empleado: 34223.253
+¿Es jefe de departamento (Si/No)?No
+
+*** Datos del Empleado ***
+Nombre: Juan Gomez
+Edad: 32
+Salario: 34223.25
+Jefe de departamento es: False
+```
