@@ -2,11 +2,9 @@
 **📄 Código :**
 
 ```python
-
 ```
 
 **🟢 Ejecutar:**
 
 ```console
-
 ```

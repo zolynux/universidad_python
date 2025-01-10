@@ -1182,3 +1182,40 @@ Número 2 en cadena: 10
 concatenación: 1020
 Suma: 30
 ```
+
+### Entrada de Datos por Conosla
+
+En Python, la entrada de datos se realiza usando la función `input()`
+
+Esta función puasa la ejecución del programa y espera a que el usuario introduzca algún texto desde el teclado.
+
+Una vez que el usuario presiona Enter, el texto introducido se devuelve como una cadena (str)
+
+#### Características de la función `input`
+
+- **Interactividad:** Permite a los usuarios de nuestros programas proporcionar valores dinámicos, en lugar de utilizar valores en código duro o estáticos.
+- **Sencillez:** La función `input` es muy fácil de usar y solo necesita, opcionalmente, indicar la cadena o mensaje a mostrar al usuario, para que éste sepa lo que se le está solicitando.
+- **Tipo de Datos:** Siempre devuelve una cadena, si riquiere otro tipo hay que Convertirlo
+
+**📄 Código :**
+
+```python
+# Entrada de datos por consola
+
+nombre = input("Introduce tu nombre: ")
+print(f"Recibiendo el valor de nombre: {nombre}")
+
+# Pedir la edad al usuario (entra como cadena, y lo convertirmos a numero)
+edad = int(input("Introduce tu edad: "))
+print(f"Tu edad es: {edad}, y en un año tendras {edad + 1}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Introduce tu nombre: Juan
+Recibiendo el valor de nombre: Juan
+Introduce tu edad: 32
+Tu edad es: 32, y en un año tendras 33
+```
+
