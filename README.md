@@ -1152,3 +1152,33 @@ Valor booleano de cadena NO vacía: True
 Valor booleano de None: False
 ```
 
+### Ejemplo de Conversión de Tipos de Datos
+
+**📄 Código :**
+
+```python
+# Ejemplo tipos de datos
+
+# Ejemplo de concatenación o suma de valores
+numero1_cadena = "10"
+print(f"Número 1 en cadena: {numero1_cadena}")
+numero2_cadena = "20"
+print(f"Número 2 en cadena: {numero1_cadena}")
+resultado = numero1_cadena + numero2_cadena
+print(f"concatenación: {resultado}")
+
+# Convertimos a tipos enteros
+numero1_cadena = int(numero1_cadena)
+numero2_cadena = int(numero2_cadena)
+resultado = numero1_cadena + numero2_cadena
+print(f"Suma: {resultado}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Número 1 en cadena: 10
+Número 2 en cadena: 10
+concatenación: 1020
+Suma: 30
+```
