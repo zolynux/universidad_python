@@ -41,6 +41,13 @@ from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
     - [Multiplicación de cadenas](#multiplicación-de-cadenas)
     - [Generador de Email](#generador-de-email)
   - [Entrada de Datos](#entrada-de-datos)
+    - [Ejemplo de Conversión de Tipos de Datos](#ejemplo-de-conversión-de-tipos-de-datos)
+    - [Entrada de Datos por Conosla](#entrada-de-datos-por-conosla)
+      - [Características de la función `input`](#características-de-la-función-input)
+    - [Sistema de Empleados](#sistema-de-empleados)
+    - [Receta de Cocina](#receta-de-cocina)
+    - [Generar valores aleatorios](#generar-valores-aleatorios)
+    - [Reto Generador de ID Único](#reto-generador-de-id-único)
 
 ## Introducción a Python
 
@@ -1347,4 +1354,72 @@ print(f'Resultado de lanzar el dado: {dado}')
 ```console
 Numero aleatorio entre 1 y 10: 4
 Resultado de lanzar el dado: 4
+```
+
+### Reto Generador de ID Único
+
+Con los datos recibidos el sistema deberá realizar lo siguiente:
+
+1. Del valor recibido de nombre, usar sólo los 2 primeras letras y convertirlas a mayúsculas
+2. Del valor de apellido, usar las 2 primeras letras y convertirlas a mayúsculas.
+3. Del valor de año, tomar los 2 últimos digitos.
+
+Además, el sistema deberá generar un valor aleatorio de 4 dígitos, con ayuda de la función rantint
+
+Finalmente, con los datos obtenidos generar un ID único uniendo los valores como sigue:
+
+**Ejemplo:**
+
+```txt
+Nombre -> Juan -> JU
+Apellido -> Perez -> PE
+Año nacimiento -> 1995 -> 95
+Valor aleatorio -> randint -> 7326
+
+Resultado ID Único: JUPE957326
+```
+
+
+**📄 Código :**
+
+```python
+from random import randint
+
+print("*** Sistema Generador de ID Único ***")
+
+nombre = str(input('¿Cuál es tu nombre?: '))
+apellido = str(input('¿Cuál es tu apellido?: '))
+anio_nacimiento = str(input('¿Cuál es tu año de nacimiento (YYYY)?: '))
+
+
+# Normalizar los valores
+
+nombre_2 = nombre.strip().upper()[0:2]
+apellido_2 = apellido.strip().upper()[0:2]
+anio_nacimiento_2 = anio_nacimiento.strip()[2:] # También puede ser [2:4]
+
+# Generar el valor aleatorio
+aleatorio = randint(1000, 9999)
+
+# Generamos el valorr de id único
+id_unico = f'{nombre_2}{apellido_2}{anio_nacimiento_2}{aleatorio}'
+
+print(f'''\nHola {nombre},
+      Tu nuevo número de identificación (ID) generador por el sistema es:
+      {id_unico}
+¡Felicitaciones!''')
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Generador de ID Único ***
+¿Cuál es tu nombre?: Juan
+¿Cuál es tu apellido?: Perz
+¿Cuál es tu año de nacimiento (YYYY)?: 1995
+
+Hola Juan,
+      Tu nuevo número de identificación (ID) generador por el sistema es:
+      JUPE952106
+¡Felicitaciones!
 ```
