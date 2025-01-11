@@ -1,9 +1,17 @@
 {
-  "cSpell.enabledFileTypes": {},
+  "cSpell.enabledFileTypes": {
+    "markdown": true,
+    "txt": true
+  },
+  "cSpell.diagnosticLevel": "Hint",
+  "workbench.colorCustomizations": {
+    // will change the color of three dots to red
+    "editorHint.foreground": "#ff0000",
+    // will underline the entire word with dots in your chosen color
+    "editorHint.border": "#00ff66"
+  },
+  "cSpell.ignoreRandomStrings": true,
   "cSpell.language": "es",
-  "cSpell.words": [
-    "Ubaldo"
-  ],
   "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -16,4 +24,6 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.fontVariations": true,
   "files.autoSave": "off",
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.runInTerminal": true,
 }
