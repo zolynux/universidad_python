@@ -1313,3 +1313,38 @@ Ingredientes: Pasta fusili, brocoli, nueces de brasil espinaca y aceite de oliva
 Tiempo de preparación: 10
 Dificultad: Pasta con brocolis
 ```
+
+### Generar valores aleatorios
+
+La función `randint()`, que es parte de módulo `random`, nos permite generar números aleatorios
+
+`randint(a, b)` devuelve un número aleatorio entre a y b, incluyendo estos valores.
+
+Es necesario importar en primer línea el módulo `random` antes de usar la función `randint()```
+
+Para importar un módulo, usamos la sintaxis `import random`
+
+
+**📄 Código :**
+
+```python
+### Valores aleatorios con la función randint
+
+#import random
+import random 
+
+# Generar un numero aleatorio entre 1 y 10
+numero = random.randint(1, 10)
+print(f'Numero aleatorio entre 1 y 10: {numero}')
+
+# Simular un dado de seis caras
+dado = random.randint(1, 6)
+print(f'Resultado de lanzar el dado: {dado}')
+```
+
+**🟢 Ejecutar:**
+
+```console
+Numero aleatorio entre 1 y 10: 4
+Resultado de lanzar el dado: 4
+```
