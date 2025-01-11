@@ -1,10 +1,19 @@
 {
   "cSpell.enabledFileTypes": {},
-  "cSpell.language": [
-    "es",
-    "en"
-  ],
+  "cSpell.language": "es",
   "cSpell.words": [
     "Ubaldo"
   ],
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.fontVariations": true,
+  "files.autoSave": "off",
 }
