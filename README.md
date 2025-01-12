@@ -47,6 +47,8 @@
     - [Generar valores aleatorios](#generar-valores-aleatorios)
     - [Reto Generador de ID Único](#reto-generador-de-id-único)
     - [Sistema Generador de Email](#sistema-generador-de-email)
+  - [Operadores](#operadores)
+    - [Operadores Aritméticos](#operadores-aritméticos)
 
 ## Introducción a Python
 
@@ -1474,4 +1476,76 @@ Tu nuevo email generado por el sistema de es:
 Tu nuevo email generado por el sistema de es:
       juan.carlos.gomez.lara@globalmentoring.com.mx      
 ¡Felicidades!
+```
+
+## Operadores
+
+Los operadores son símbolos especiales que están disñados para realizar operaciones específicas. Tenemos varios tipos, como son:
+
+- **Operadores Aritméticos:** Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o división.
+- **Operadres de asisgnació:** Se utilizan para asignar valores a variables.
+- **Operadores de Comparación:** Se utiliza para comparar un valor con otro.
+- **Operadores Lógicos:** Se utilizan para combinar expreseiones condicionales o lógicas
+- **Operadores de Identidad:** Se utlizan para comparar si dos variables son el mismo objeto.
+- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una subcadena) se presenta en un objeto.
+
+### Operadores Aritméticos
+
+Los operadores aritméticos nos permiten realizar cálculos matemáticos básicos entre números. Por ejemplo:
+
+- **Suma (`+`):** Suma dos operandos
+- **Resta (`-`):** Resta dos operandos
+- **Multiplicación (`*`):** Multiplica dos operandos
+- **División (`/`):** Divide el primer operando enter el segundo. Resulta un valor flotante.
+- **División Entera (`//`):** Divide el primer operando entre el segundo. Resulta un tipo entero.
+- **Módulo (`%`):** Regresa el residuo de la división.
+- **Exponente (`**`):** Eleva el primer operando a la potencia del segunda.
+
+**📄 Código :**
+
+```python
+# Operadores Aritméticos
+
+a = 10
+b = 3
+
+# Suma +
+suma = a + b
+print(f"Suma: {suma}")
+
+# Resta -
+resta = a - b
+print(f"Resta: {resta}")
+
+# Multiplicación *
+multiplicacion = a * b
+print(f"Multiplicación: {multiplicacion}")
+
+# División / (retorna un tipo flotante)
+division = a / b
+print(f"División: {division:.2f}")
+
+# División Entera //
+division_entera = a // b
+print(f"División Entera: {division_entera}")
+
+# Módulo %
+modulo = a % b
+print(f"Módulo: {modulo}")
+
+# Exponente **
+exponente = a**b
+print(f"Exponente: {exponente}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Suma: 13
+Resta: 7
+Multiplicación: 30
+División: 3.33
+División Entera: 3
+Módulo: 1
+Exponente: 1000
 ```
