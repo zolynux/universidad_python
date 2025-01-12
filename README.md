@@ -626,10 +626,10 @@ cadena1 = "Hola Mundo"
 ```python
 # Cadenas en Python
 cadena1 = "Hola Mundo"
-cadena1 = "Adios"
+cadena1 = "Adiós"
 cadena2 = "Python es Genial"
 cadena3 = """Este es un ejemplo
-de multiples líneas
+de múltiples líneas
 en una cadena"""
 
 print(cadena1)
@@ -640,10 +640,10 @@ print(cadena3)
 **🟢 Ejecutar:**
 
 ```console
-Adios
+Adiós
 Python es Genial
 Este es un ejemplo
-de multiples líneas
+de múltiples líneas
 en una cadena
 ```
 
@@ -651,7 +651,7 @@ en una cadena
 
 Los caracteres de una cadena están indexados de manera secuencial.
 
-Por lo tanto, podemos acceder cada caracter indicando el índice del caracter que deseamos recuperar
+Por lo tanto, podemos acceder cada carácter indicando el índice del carácter que deseamos recuperar
 
 ![img_4.png](img_4.png)
 
@@ -678,7 +678,7 @@ o
 
 ### Inmutabilidad de una Cadena
 
-Una vez que se crea una cadena, los caractéres dentro de ella no pueden ser modificados
+Una vez que se crea una cadena, los caracteres dentro de ella no pueden ser modificados
 
 Si deseamos modificar una cadena, entonces tenemos que crear una nueva cadena.
 
