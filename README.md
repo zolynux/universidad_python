@@ -1,5 +1,3 @@
-from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
-
 # Universidad Python - Cero a Experto (+86 horas) 🐍
 
 ## Tabla de Contenido
@@ -48,6 +46,7 @@ from sc_03_manejo_de_cadenas.py_08_largo_cadena import cadena
     - [Receta de Cocina](#receta-de-cocina)
     - [Generar valores aleatorios](#generar-valores-aleatorios)
     - [Reto Generador de ID Único](#reto-generador-de-id-único)
+    - [Sistema Generador de Email](#sistema-generador-de-email)
 
 ## Introducción a Python
 
@@ -1331,7 +1330,6 @@ Es necesario importar en primer línea el módulo `random` antes de usar la func
 
 Para importar un módulo, usamos la sintaxis `import random`
 
-
 **📄 Código :**
 
 ```python
@@ -1379,7 +1377,6 @@ Valor aleatorio -> randint -> 7326
 Resultado ID Único: JUPE957326
 ```
 
-
 **📄 Código :**
 
 ```python
@@ -1422,4 +1419,59 @@ Hola Juan,
       Tu nuevo número de identificación (ID) generador por el sistema es:
       JUPE952106
 ¡Felicitaciones!
+```
+
+### Sistema Generador de Email
+
+Se solicita crear una nueva versión del sistema generador de emails.
+
+Para generar un email se debe solicitar
+
+- Nombre -> ej. Juan Carlos
+- Apellido -> ej. Gómez lara
+- Nombre Empresa -> ej. Global Mentoring
+- Extensión Dominio -> Ej. .com.mx
+
+El resultado debe ser:
+`juan.carlos.gomez.lara@globalmentoring.com.mx`
+
+**📄 Código :**
+
+```python
+print("*** Sistema Generador de Emails ***")
+nombre = input("¿Cual es tu nombre?: ")
+apellidos = input("¿Cuales son tus apellidos?: ")
+empresa = input("¿Nombre de tu empresa?: ")
+extension_dominio = input("¿Extensión de dominio de tu empresa?: ")
+
+# Normalizamos los valores recibidos.
+nombre = nombre.strip().lower().replace(" ", ".")
+apellidos = apellidos.strip().lower().replace(" ", ".")
+empresa = empresa.strip().lower().replace(" ", "")
+extension_dominio = extension_dominio.strip().lower().replace(" ", "")
+
+# Generar el email
+
+email = f"{nombre}.{apellidos}@{empresa}{extension_dominio}"
+
+print(
+    f"""
+Tu nuevo email generado por el sistema de es:
+      {email}
+¡Felicidades!"""
+)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Generador de Emails ***
+¿Cual es tu nombre?: Juan Carlos
+¿Cuales son tus apellidos?: Gomez Lara
+¿Nombre de tu empresa?: Global Mentoring
+¿Extensión de dominio de tu empresa?: .com.mx
+
+Tu nuevo email generado por el sistema de es:
+      juan.carlos.gomez.lara@globalmentoring.com.mx      
+¡Felicidades!
 ```
