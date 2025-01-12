@@ -49,6 +49,7 @@
     - [Sistema Generador de Email](#sistema-generador-de-email)
   - [Operadores](#operadores)
     - [Operadores Aritméticos](#operadores-aritméticos)
+    - [Operadores de Asignación](#operadores-de-asignación)
 
 ## Introducción a Python
 
@@ -1548,4 +1549,19 @@ División: 3.33
 División Entera: 3
 Módulo: 1
 Exponente: 1000
+```
+
+### Operadores de Asignación
+
+El operador de asignación se utiliza para asignar un valor a una variable, y se utiliza el carácter (`=`)
+
+```python
+# Sintaxis Operador asignación
+variable = valor
+```
+
+```python
+# Ejemplo Operador Asignación
+numero = 10
+texto = "Hola, mundo"
 ```
