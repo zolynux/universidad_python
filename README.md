@@ -50,6 +50,7 @@
   - [Operadores](#operadores)
     - [Operadores Aritméticos](#operadores-aritméticos)
     - [Operadores de Asignación](#operadores-de-asignación)
+      - [Asignación Encadenada](#asignación-encadenada)
 
 ## Introducción a Python
 
@@ -1564,4 +1565,61 @@ variable = valor
 # Ejemplo Operador Asignación
 numero = 10
 texto = "Hola, mundo"
+```
+
+En Python también tenemos la asignación múltiple, lo que nos permite asignar valores a varias variables en una sola línea de código.. El código es más compacto y fácil de leer
+
+```python
+# Sintaxis de Asignación Múltiple
+variable1, variable2 = valor1, valor2
+```
+
+```python
+# Ejemplo de Asignación Múltiple
+a, b, c = 10, 'Saludo', 14.5
+```
+
+#### Asignación Encadenada
+
+En Python también contamos con la asignación encadenada. Esto permite asignar el mismo valor a múltiples variables.
+
+```python
+# Sintaixs de Asignación Encadenada
+variable1 = variable2 = ... = valor
+```
+
+```python
+# Ejemplo. Inicializar contadores
+contador1 = contador2 = 0
+```
+
+**📄 Código :**
+
+```python
+print("*** Operadores de Asignación ***")
+numero = 5
+print(f"Valor de la variable numero: {numero}")
+numero = 10
+print(f"Valor de la variable numero: {numero}")
+cadena = "Hola, mundo"
+print(f"Valor de la variable cadena: {cadena}")
+
+# Asignación Múltiple
+a, b, c = 10, "Saludo", 14.5
+print(f"Valor de a = {a}, b = {b}, c = {c}")
+
+# Asignación Encadenada
+x = y = z = 10
+print(f"Valor de x = {x}, y = {y}, z = {z}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operadores de Asignación ***
+Valor de la variable numero: 5
+Valor de la variable numero: 10
+Valor de la variable cadena: Hola, mundo
+Valor de a = 10, b = Saludo, c = 14.5
+Valor de x = 10, y = 10, z = 10
 ```
