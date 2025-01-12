@@ -52,6 +52,7 @@
     - [Operadores de Asignación](#operadores-de-asignación)
       - [Asignación Encadenada](#asignación-encadenada)
     - [Asingación Multiple](#asingación-multiple)
+    - [Operadores de Arignación Compuestos](#operadores-de-arignación-compuestos)
 
 ## Introducción a Python
 
@@ -1671,4 +1672,76 @@ Valor de iniciales x = 5, y = 10
 Valor de intercambio x = 10, y = 5
 Ingresa tu nombre y apellido separados por coma: Juan, Perez
 Nombre: Juan, Apellido: Perez
+```
+
+### Operadores de Arignación Compuestos
+
+Los operadores de asignación compuesto combinan una operación aritmética con una asignación, haciendo las operaciones más conscisas
+
+Los operadores pueden ser +=, -=, *=, /=, etc.
+Operador `=`
+
+```python
+# Sintaxis operador Asignación compuesto
+variable OPERADOR= valor
+```
+
+```python
+# Ejemplo Operador Asginación Compuesto
+contador = 0
+contador += 1 # contador = contador + 1
+```
+
+**📄 Código :**
+
+```python
+print("*** Operadores de Asignación Compuestos ***")
+a, b = 10, 15
+print(f"Valor de a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto suma +=
+a += b  # a = a + b
+print(f"Valor de suma a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto resta -=
+a = 10
+a -= b  # a = a - b
+print(f"Valor de resta a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto multiplicación *=
+a = 10  # reiniciamos el valor de a
+a *= b  # a = a * b
+print(f"Valor de multiplicación a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto división /=
+a = 10  # reiniciamos el valor de a
+a /= b  # a = a / b
+print(f"Valor de división a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto división entera //=
+a = 10  # reiniciamos el valor de a
+a //= b  # a = a // b
+print(f"Valor de división entera a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto módulo %=
+a = 10  # reiniciamos el valor de a
+a %= b  # a = a % b
+print(f"Valor de módulo a = {a}, b = {b}")
+
+# Operador de Asignación Compuesto exponenciación **=
+a, b = 10, 2  # reiniciamos el valor de a
+a **= b  # a = a ** b
+print(f"Valor de exponenciación a = {a}, b = {b}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Valor de a = 10, b = 15
+Valor de suma a = 25, b = 15
+Valor de resta a = -5, b = 15
+Valor de multiplicación a = 150, b = 15
+Valor de división a = 0.6666666666666666, b = 15
+Valor de división entera a = 0, b = 15
+Valor de módulo a = 10, b = 15
 ```
