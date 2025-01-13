@@ -54,6 +54,12 @@
     - [Asingación Multiple](#asingación-multiple)
     - [Operadores de Arignación Compuestos](#operadores-de-arignación-compuestos)
     - [Operadores de Comparación](#operadores-de-comparación)
+    - [Operadores Lógicos](#operadores-lógicos)
+      - [Ejemplo Descuento VIP](#ejemplo-descuento-vip)
+      - [Operador 'or'](#operador-or)
+      - [Sistema Préstamo de Libros](#sistema-préstamo-de-libros)
+      - [Operador 'not'](#operador-not)
+      - [Fuera de rango - Operador not](#fuera-de-rango---operador-not)
 
 ## Introducción a Python
 
@@ -1842,4 +1848,184 @@ Resultado a > b es: True
 Resultado a >= b es: True
 Resultado a < b es: False
 Resultado a <= b es: False
+```
+
+### Operadores Lógicos
+
+Los operadores lógicos nos permiten combinar múltiples condiciones o valores booleanos y obtener un resultado verdadero o falso. Los principales operadores lógicos en Python son:
+
+- `and`: Devuelve True si ambas condiciones son verdaderas
+- `or`: Devuelve True si al menos una condición es verdadera  
+- `not`: Invierte el valor booleano (True a False o False a True)
+
+| a     | b     | a and b | a or b | not a |
+| ----- | ----- | ------- | ------ | ----- |
+| True  | True  | True    | True   | False |
+| True  | False | False   | True   | False |
+| False | True  | False   | True   | True  |
+| False | False | False   | False  | True  |
+
+**📄 Código :**
+
+```python
+print("*** Operador 'and' ***")
+# Regresa Verdadero si ambos valores a evaluar son verdaderos
+condicion1 = True
+condicion2 = False
+resultado = condicion1 and condicion2
+print(f"Resultado {condicion1} and {condicion2} = {resultado}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operador 'and' ***
+Resultado True and False = False
+```
+
+#### Ejemplo Descuento VIP
+
+**📄 Código :**
+
+```python
+print("*** Sistema Descuentos VIP ***")
+
+NO_PRODUCTOS_DESCUENTOS = 10
+cantidad_productos = int(input("¿Cuántos productos compraste hoy?: "))
+tiene_membresia = str(input("¿Tienes la membresía de la tienda (Si/No)?: "))
+
+es_elegible_descuento = (
+    cantidad_productos >= NO_PRODUCTOS_DESCUENTOS
+    and tiene_membresia.strip().lower() == "si"
+)
+
+print(f"¿Tienes acceso al descuento VIP?: {es_elegible_descuento}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Descuentos VIP ***
+¿Cuántos productos compraste hoy?: 12
+¿Tienes la membresía de la tienda (Si/No)?: Si
+¿Tienes acceso al descuento VIP?: True
+```
+
+#### Operador 'or'
+
+**📄 Código :**
+
+```python
+print("*** Operador 'or' ***")
+# Regresa or regresa True si cualquiera de los operandos es True
+condicion1 = True
+condicion2 = False
+resultado = condicion1 or condicion2
+print(f"Resultado {condicion1} or {condicion2} = {resultado}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operador 'or' ***
+Resultado True or False = True
+```
+
+#### Sistema Préstamo de Libros
+
+Se pide crear un sistema para una biblioteca, la cual desea prestar libros si cumples con cualquiera de las siguientes condicionales.
+
+1. El usuario tiene credencial de estudiante
+2. El usuario vive a no más de 3 km a la redonda
+
+Si cumple con cualquiera de estas condiciones se le puede prestar el libro
+
+**📄 Código :**
+
+```python
+print("*** Sistema Préstamo de Libros ***")
+
+DISTANCIA_PERMITIDA_KM = 3
+tiene_credencial = input("¿Cuentas con credencial de estudiante (Si/No)?: ")
+distancia_biblioteca_km = int(input("¿A cuántos km vives de la biblioteca?: "))
+
+es_elegible_prestamo = (
+    tiene_credencial.strip().lower() == "si"
+    or distancia_biblioteca_km <= DISTANCIA_PERMITIDA_KM
+)
+
+print(f"¿Eres elegible para préstamo de libros?: {es_elegible_prestamo}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Préstamo de Libros ***
+¿Cuentas con credencial de estudiante (Si/No)?: si
+¿A cuántos km vives de la biblioteca?: 5
+¿Eres elegible para préstamo de libros?: True
+```
+
+#### Operador 'not'
+
+**📄 Código :**
+
+```python
+print('*** Operador "not" ***')
+
+condicion = False
+print(f"Operador de variable es: {condicion}")
+resultado = not condicion
+print(f"Operador not store {condicion} = {resultado}")
+
+# Revisar si una variable es cadena vacia
+nombre = ""
+es_cadena_vacia = not nombre
+print(
+    f"Varaible es cadena vacía '{nombre}'\nLa variable NO tiene ningún valor? {es_cadena_vacia}"
+)
+
+# Revisar si una variable no tiene ningún valor asignado
+variable = None
+es_variable_sin_valor = not variable
+print(
+    f"Varaible es sin valor asignado {variable} \n¿La variable NO tiene ningún valor asignado?: {es_variable_sin_valor}"
+)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operador "not" ***
+Operador de variable es: False
+Operador not store False = True
+Varaible es cadena vacía ''
+La variable NO tiene ningún valor? True
+Varaible es sin valor asignado None
+¿La variable NO tiene ningún valor asignado?: True
+```
+
+#### Fuera de rango - Operador not
+
+**📄 Código :**
+
+```python
+# Revisar si una variable se encuentra dentro de rango entre 1 Y 10
+dato = int(input("Proporciona un dato entero: "))
+
+# Revisamos si está dentro de rango
+# esta_dentro_rango  = 1 <= dato <= 10
+# print(f'Variable está dentro de rango (entre 1 y 10): {esta_dentro_rango}')
+
+# revisamos la lógica inversa, si el dato está fuera de rango
+esta_fuera_rango = not (1 <= dato <= 10)
+print(f"Variable está fuera de rango (entre 1 y 10): {esta_fuera_rango}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+Proporciona un dato entero: 2
+Variable está fuera de rango (entre 1 y 10): False
 ```
