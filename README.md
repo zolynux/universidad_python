@@ -60,6 +60,7 @@
       - [Sistema Préstamo de Libros](#sistema-préstamo-de-libros)
       - [Operador 'not'](#operador-not)
       - [Fuera de rango - Operador not](#fuera-de-rango---operador-not)
+    - [Generación Ticket Venta](#generación-ticket-venta)
 
 ## Introducción a Python
 
@@ -2028,4 +2029,53 @@ print(f"Variable está fuera de rango (entre 1 y 10): {esta_fuera_rango}")
 ```console
 Proporciona un dato entero: 2
 Variable está fuera de rango (entre 1 y 10): False
+```
+
+### Generación Ticket Venta
+
+Supongamos que compramos varios artículos en el supermercado y queremos obtener el ticket de venta total incluyendo impuestos.
+
+El sistema solicitará el precio de cada producto a comprar y el usuario deberá indicar su precio (valor de tipo de punto decimal)
+
+El sistema debe realizar la suma de cada producto, calcular el impuesto y finalmente imprimir el total de la compra.
+
+**📄 Código :**
+
+```python
+print("*** Generación Ticket de Venta ***")
+
+precio_leche = float(input("Precio leche: "))
+precio_pan = float(input("Precio pan: "))
+precio_lechuga = float(input("Precio lechuga: "))
+precio_platanos = float(input("Precio plátanos: "))
+
+# Cálculo del subtotal (sin impuesto)
+subtotal = precio_leche + precio_pan + precio_lechuga + precio_platanos
+
+# Cálculo con impousto (16%)
+impuesto = subtotal * 0.16
+
+# Calculo total de la compra (con impuesto)
+costo_total_compra = subtotal + impuesto
+print(
+    f"""
+subtotal: ${subtotal:.2f}
+impuesto: ${impuesto:.2f}
+Costo total de la compra: ${costo_total_compra:.2f}
+      """
+)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Generación Ticket de Venta ***
+Precio leche: 10
+Precio pan: 5
+Precio lechuga: 6
+Precio plátanos: 9
+
+subtotal: $30.00
+impuesto: $4.80
+Costo total de la compra: $34.80
 ```
