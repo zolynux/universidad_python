@@ -53,6 +53,7 @@
       - [Asignación Encadenada](#asignación-encadenada)
     - [Asingación Multiple](#asingación-multiple)
     - [Operadores de Arignación Compuestos](#operadores-de-arignación-compuestos)
+    - [Operadores de Comparación](#operadores-de-comparación)
 
 ## Introducción a Python
 
@@ -1744,4 +1745,101 @@ Valor de multiplicación a = 150, b = 15
 Valor de división a = 0.6666666666666666, b = 15
 Valor de división entera a = 0, b = 15
 Valor de módulo a = 10, b = 15
+```
+
+### Operadores de Comparación
+
+Los operadores de comparación en Python se utilizan para comparar dos valores. El resultado de una comparación es un valor booleano: `True` o `False`. Aquí tienes una lista de los operadores de comparación más comunes:
+
+1. **Igual a (`==`)**: Comprueba si dos valores son iguales.
+   ```python
+   a == b
+   ```
+
+2. **Distinto de (`!=`)**: Comprueba si dos valores son diferentes.
+   ```python
+   a != b
+   ```
+
+3. **Mayor que (`>`)**: Comprueba si el valor de la izquierda es mayor que el de la derecha.
+   ```python
+   a > b
+   ```
+
+4. **Menor que (`<`)**: Comprueba si el valor de la izquierda es menor que el de la derecha.
+   ```python
+   a < b
+   ```
+
+5. **Mayor o igual que (`>=`)**: Comprueba si el valor de la izquierda es mayor o igual al de la derecha.
+   ```python
+   a >= b
+   ```
+
+6. **Menor o igual que (`<=`)**: Comprueba si el valor de la izquierda es menor o igual al de la derecha.
+   ```python
+   a <= b
+   ```
+
+Aquí tienes un ejemplo de cómo se pueden usar estos operadores en un programa:
+
+```python
+# Ejemplo de operadores de comparación
+a = 10
+b = 20
+
+print(a == b)  # False
+print(a != b)  # True
+print(a > b)   # False
+print(a < b)   # True
+print(a >= b)  # False
+print(a <= b)  # True
+```
+
+Estos operadores son fundamentales para controlar el flujo de un programa, especialmente en estructuras de control como condicionales (`if`, `else`) y bucles (`while`, `for`).
+
+**📄 Código :**
+
+```python
+print("*** Operadores de Comparación ***")
+a, b = 7, 5
+print(f"Valor inicial: a = {a}, b = {b}")
+
+# Operador de Igualdad
+resultado = a == b
+print(f"Resultado de a == b es: {resultado}")
+
+# Operador de Desigualdad
+resultado = a != b
+print(f"Resultado a != b es: {resultado}")
+
+# Operador mayor que
+resultado = a > b
+print(f"Resultado a > b es: {resultado}")
+
+# Operador mayor o igual que
+resultado = a >= b
+print(f"Resultado a >= b es: {resultado}")
+
+# Operador menor que
+resultado = a < b
+print(f"Resultado a < b es: {resultado}")
+
+# Operador menor o igual que
+resultado = a <= b
+print(f"Resultado a <= b es: {resultado}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operadores de Comparación ***
+Valor inicial: a = 7, b = 5
+Resultado de a == b es: False
+Resultado a != b es: True
+Resultado a > b es: True
+Resultado a >= b es: True
+Resultado a < b es: False
+Resultado a <= b es: False
 ```
