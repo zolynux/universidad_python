@@ -62,6 +62,7 @@
       - [Fuera de rango - Operador not](#fuera-de-rango---operador-not)
     - [Generación Ticket Venta](#generación-ticket-venta)
       - [Generación Ticket de Venta con Descuento](#generación-ticket-de-venta-con-descuento)
+    - [Sistema de Autenticación](#sistema-de-autenticación)
 
 ## Introducción a Python
 
@@ -2134,4 +2135,36 @@ Descuento: $3.0 (10)
 Subtotal: con descuento: $27.0
 impuesto (16%): $4.32
 Costo total de la compra: $31.32
+```
+
+### Sistema de Autenticación
+
+Crea un programa para validar el usuairo y password proporcionados por el usuario
+
+crea 2 constantes con los valores correctos y posteriormente compara que el usuario y password proporcionados por el usuario sean válidos.
+
+Debe solicitar el usuario y el password al usuario y si son iguales que los valorss correctos almacenados en las contantes debe imprimir True, de lo contrario debe imprimir False.
+
+**📄 Código :**
+
+```python
+print("*** Sistema Autenticación ***")
+
+USUARIO_VALIDO = "admin"
+PASSWORD_VALIDO = "123"
+usuario = input("¿Cuál es tu usuario?: ")
+password = input("¿Cuál es tu contraseña?: ")
+
+valido = usuario.strip() == USUARIO_VALIDO and password.strip() == PASSWORD_VALIDO
+
+print(f"¿Datos correctos?: {valido}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Autenticación ***
+¿Cuál es tu usuario?: admin
+¿Cuál es tu contraseña?: 123 
+¿Datos correctos?: True
 ```
