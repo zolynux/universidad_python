@@ -65,6 +65,7 @@
     - [Sistema de Autenticación](#sistema-de-autenticación)
     - [Valor Dentro de Rango](#valor-dentro-de-rango)
     - [Cálculo Área y Perímetro de un rectángulo](#cálculo-área-y-perímetro-de-un-rectángulo)
+    - [Precedencia de Operadores](#precedencia-de-operadores)
 
 ## Introducción a Python
 
@@ -2238,4 +2239,45 @@ Ingresa la base (cm) del rectángulo: 5
 Ingresa la altura (cm) del rectángulo: 2
 El área del rectángulo es: 10.0
 El perímetro del rectángulo es: 14.0
+```
+
+### Precedencia de Operadores
+
+La precedencia de operadores determina el orden en que se evalúan los operaciones en una expresión.
+
+Python aplica la siguiente tabla para asegurar que algunos operadores tengan mayor prioridad que otros durante la evaluación de expresiones.
+
+1. Operador de paréntesis `()`
+2. Exponente `**`
+3. Unarios `+x`, `-x`
+4. Multiplicación, División y Módulo `*`, `/`, `//`, `%`
+5. Suma y resta `+`, `-`
+6. Comparación `==`, `!=`, `>`, `>=`, `<`, `<=`
+7. Operadores Lógicos `not`, `and` y `or`
+8. Operadores Asignación `=`, `+=`, `-=`, `/=`, `%=`, `//==`, `**=`
+
+```python
+resultado = 5 + 3 * 2 ** 2 # 17
+resultado = (5 + 3) * 2 ** 2 # 32
+```
+
+**📄 Código :**
+
+```python
+print("*** Precedencia de Operadores ***")
+# Ejemplo de precedencia de operadores
+# 1. División 12 / 3 = 4
+# 2. Multiplicación 2 * 3 = 6
+# 3. Suma 4 + 6 = 10
+# 4. Resta 10 - 1 = 9
+resultado = 12 // 3 + 2 * 3 - 1
+print(f"Resultado: {resultado}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Precedencia de Operadores ***
+Resultado: 9
 ```
