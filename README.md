@@ -64,6 +64,7 @@
       - [Generación Ticket de Venta con Descuento](#generación-ticket-de-venta-con-descuento)
     - [Sistema de Autenticación](#sistema-de-autenticación)
     - [Valor Dentro de Rango](#valor-dentro-de-rango)
+    - [Cálculo Área y Perímetro de un rectángulo](#cálculo-área-y-perímetro-de-un-rectángulo)
 
 ## Introducción a Python
 
@@ -2201,4 +2202,40 @@ print(f"Valor dentro de rango: {rango}")
 *** Valor Dentro de Rango ***
 Proporciona un número dentro de rango entre 0 y 5: 4
 Valor dentro de rango: True
+```
+
+### Cálculo Área y Perímetro de un rectángulo
+
+Se solicita calcular el área y perímetro de un rectángulo aplicando las siguientes fórmulas:
+
+![alt text](image.png)
+
+```python
+area = base * altura
+perimetro = 2 * (base + altura)
+```
+
+**📄 Código :**
+
+```python
+print("*** Cálculo Área y Perímetro de un Rectángulo ***")
+
+base = float(input("Ingresa la base (cm) del rectángulo: "))
+altura = float(input("Ingresa la altura (cm) del rectángulo: "))
+
+area = base * altura
+perimetro = 2 * (base + altura)
+
+print(f"El área del rectángulo es: {area}")
+print(f"El perímetro del rectángulo es: {perimetro}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Cálculo Área y Perímetro de un Rectángulo ***
+Ingresa la base (cm) del rectángulo: 5
+Ingresa la altura (cm) del rectángulo: 2
+El área del rectángulo es: 10.0
+El perímetro del rectángulo es: 14.0
 ```
