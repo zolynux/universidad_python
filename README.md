@@ -63,6 +63,7 @@
     - [Generación Ticket Venta](#generación-ticket-venta)
       - [Generación Ticket de Venta con Descuento](#generación-ticket-de-venta-con-descuento)
     - [Sistema de Autenticación](#sistema-de-autenticación)
+    - [Valor Dentro de Rango](#valor-dentro-de-rango)
 
 ## Introducción a Python
 
@@ -2167,4 +2168,37 @@ print(f"¿Datos correctos?: {valido}")
 ¿Cuál es tu usuario?: admin
 ¿Cuál es tu contraseña?: 123 
 ¿Datos correctos?: True
+```
+
+### Valor Dentro de Rango
+
+Solicitar al usuario un valor entre 0 y 5 e indicarle si el valor proporcionado está dentro de rango.
+
+Se deben definir 2 constante, `VALOR_MINIMO = 0` y `VALOR_MAXIMO = 5`
+
+Y debemos comprobar si el valor proporcionado se encuentra en el rango entre 0 y 5
+
+Finalmente se debe imprimir: `valor dentro de rango: {True/False}`
+
+**📄 Código :**
+
+```python
+print("*** Valor Dentro de Rango ***")
+
+VALOR_MINIMO, VALOR_MAXIMO = 0, 5
+
+numero = int(input("Proporciona un número dentro de rango entre 0 y 5: "))
+
+# rango = numero >= VALOR_MINIMO and numero <= VALOR_MAXIMO
+rango = VALOR_MINIMO <= numero <= VALOR_MAXIMO  # exactamente la misma de linea anterior
+
+print(f"Valor dentro de rango: {rango}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Valor Dentro de Rango ***
+Proporciona un número dentro de rango entre 0 y 5: 4
+Valor dentro de rango: True
 ```
