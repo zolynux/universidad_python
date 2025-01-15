@@ -68,3 +68,60 @@ if edad >= 18:
 *** Sentencia IF ***
 Eres mayor de edad. Tienes 30 años
 ```
+
+## Sentencia if else
+
+- La sentencia `else` se usa para ejecutar un bloque de código cuando la condición del `if` es falsa.
+
+```python
+# Sintaxis sentecia if else
+if condicion:
+  # Bloque de código que se ejecuta
+  # si la condición es verdadera
+else:
+  # Bloque de código que se ejecuta
+  # Si la condición es falsa
+```
+
+```python
+# Ejemplo Sentencia if else
+edad = 10
+if edad >= 18:
+  print("Eres mayor de edad.")
+else:
+  print("Eres menor de edad.")
+```
+
+### Diagrama de Flujo sentencia `if else`
+
+Dado el siguiente código, vamos a crear el diagrama de flujo equivalente:
+
+```python
+# Ejemplo Sentencia if else
+edad = 10
+if edad >= 18:
+  print("Eres mayor de edad.")
+else:
+  print("Eres menor de edad.")
+```
+
+![alt text](image-5.png)
+
+**📄 Código :**
+
+```python
+print("*** Sentencia IF ***")
+
+edad = 10
+if edad >= 18:
+    print(f"Eres mayor de edad. Tienes {edad} años")
+else:
+    print(f"Eres menor de edad. Tienes {edad} años")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sentencia IF ***
+Eres menor de edad. Tienes 10 años
+```
