@@ -202,3 +202,71 @@ else:
 Proporciona un número positivo: -3
 Número es negativo: -3
 ```
+
+## Tienda en línea
+
+Crear un sistema que ofrezca descuentos dependiendo del monto de la compra, o si es miembro de la tienda.
+
+Se deben revisar las siguientes condiciones:
+
+1. Si ha comprado más de $1,000 y es miembro -> descuento de 10%
+2. Si sólo es miembro de la tienda -> Descuento del 5%
+3. Si no es miembro mi compro más de $1,000 -> Descuento del 0%
+
+**📄 Código :**
+
+```python
+print("*** Sistema Tienda en Línea con Descuentos ***")
+
+# condiciones
+MONTO_COMPRA_DESC = 1000
+
+monto_compra = float(input("¿Cuál fue el monto de tu compra?: "))
+es_miembro = input("¿Eres miembro de la tienda (Si/No)?: ")
+
+descuento = 0
+# verificar cada case, con los datos proporcionados
+if monto_compra >= MONTO_COMPRA_DESC and es_miembro.strip().lower() == "si":
+    descuento = 0.1  # Descuento del 10%
+elif es_miembro.strip().lower() == "si":
+    descuento = 0.05  # Descuento del 5%
+elif monto_compra >= MONTO_COMPRA_DESC:
+    descuento = 0.03  # Descuento del 3%
+else:
+    descuento = 0
+
+# Hacemos los cálculos respectivos para obtener el monto final
+if descuento != 0:
+    monto_descuento = monto_compra * descuento
+    monto_final = monto_compra - monto_descuento
+    print(
+        f"""
+Felicidades, has obtenido un descuento del {descuento * 100:.0f}%
+Monto de la compra: ${monto_compra:.2f}
+Monto del descuento: ${monto_descuento:.2f}
+Monto final de la compra con descuento: ${monto_final:.2f}
+          """
+    )
+else:
+    print(
+        f"""
+No obtuviste ningún tipo de descuento
+Te invitamos a hacerte miembro de la tienda
+Monto final de la compra: ${monto_compra:.2f}
+          """
+    )
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Tienda en Línea con Descuentos ***
+¿Cuál fue el monto de tu compra?: 1500 
+¿Eres miembro de la tienda (Si/No)?: si
+
+Felicidades, has obtenido un descuento del 10%
+Monto de la compra: $1500.00
+Monto del descuento: $150.00
+Monto final de la compra con descuento: $1350.00
+```
