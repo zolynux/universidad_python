@@ -32,4 +32,9 @@
     "editor.useTabStops": false,
     "editor.tabFocusMode": false,
   },
+  "cSpell.words": [
+    "condicion",
+    "elif",
+    "print"
+  ],
 }

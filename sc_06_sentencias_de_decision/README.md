@@ -125,3 +125,53 @@ else:
 *** Sentencia IF ***
 Eres menor de edad. Tienes 10 años
 ```
+
+## Sentencia `if` `elif` `else`
+
+La sentencia `elif` es una abreviatura de `else if`, y se utiliza cuando necesitamos verificar múltiples condiciones, una tras otra.
+
+Se pueden agregar tantas nuevas condiciones de tipo `elif` como necesitemos, pero deben después de un `if` y antes de un `else`.
+
+```python
+# Sintaxis sentencia if else
+if condicion1:
+  # Bloque de código condicion1 True
+elif condicion2:
+  # Bloque de código condicion2 True
+else:
+  # Bloque de código condiciones False
+```
+
+```python
+# Ejemplo sintaxis if elif else
+edad = 16
+if edad >= 18:
+  print("Eres mayor de edad.")
+elif 13 <= edad < 18:
+  print("Eres un adolescente.")
+else:
+  print("Eres un niño.")
+```
+
+![alt text](image-6.png)
+
+**📄 Código :**
+
+```python
+print("*** Sentencia IF ***")
+
+edad = 9
+if edad >= 18:
+    print(f"Eres mayor de edad. Tienes {edad} años")
+elif 13 <= edad < 18:
+    print(f"Eres un adolescente. Tienes {edad} años")
+else:
+    print(f"Eres un niño. Tienes {edad} años")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sentencia IF ***
+Eres un niño. Tienes 9 años
+```
