@@ -179,9 +179,9 @@ poetry.toml
 pyrightconfig.json
 
 # PNG JPG JPEG
-**.png
-**.jpg
-**.jpeg
+# **.png
+# **.jpg
+# **.jpeg
 
 ### VisualStudioCode ###
 .vscode/*
