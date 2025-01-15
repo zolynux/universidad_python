@@ -1,14 +1,14 @@
 
 # Operadores
 
-Los operadores son símbolos especiales que están disñados para realizar operaciones específicas. Tenemos varios tipos, como son:
+Los operadores son símbolos especiales que están diseñados para realizar operaciones específicas. Tenemos varios tipos, como son:
 
 - **Operadores Aritméticos:** Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o división.
-- **Operadres de asisgnació:** Se utilizan para asignar valores a variables.
+- **Operadores de asignación:** Se utilizan para asignar valores a variables.
 - **Operadores de Comparación:** Se utiliza para comparar un valor con otro.
-- **Operadores Lógicos:** Se utilizan para combinar expreseiones condicionales o lógicas
-- **Operadores de Identidad:** Se utlizan para comparar si dos variables son el mismo objeto.
-- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una subcadena) se presenta en un objeto.
+- **Operadores Lógicos:** Se utilizan para combinar expresiones condicionales o lógicas
+- **Operadores de Identidad:** Se utilizan para comparar si dos variables son el mismo objeto.
+- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una sub-cadena) se presenta en un objeto.
 
 ## Operadores Aritméticos
 
