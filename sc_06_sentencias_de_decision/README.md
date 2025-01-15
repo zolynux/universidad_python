@@ -47,3 +47,24 @@ if edad >= 18:
 ```
 
 ![alt text](image-4.png)
+
+**📄 Código :**
+
+```python
+print("*** Sentencia IF ***")
+
+edad = 30
+if edad >= 18:
+    print(f"Eres mayor de edad. Tienes {edad} años")
+#     print()
+#     print()
+# print()
+# print()
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sentencia IF ***
+Eres mayor de edad. Tienes 30 años
+```

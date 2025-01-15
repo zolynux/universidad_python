@@ -26,4 +26,10 @@
   "files.autoSave": "off",
   "code-runner.saveFileBeforeRun": true,
   "code-runner.runInTerminal": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.tabSize": 4,
+    "editor.useTabStops": false,
+    "editor.tabFocusMode": false,
+  },
 }

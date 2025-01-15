@@ -69,7 +69,7 @@
 
 ## Introducción a Python
 
-![img.png](img.png)
+![img.png](screenshot/img.png)
 
 Python es un lenguaje de programación muy popular que es conocido por ser fácil de aprender y utilizar. Fue creado por
 Guido van Rossum y lanza por primera vez en 1992. La simplicidad de Python permite a los programadores escribir menos
@@ -209,7 +209,7 @@ edad = 30
 altura = 1.75
 ````
 
-![img_1.png](img_1.png)
+![img_1.png](screenshot/img_1.png)
 
 #### Variables y Memoria Simplificado
 
@@ -220,7 +220,7 @@ edad = 30
 altura = 1.68
 ````
 
-![img_2.png](img_2.png)
+![img_2.png](screenshot/img_2.png)
 
 ### Ejemplo de Variables
 
@@ -638,7 +638,7 @@ Los caracteres pueden ser letras, números, símbolos o espacios.
 cadena1 = "Hola Mundo"
 ```
 
-![img_3.png](img_3.png)
+![img_3.png](screenshot/img_3.png)
 
 **Código 📄:**
 
@@ -672,7 +672,7 @@ Los caracteres de una cadena están indexados de manera secuencial.
 
 Por lo tanto, podemos acceder cada carácter indicando el índice del carácter que deseamos recuperar
 
-![img_4.png](img_4.png)
+![img_4.png](screenshot/img_4.png)
 
 **📄 Código :**
 
@@ -703,7 +703,7 @@ Si deseamos modificar una cadena, entonces tenemos que crear una nueva cadena.
 
 Las cadenas no se pueden modificar, son inmutables:
 
-![img_5.png](img_5.png)
+![img_5.png](screenshot/img_5.png)
 
 Nuevo valor.
 
@@ -2209,7 +2209,7 @@ Valor dentro de rango: True
 
 Se solicita calcular el área y perímetro de un rectángulo aplicando las siguientes fórmulas:
 
-![alt text](image.png)
+![alt text](screenshot/image.png)
 
 ```python
 area = base * altura
