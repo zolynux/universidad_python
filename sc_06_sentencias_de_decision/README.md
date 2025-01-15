@@ -175,3 +175,30 @@ else:
 *** Sentencia IF ***
 Eres un niño. Tienes 9 años
 ```
+
+## Ejemplo Valor Positivo
+
+![alt text](image-7.png)
+
+**📄 Código :**
+
+```python
+print("*** Ejemplo Valor Positivo ***")
+
+numero = int(input("Proporciona un número positivo: "))
+
+if numero > 0:
+    print(f"Número es positivo: {numero}")
+elif numero < 0:
+    print(f"Número es negativo: {numero}")
+else:
+    print(f"Número es cero: {numero}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Ejemplo Valor Positivo ***
+Proporciona un número positivo: -3
+Número es negativo: -3
+```
