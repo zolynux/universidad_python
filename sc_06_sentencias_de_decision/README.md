@@ -270,3 +270,34 @@ Monto de la compra: $1500.00
 Monto del descuento: $150.00
 Monto final de la compra con descuento: $1350.00
 ```
+
+## Sistema de Bancario
+
+Considerando que estamos dentro de un sistema bancario, se solicita preguntar al usuario si desea continuar dentro del sistema.
+
+Utilizando el operador `not` para aplicar una lógica inversa se debe programar las siguientes condiciones:
+
+- Si NO deseamos salir del sistema, imprimir: continuamos dentro del sistema.
+- De lo contrario, imprimimos: Saliendo del sistema.
+
+**📄 Código :**
+
+```python
+print("*** Bienvenidos al sistema bancario ***")
+
+salir_sistema_txt = input("¿Deseas salir del sistema (Si/No)? ")
+salir_sistema = salir_sistema_txt.strip().lower() == "si"
+
+if not salir_sistema:
+    print("Continuamos dentro del sistema")
+else:
+    print("Salimos del sistema")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Bienvenidos al sistema bancario ***
+¿Deseas salir del sistema (Si/No)? si
+Salimos del sistema
+```
