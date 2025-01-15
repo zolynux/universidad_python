@@ -3,13 +3,13 @@
     "markdown": true,
     "txt": true
   },
-  "cSpell.diagnosticLevel": "Hint",
-  "workbench.colorCustomizations": {
-    // will change the color of three dots to red
-    "editorHint.foreground": "#ff0000",
-    // will underline the entire word with dots in your chosen color
-    "editorHint.border": "#00ff66"
-  },
+  // "cSpell.diagnosticLevel": ,
+  // "workbench.colorCustomizations": {
+  //   // will change the color of three dots to red
+  //   "editorHint.foreground": "#ff0000",
+  //   // will underline the entire word with dots in your chosen color
+  //   "editorHint.border": "#00ff66"
+  // },
   "cSpell.ignoreRandomStrings": true,
   "cSpell.language": "es",
   "editor.fontSize": 15,
@@ -35,6 +35,7 @@
   "cSpell.words": [
     "condicion",
     "elif",
+    "operandos",
     "print"
   ],
 }
