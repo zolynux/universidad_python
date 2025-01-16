@@ -447,3 +447,67 @@ Calorías quemadas: 600.0 kcal
 Meta de pasos diarios alcanzada: Si
 La meta de pasos diarios es de: 1000 pasos
 ```
+
+## Sistema Reserva Hotel
+
+Se solicita crear un sistema de Reservación de un Hotel se debe pedir la siguiente información al usuario:
+
+- Nombre del Usuario
+- Días de estadía en el hotel
+- Cuarto con vista al mar?
+
+El hotel tiene las siguientes tarifas:
+
+- Cuarto sin vista al mar: $150.50 por día
+- Cuarto con vista al mar: $190.50 por día
+
+El sistema debe calcular el costo total de la estadía dependiendo si escogió un cuarto con vista al mar o no. Además de indicar si escogió un cuarto con vista al mar o no.
+
+**📄 Código :**
+
+```python
+print("*** Sistema Reserva Hotel ***")
+
+# Variables del hotel
+TARIFA_DIARIA_SIN_VISTA_MAR = 150.50
+TARIFA_DIARIA_CON_VISTA_MAR = 190.50
+
+# Pedimos la información al usuario
+nombre_cliente = input("Ingresa el nombre de cliente: ")
+dias_estadia = int(input("Ingresa el número de los días de estadía: "))
+vista_al_mar_txt = input("Ingresa con vista al mar (Si/No): ")
+vista_al_mar = vista_al_mar_txt.strip().lower == "si"
+
+# Cálculo del costo total de la estancia
+costo_total = (
+    dias_estadia * TARIFA_DIARIA_CON_VISTA_MAR
+    if vista_al_mar
+    else dias_estadia * TARIFA_DIARIA_SIN_VISTA_MAR
+)
+
+# Mostramos los detalles de la reserva
+print(
+    f"""
+{'-' * 10} Detalles de la Reservación {'-' * 10}
+Cliente: {nombre_cliente}
+Días de estandía: {dias_estadia}
+Costo total: ${costo_total:.2f}
+Habitación con vista al mar: {'Sí' if vista_al_mar else 'No'}
+"""
+)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema Reserva Hotel ***
+¿Cuál es tu nombre del cliente?: Susana
+¿Cuántos son tus días de estadía?: 3
+¿Deseas al cuarto con vista al mar (Si/No)?: no
+
+---------- Detalle de la Reservación ----------
+Cliente: Susana
+Días de estadía: 3
+Costo total: $451.50
+Habitación con Vista al mar: No
+```
