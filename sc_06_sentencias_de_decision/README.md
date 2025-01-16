@@ -340,3 +340,39 @@ else:
 ¿Tienes miedo a la oscuridad (Si/No)?: no
 Puedes entrar a la casa de los espejos
 ```
+
+## Operador Ternario
+
+El operador ternario en Python es una forma compacto del agregar una condición, y el objetivo es asignar una valor a una variable dependiendo del valor de la condición.
+
+```python
+# Sintaxis Operador Ternario
+resultado = valor_si_verdadero if condicion else valor_si_falso
+```
+
+```python
+# Ejemplo Operador Ternario
+edad = 18
+es_adulto = "Sí" if edad >= 18 else "No"
+print(es_adulto)
+```
+
+**📄 Código :**
+
+```python
+print("*** Operador Ternario ***")
+
+edad = int(input("¿Cuál es tu edad?: "))
+
+es_adulto = "Si" if edad >= 18 else "No"
+
+print(f"¿Es un adulto?: {es_adulto}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operador Ternario ***
+¿Cuál es tu edad?: 12
+¿Es un adulto?: No
+```
