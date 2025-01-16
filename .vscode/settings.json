@@ -33,8 +33,12 @@
     "editor.tabFocusMode": false,
   },
   "cSpell.words": [
+    "CALORIAS",
     "condicion",
     "elif",
+    "fitness",
+    "kcal",
+    "kilocalorias",
     "operandos",
     "print"
   ],
