@@ -511,3 +511,37 @@ Días de estadía: 3
 Costo total: $451.50
 Habitación con Vista al mar: No
 ```
+
+## El mayor de 2 números
+
+crear un programa para indicar cual es el mayor de dos números
+El programa debe pedir al usuario dos números enteros.
+Posteriormente se deben comparar y mandar a imprimir el número mayor.
+
+**📄 Código :**
+
+```python
+print("*** El mayor  de dos números ***")
+
+numero1 = int(input("Ingresa un primer número entero: "))
+numero2 = int(input("Ingresa un segundo número entero: "))
+
+numero_mayor = (
+    "El primer numero es mayor." if numero1 > numero2 else "El segundo numero es mayor."
+)
+
+print(
+    f"El primer es: {numero1}\nEl segundo es: {numero2}\n Resultado: *** {numero_mayor} ***"
+)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** El mayor  de dos números ***
+Ingresa un primer número entero: 4
+Ingresa un segundo número entero: -1
+El primer es: 4
+El segundo es: -1
+ Resultado: *** El primer numero es mayor. ***
+```
