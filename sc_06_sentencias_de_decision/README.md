@@ -591,3 +591,51 @@ Introduce el número de mes entre 1 y 12: 9
 ---------- Estación del Año ----------
 Esta la estación: Es Otoño
 ```
+
+## Sistema de Calificaciones
+
+Crear un programa para convertir una calificación numérica (entre 0 y 10) a  una letra (de la F a la A)
+
+- Si es mayor o igual a 9 y menor o igual a 10 es una A
+- Si es mayor o igual a 8 y menor a 9 es una B
+- Si es mayor o igual a 7 y menor a 8 es una C
+- Si es mayor o igual a 6 y menor a 7 es una D
+- Si es mayor o igual a 0 y menor a 6 es una F
+
+En otro caso, imprimir:
+
+"Valor desconocido"
+
+**📄 Código :**
+
+```python
+print("*** Sistema de Calificaciones")
+
+calificacion = float(input("Introduzca el número de calificado entre 0 y 10: "))
+calificacion_letra = None
+
+# Revisamos si está en los siguientes rangos
+if 9 <= calificacion <= 10:
+    calificacion_letra = "A"
+elif 8 <= calificacion < 9:
+    calificacion_letra = "B"
+elif 7 <= calificacion < 8:
+    calificacion_letra = "C"
+elif 6 <= calificacion < 7:
+    calificacion_letra = "D"
+elif 0 <= calificacion < 6:
+    calificacion_letra = "F"
+else:
+    calificacion_letra = "Valor Desconocido"
+
+# Imprimir el resultado
+print(f"Calificación {calificacion} es equivalente a {calificacion_letra}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema de Calificaciones
+Introduzca el número de calificado entre 0 y 10: 9
+Calificación 9.0 es equivalente a A
+```
