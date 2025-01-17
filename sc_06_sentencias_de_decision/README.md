@@ -27,13 +27,13 @@ Un programa de flujo es una representación gráfica de los pasos a ejecutar par
 Se utilizan símbolos estandarizados para representar distintos tipos de acciones:
 
 - Un óvalo  representa el inicio o fin de un proceso:
-![alt text](image.png)
+![alt text](../screenshot/decisiones/image.png)
 - Un rectángulo muestra instrucciones o acciones a ejecutar
-![alt text](image-1.png)
+![alt text](../screenshot/decisiones/image-1.png)
 - Un rombo o diamante indica decisiones, con múltiples flujos dependiendo si la respuesta es verdadera o falsa
-![alt text](image-2.png)
+![alt text](../screenshot/decisiones/image-2.png)
 - Las fechas dirigen el flujo del proceso, mostrando la dirección en que se mueven la secuencia de acciones.
-![alt text](image-3.png)
+![alt text](../screenshot/decisiones/image-3.png)
 
 ## Diagrama de Flujo Sentencia `if`
 
@@ -46,7 +46,7 @@ if edad >= 18:
   print("Eres mayor de edad.")
 ```
 
-![alt text](image-4.png)
+![alt text](../screenshot/decisiones/image-4.png)
 
 **📄 Código :**
 
@@ -105,7 +105,7 @@ else:
   print("Eres menor de edad.")
 ```
 
-![alt text](image-5.png)
+![alt text](../screenshot/decisiones/image-5.png)
 
 **📄 Código :**
 
@@ -153,7 +153,7 @@ else:
   print("Eres un niño.")
 ```
 
-![alt text](image-6.png)
+![alt text](../screenshot/decisiones/image-6.png)
 
 **📄 Código :**
 
@@ -178,7 +178,7 @@ Eres un niño. Tienes 9 años
 
 ## Ejemplo Valor Positivo
 
-![alt text](image-7.png)
+![alt text](../screenshot/decisiones/image-7.png)
 
 **📄 Código :**
 
@@ -304,7 +304,7 @@ Salimos del sistema
 
 ## Casa de los Espejos
 
-![alt text](image-8.png)
+![alt text](../screenshot/decisiones/image-8.png)
 
 Supón que estás en un parque de diversiones y quieres entrar a la case de los espejos.
 
