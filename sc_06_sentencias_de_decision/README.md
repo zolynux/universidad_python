@@ -691,3 +691,45 @@ Ingresa el destino ddel paquete (nacional/internacional): nacional
 Ingresa el peso del paquete (en kg): 3
 El costo de envío del paquete es: $30.00
 ```
+
+## Sistema de Autenticación
+
+Crear un sistema para validar los valores de usuario y password proporcionados.
+Se deben definir dos constantes con los valores válidos de usuario y password
+Y el sistema debe comparar los valores validos contra los valores proporcionadas
+Se deben considerar 4 casos:
+
+1. Usuario y password válidos. Debe imprimir 'Bienvenido al Sistema'
+2. Usuario inválido
+3. Password inválido
+4. Usuario y Password inválidos
+
+**📄 Código :**
+
+```python
+print("*** Sistema de Autenticación ***")
+
+USUARIO_VALIDO = "admin"
+PASSWORD_VALIDO = "123"
+
+usuario = str(input("Ingresa tu usuario: "))
+password = str(input("Ingresa tu password: "))
+
+if usuario == USUARIO_VALIDO and password == PASSWORD_VALIDO:
+    print("Bienvenido al sistema")
+elif usuario == USUARIO_VALIDO:
+    print("password es inválido, favor de corregirlo!")
+elif password == PASSWORD_VALIDO:
+    print("Usuario es inválido, favor de corregirlo!")
+else:
+    print("usuario y password son inválidos, favor de corregirlo!")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema de Autenticación ***
+Ingresa tu usuario: admin
+Ingresa tu password: 234
+password es inválido, favor de corregirlo!
+```
