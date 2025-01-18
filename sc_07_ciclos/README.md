@@ -685,3 +685,38 @@ Proporciona el número de filas: 3
  ***
 *****
 ```
+
+### Palabra `break` y `continue` en ciclos
+
+**📄 Código :**
+
+```python
+print("*** Palabra break y continue en ciclos ***")
+
+# Ejemplo con break
+print("Palabra break:")
+for numero in range(1, 10):
+    if numero % 2 == 0:  # Numero par
+        print(numero)
+        break  # Salimos del ciclo inmediatamente
+
+# Ejemplo con continue
+print("Palabra continue:")
+for numero in range(1, 10):
+    if numero % 2 == 1:  # Numero impar
+        continue
+    print(numero)  # números pares
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Palabra break y continue en ciclos ***
+Palabra break:
+2
+Palabra continue:
+2
+4
+6
+8
+```
