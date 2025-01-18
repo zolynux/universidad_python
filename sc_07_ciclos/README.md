@@ -1,8 +1,6 @@
-# Ciclos
+# Ciclos en Python
 
-## Ciclos en Python
-
-### Ciclo while
+## Ciclo while
 
 Los ciclos en Python son estructuras de control que repitan una serie de instrucciones hasta que se cumple una condición específica.
 
@@ -25,11 +23,11 @@ while contador <= 3:
   contador += 1
 ```
 
-#### Diagrama de Flujo Ciclo `while`
+## Diagrama de Flujo Ciclo `while`
 
 Dado el siguiente código, veamos el diagrama de flujo asociado:
 
-![alt text](image.png)
+![alt text](/screenshot/ciclos/image.png)
 
 Valor contador = ~~1~~ 2
 
@@ -64,7 +62,7 @@ while contador <= 5:
 1 2 3 4 5
 ```
 
-### Ciclo for
+## Ciclo for
 
 El ciclo `for` itera o recorre una secuencia de valores, por ejemplo los caracteres de una cadena, una lista, etc. y ejecuta bloque de código por cada elemento de la secuencia.
 
@@ -115,11 +113,11 @@ Recorremos la lista de frutas:
 Plátano Fresa Mango Uva Manzana Pera Naranja
 ```
 
-### Ejercicio Acumulador Suma en Ciclo
+## Ejercicio Acumulador Suma en Ciclo
 
 Realizar la suma de los primeros 5 números utilizando un ciclo while
 
-![alt text](image-1.png)
+![alt text](/screenshot/ciclos/image-1.png)
 
 **📄 Código :**
 
@@ -162,7 +160,7 @@ Suma parcial acumulada: 15
 Resultado suma acumulado: 15
 ```
 
-### Menú Iterativo
+## Menú Iterativo
 
 **📄 Código :**
 
@@ -220,7 +218,7 @@ Salimos del sistema. Hasta pronto!
 Terminando el sistema de Administración de Cuentas
 ```
 
-### Reto - Cajero Automático
+## Reto - Cajero Automático
 
 **Aplicación Cajero Automático:**
 
@@ -309,7 +307,7 @@ Escoge un número de opción: 4
 Saliendo del cajero automático. ¡Hasta Pronto!
 ```
 
-### Aplicación Calculadora
+## Aplicación Calculadora
 
 Crear una aplicación de calculadora con las opciones de:
 
@@ -454,7 +452,7 @@ Escoge una opción con número: 5
 Saliendo del aplicación calculadora. ¡Hasta pronto!
 ```
 
-### Creación y validación de Password
+## Creación y validación de Password
 
 Crear un programa para solicitar la validación al momento de crear un valor de un password o contraseña
 
@@ -489,7 +487,7 @@ Ingresa un nuevo valor de password: zoy2454
 El valor de password es válido
 ```
 
-### Juego de Adivinanzas
+## Juego de Adivinanzas
 
 Crea un juego donde el jugador debe adivinar un número secreto.
 
@@ -547,7 +545,7 @@ Adivina el número secreto (1-50): 15
 Felicidades, adivinaste el número secreto en 3 intentos
 ```
 
-### Validación de Información de un Formulario
+## Validación de Información de un Formulario
 
 **📄 Código :**
 
@@ -572,7 +570,7 @@ Ingresa tu nombre de usuario: zolyn
 Nombre de usuario válido: zolyn
 ```
 
-### Función range en Python
+## Función range en Python
 
 La función `range` es una función incorporada que genera una secuencia de números.
 
@@ -633,7 +631,7 @@ Secuencia del 20 al 30 de 2 en 2:
 20 22 24 26 28 30
 ```
 
-### Imprimir mensaje función range
+## Imprimir mensaje función range
 
 **📄 Código :**
 
@@ -660,7 +658,7 @@ hola mundo
 hola mundo
 ```
 
-### Dibujar un Triángulo
+## Dibujar un Triángulo
 
 **📄 Código :**
 
@@ -686,7 +684,7 @@ Proporciona el número de filas: 3
 *****
 ```
 
-### Palabra `break` y `continue` en ciclos
+## Palabra `break` y `continue` en ciclos
 
 **📄 Código :**
 
