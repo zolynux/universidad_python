@@ -488,3 +488,61 @@ El password no cumple con los requisitos. Debe tener al menos 6 caracteres.
 Ingresa un nuevo valor de password: zoy2454
 El valor de password es válido
 ```
+
+### Juego de Adivinanzas
+
+Crea un juego donde el jugador debe adivinar un número secreto.
+
+Puedes usar un ciclo `while` hasta que el jugador adivine correctamente.
+
+El número secreto se puede crear usando la función `randint` para generar un valor aleatorio entre 1 y 50
+
+Por cada intento fallido se debe incrementar una variable que lleve el conteo de intentos.
+
+El programa debe orientar al jugador indicándole si el valor que proporcionó fue mayor o menor que el número secreto
+
+Finalmente si adivina el número secreto debe felicitar al usuario e indicar cuántos intentos realizó
+
+Opcionalmente, se puede limitar el juego a un número de intentos máximo (ej: 10) de lo contrario termina el juego.
+
+**📄 Código :**
+
+```python
+from random import randint
+
+
+print("*** Juego de Adivinanzas ***")
+
+numero_secreto = int(randint(1, 50))
+intentos = 0
+adivinanza = None
+INTENTOS_MAXIMOS = 5
+
+while adivinanza != numero_secreto and intentos < INTENTOS_MAXIMOS:
+    adivinanza = int(input("Adivina el número secreto (1-50): "))
+    # Agregamos un ayuda para orientar al jugador
+    if adivinanza < numero_secreto:
+        print("El número secreto es mayor")
+    elif adivinanza > numero_secreto:
+        print("El número secreto es menor")
+    # Incrementamos la variable de intentos
+    intentos += 1
+# Conclusion del juego
+if adivinanza == numero_secreto:
+    print(f"Felicidades, adivinaste el número secreto en {intentos} intentos")
+else:
+    print(f"Lo siento, has agotado tus intentos máximos: {INTENTOS_MAXIMOS}")
+    print(f"El número secreto era: {numero_secreto}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Juego de Adivinanzas ***
+Adivina el número secreto (1-50): 20
+El número secreto es menor
+Adivina el número secreto (1-50): 10
+El número secreto es mayor
+Adivina el número secreto (1-50): 15
+Felicidades, adivinaste el número secreto en 3 intentos
+```

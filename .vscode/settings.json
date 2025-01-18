@@ -43,6 +43,7 @@
     "kcal",
     "kilocalorias",
     "operandos",
-    "print"
+    "print",
+    "randint"
   ],
 }
