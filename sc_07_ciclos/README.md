@@ -571,3 +571,64 @@ Ingresa tu nombre de usuario:
 Ingresa tu nombre de usuario: zolyn
 Nombre de usuario válido: zolyn
 ```
+
+### Función range en Python
+
+La función `range` es una función incorporada que genera una secuencia de números.
+
+Es comúnmente utilizada para iterar sobre ciclos tipo `for`
+
+```python
+# Sintaxis función range
+# inicio - valor inicial (opcional)
+# fin - valor final, sin incluirlo
+# incremento - diferencia entre cada número (opcional)
+range(inicio, fin, incremento)
+```
+
+```python
+# usar range para imprimir 0 al 4
+for i int range(5):
+    print(i)
+
+# Usar range para imprimir del 0 al 9
+# con incremento de 2
+for i in range(0,10, 2):
+    print(i) # imprime 0, 2, 4, 6, 8
+```
+
+**📄 Código :**
+
+```python
+print("*** Función Range ***")
+
+print("Secuencia del 0 al 4")
+# Inicio = 0 (opcional)
+# fin = 5 - 1 = 4
+# incremento = 1 (opcional)
+for i in range(5):  # fin = 5 - 1
+    print(i, end=" ")
+
+print("\n\nSecuencia del 10 al 20:")
+# incremento = 1 (default y es opcional)
+for i in range(10, 20 + 1):
+    print(i, end=" ")
+
+print("\n\nSecuencia del 20 al 30 de 2 en 2:")
+for i in range(20, 30 + 1, 2):
+    print(i, end=" ")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Función Range ***
+Secuencia del 0 al 4
+0 1 2 3 4
+
+Secuencia del 10 al 20:
+10 11 12 13 14 15 16 17 18 19 20
+
+Secuencia del 20 al 30 de 2 en 2:
+20 22 24 26 28 30
+```
