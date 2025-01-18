@@ -546,3 +546,28 @@ El número secreto es mayor
 Adivina el número secreto (1-50): 15
 Felicidades, adivinaste el número secreto en 3 intentos
 ```
+
+### Validación de Información de un Formulario
+
+**📄 Código :**
+
+```python
+print("*** Validación Campo de un Formulario ***")
+
+nombre_usuario = None
+
+while not nombre_usuario:
+    nombre_usuario = str(input("Ingresa tu nombre de usuario: "))
+
+print(f"Nombre de usuario válido: {nombre_usuario}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Validación Campo de un Formulario ***
+Ingresa tu nombre de usuario:
+Ingresa tu nombre de usuario: 
+Ingresa tu nombre de usuario: zolyn
+Nombre de usuario válido: zolyn
+```
