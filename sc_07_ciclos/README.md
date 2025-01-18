@@ -114,3 +114,51 @@ H o l a   M u n d o
 Recorremos la lista de frutas:
 Plátano Fresa Mango Uva Manzana Pera Naranja
 ```
+
+
+### Ejercicio Acumulador Suma en Ciclo
+
+Realizar la suma de los primeros 5 números utilizando un ciclo while
+
+![alt text](image-1.png)
+
+**📄 Código :**
+
+```python
+print('*** Suma Acumulativa "while" ***')
+
+# Sumar los primeros 5 números
+MAXIMO = 5
+numero = 1
+acumulador_suma = 0
+
+# Empezamos a iterar
+while numero <= MAXIMO:
+    # Imprimir lo que se va a sumar
+    print(f"(acumulador_suma + numer) -> {acumulador_suma} + {numero}")
+    acumulador_suma += numero
+    numero += 1
+
+    # Imprimir el resultado de la suma parcial
+    print(f"Suma parcial acumulada: {acumulador_suma}")
+
+print(f"\nResultado suma acumulado: {acumulador_suma}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Suma Acumulativa "while" ***
+(acumulador_suma + numer) -> 0 + 1
+Suma parcial acumulada: 1
+(acumulador_suma + numer) -> 1 + 2
+Suma parcial acumulada: 3
+(acumulador_suma + numer) -> 3 + 3
+Suma parcial acumulada: 6
+(acumulador_suma + numer) -> 6 + 4
+Suma parcial acumulada: 10
+(acumulador_suma + numer) -> 10 + 5
+Suma parcial acumulada: 15
+
+Resultado suma acumulado: 15
+```
