@@ -453,3 +453,38 @@ Operaciones que puedes realizar:
 Escoge una opción con número: 5
 Saliendo del aplicación calculadora. ¡Hasta pronto!
 ```
+
+### Creación y validación de Password
+
+Crear un programa para solicitar la validación al momento de crear un valor de un password o contraseña
+
+La contraseña debe tener al menos 6 caracteres
+
+En caso de no cumplir con esta condición el programa debe volver a solicitar un nuevo valor hasta que cumpla con la condición.
+
+Si el valor proporcionado es válido, se debe imprimir: 'Password válido' y debe terminar la ejecución del sistema.
+
+**📄 Código :**
+
+```python
+print("*** Creación y Validación de Password")
+
+password = input("Ingresa un password (debe tener al menos 6 caracteres): ")
+
+# Validar el password
+while len(password) < 6:
+    print("El password no cumple con los requisitos. Debe tener al menos 6 caracteres.")
+    password = input("Ingresa un nuevo valor de password: ")
+else:
+    print("El valor de password es válido")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Creación y Validación de Password
+Ingresa un password (debe tener al menos 6 caracteres): 4335   
+El password no cumple con los requisitos. Debe tener al menos 6 caracteres.
+Ingresa un nuevo valor de password: zoy2454
+El valor de password es válido
+```
