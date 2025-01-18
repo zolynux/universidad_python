@@ -632,3 +632,30 @@ Secuencia del 10 al 20:
 Secuencia del 20 al 30 de 2 en 2:
 20 22 24 26 28 30
 ```
+
+### Imprimir mensaje función range
+
+**📄 Código :**
+
+```python
+print("*** Repetición de un Mensaje ***")
+
+mensaje = input("Proporciona un mensaje a repetir: ")
+numero_de_repeticion = int(input("Proporciona el número de repeticiones: "))
+
+# Iterar sobre el rango de repeticiones
+for _ in range(numero_de_repeticion):
+    # print(f"{i+1} - {mensaje}")
+    print(mensaje)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Repetición de un Mensaje ***
+Proporciona un mensaje a repetir: hola mundo
+Proporciona el número de repeticiones: 3
+hola mundo
+hola mundo
+hola mundo
+```
