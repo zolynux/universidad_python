@@ -64,3 +64,53 @@ while contador <= 5:
 1 2 3 4 5
 ```
 
+### Ciclo for
+
+El ciclo `for` itera o recorre una secuencia de valores, por ejemplo los caracteres de una cadena, una lista, etc. y ejecuta bloque de código por cada elemento de la secuencia.
+
+```python
+# Sintaxis ciclo for
+for variable in secuencia:
+  # Bloque de código a ejecutar
+```
+
+```python
+# Ejemplo ciclo for
+cadena = 'Hola Mundo'
+for letra in cadena:
+  print(letra, end=' ')
+```
+
+Salida a consola:
+
+```console
+H o l a  M u n d o
+```
+
+**📄 Código :**
+
+```python
+print("*** Ciclo for ***")
+
+print("Recorremos los caracteres de una cadena")
+cadena = "Hola Mundo"
+# Iteramos los caracteres
+for letra in cadena:
+    print(letra, end=" ")
+
+print("\n\nRecorremos la lista de frutas:")
+frutas = ["Plátano", "Fresa", "Mango", "Uva", "Manzana", "Pera", "Naranja"]
+for fruta in frutas:
+    print(fruta, end=" ")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Ciclo for ***
+Recorremos los caracteres de una cadena
+H o l a   M u n d o
+
+Recorremos la lista de frutas:
+Plátano Fresa Mango Uva Manzana Pera Naranja
+```
