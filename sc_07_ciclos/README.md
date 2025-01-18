@@ -115,7 +115,6 @@ Recorremos la lista de frutas:
 Plátano Fresa Mango Uva Manzana Pera Naranja
 ```
 
-
 ### Ejercicio Acumulador Suma en Ciclo
 
 Realizar la suma de los primeros 5 números utilizando un ciclo while
@@ -161,4 +160,62 @@ Suma parcial acumulada: 10
 Suma parcial acumulada: 15
 
 Resultado suma acumulado: 15
+```
+
+### Menú Iterativo
+
+**📄 Código :**
+
+```python
+print("*** Sistema de Administración de Cuenta ***")
+
+salir = False
+while not salir:
+    print(
+        f"""Menú:
+          1. Crear cuenta
+          2. Eliminar cuenta
+          3. Salir"""
+    )
+    opcion = int(input("Escoge una opción: "))
+    match opcion:
+        case 1:
+            print("Creando tu cuenta... \n")
+        case 2:
+            print("Eliminado tu cuenta... \n")
+        case 3:
+            print("Salimos del sistema. Hasta pronto!\n")
+            salir = True
+        case _:
+            print("Opción inválida, proporciona otra opción...\n")
+else:
+    print("Terminando el sistema de Administración de Cuentas")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema de Administración de Cuenta ***
+Menú:
+          1. Crear cuenta
+          2. Eliminar cuenta
+          3. Salir
+Escoge una opción: 1
+Creando tu cuenta... 
+
+Menú:
+          1. Crear cuenta
+          2. Eliminar cuenta
+          3. Salir
+Escoge una opción: 5
+Opción inválida, proporciona otra opción...
+
+Menú:
+          1. Crear cuenta
+          2. Eliminar cuenta
+          3. Salir
+Escoge una opción: 3
+Salimos del sistema. Hasta pronto!
+
+Terminando el sistema de Administración de Cuentas
 ```
