@@ -11,7 +11,10 @@
   //   "editorHint.border": "#00ff66"
   // },
   "cSpell.ignoreRandomStrings": true,
-  "cSpell.language": "es",
+  "cSpell.language": [
+    "es",
+    "en"
+  ],
   "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
