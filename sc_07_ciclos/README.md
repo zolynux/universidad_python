@@ -659,3 +659,29 @@ hola mundo
 hola mundo
 hola mundo
 ```
+
+### Dibujar un Triángulo
+
+**📄 Código :**
+
+```python
+print("*** Dibujar Triángulo Simétrico ***")
+
+numero_fila = int(input("Proporciona el número de filas: "))
+
+# Iterar sobre cada fila del triángulo
+for fila in range(1, numero_fila + 1):
+    espacios_blanco = " " * (numero_fila - fila)
+    asteriscos = "*" * (2 * fila - 1)
+    print(f"{espacios_blanco}{asteriscos}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Dibujar Triángulo Simétrico ***
+Proporciona el número de filas: 3
+  *
+ ***
+*****
+```
