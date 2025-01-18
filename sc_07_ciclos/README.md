@@ -219,3 +219,92 @@ Salimos del sistema. Hasta pronto!
 
 Terminando el sistema de Administración de Cuentas
 ```
+
+### Reto - Cajero Automático
+
+**Aplicación Cajero Automático:**
+
+Se les deja crear la aplicación de cajero automático.
+Las funciones principales de un cajero automático son: depositar, retirar y consultar el saldo.
+
+El saldo puede tener un valor inicial por ejemplo $1,000.00
+
+Si haces un retiro se resta de tu saldo. Y si haces un depósito se suma a tu saldo.
+
+**📄 Código :**
+
+```python
+print("*** Aplicación de Cajero Automático ***")
+
+salir = False
+saldo = 1000.00
+
+while not salir:
+    print(
+        """Operaciones que puedes realizar:
+          1. Consultar Saldo
+          2. Retirar
+          3. Depositar
+          4. Salir."""
+    )
+    opcion = int(input("Escoge un número de opción: "))
+
+    match opcion:
+        case 1:
+            print(f"\nTu saldo actual es: {saldo:.2f}\n")
+        case 2:
+            monto_retirar = float(input("Ingresa el monto a retirar: "))
+            if monto_retirar <= saldo:
+                saldo -= monto_retirar
+                print(f"\nTu nuevo saldo es: ${saldo:.2f}\n")
+            else:
+                print(
+                    f"\nNo cuentas con el saldo suficiente. Tu saldo actual: ${saldo:.2f}\n"
+                )
+        case 3:
+            monto_depositar = float(input("Ingresa el monto a depositar: "))
+            saldo += monto_depositar
+            print(f"\nTu nuevo saldo es: ${saldo:.2f}\n")
+        case 4:
+            salir = True
+        case _:
+            print(
+                "\nLa opción es inválida. Ingresa de nuevo debe ser un número entero de opción...\n"
+            )
+else:
+    print("\nSaliendo del cajero automático. ¡Hasta Pronto!")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Aplicación de Cajero Automático ***
+Operaciones que puedes realizar:
+          1. Consultar Saldo
+          2. Retirar
+          3. Depositar
+          4. Salir.
+Escoge un número de opción: 2
+Ingresa el monto a retirar: 3000
+
+No cuentas con el saldo suficiente. Saldo actual: $1000.00
+
+Operaciones que puedes realizar:
+          1. Consultar Saldo
+          2. Retirar
+          3. Depositar
+          4. Salir.
+Escoge un número de opción: 3
+Ingresa el monto a depositar: 5000
+
+Tu nuevo saldo es: $6000.00
+
+Operaciones que puedes realizar:
+          1. Consultar Saldo
+          2. Retirar
+          3. Depositar
+          4. Salir.
+Escoge un número de opción: 4
+
+Saliendo del cajero automático. ¡Hasta Pronto!
+```
