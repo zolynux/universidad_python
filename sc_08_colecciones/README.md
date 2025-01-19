@@ -296,3 +296,29 @@ Coordenada en el eje y:5
 Tupla de un elemento (10,)
 Segundo elemento tupla anidada: (2, 3)
 ```
+
+### Desempaquetado de Tuplas (unpacking)
+
+**📄 Código :**
+
+```python
+print("*** Desempaquetado de Tuplas ***")
+
+producto = ("P001", "Camisa", 20.00)
+
+# Desempaquetado
+id, descripcion, precio = producto
+
+# imprimir los valores
+print(f"Tupla completa: {producto}")
+# Valores independientes ya desempaquetados
+print(f"Producto: id = {id}, descripción = {descripcion}, precio = {precio}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Desempaquetado de Tuplas ***
+Tupla completa: ('P001', 'Camisa', 20.0)
+Producto: id = P001, descripción = Camisa, precio = 20.0
+```
