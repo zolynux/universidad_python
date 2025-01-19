@@ -179,3 +179,57 @@ Iteramos el Playlist
 - Hotel California - Eaglles
 - Staying Alive - Bee Gees
 ```
+
+### Promedio de calificaiones
+
+Crea un programa para realizar el cálculo promedio de calificaciones.
+
+El programa debe solicitar el número de calificaciones a utilizar para obtener el promedio.
+
+Posteriormente, se debe solicitar cada calificación al usuario.
+
+Posteriormente realizar la suma de todas las calificaciones y finalmente mandar a imprimir el promedio.
+
+**📄 Código :**
+
+```python
+print("*** Promedio de Calificaciones ***")
+
+total_calificaciones = int(input("Proporciona el no. de calificaciones a evaluar: "))
+calificaciones = []
+promedio = 0
+
+# Iterar las calificaciones
+for indice in range(total_calificaciones):
+    calificacion = int(input(f"Calificación[{indice + 1}] = "))
+    calificaciones.append(calificacion)
+
+# Imprimimos las calificaciones proporcionadas
+print(
+    f"""
+Las calificaciones proporcionadas son: {calificaciones}
+"""
+)
+
+# Calculamos el promedio de las calificaciones
+# sum(iterable)
+suma_calificaciones = sum(calificaciones)
+promedio = suma_calificaciones / total_calificaciones
+
+print(f"Promedio de las calificaciones: {promedio:.2f}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Promedio de Calificaciones ***
+Proporciona el no. de calificaciones a evaluar: 4      
+Calificación[1] = 3
+Calificación[2] = 6
+Calificación[3] = 8 
+Calificación[4] = 9
+
+Las calificaciones proporcionadas son: [3, 6, 8, 9]    
+
+Promedio de las calificaciones: 6.50
+```
