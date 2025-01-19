@@ -45,10 +45,15 @@
     "Ivonne",
     "kcal",
     "kilocalorias",
+    "numeros",
     "operandos",
     "print",
     "randint",
+    "reproduccion",
     "sublista",
-    "sublistas"
+    "sublistas",
+    "tupla",
+    "tuplas",
+    "Tuplas"
   ],
 }

@@ -19,7 +19,7 @@ Las listas son colecciones ordenadas y mutables de elementos que pueden ser de d
 
 ```python
 # Sintaxis Listas
-mi_list = [elemeno1, elemento2, elemento3, ...]
+mi_list = [elemento1, elemento2, elemento3, ...]
 ```
 
 ```python
@@ -232,4 +232,67 @@ Calificación[4] = 9
 Las calificaciones proporcionadas son: [3, 6, 8, 9]    
 
 Promedio de las calificaciones: 6.50
+```
+
+### Tuplas
+
+Las tuplas son similares a las listas, ya que también son una colección de datos ordenados, pero las tuplas son inmutables, lo que significa que una vez creada una tupla no es posible modificar su tamaño, ni podemos agregar más elementos, ni modificarlos ni eliminarlos.
+
+Las tuplas suelen utilizarse para crear colecciones de datos que no deben cambiar con el tiempo
+
+```python
+# Sintaxis de una tupla
+mi_tupla = (elemento1, elemento2, elemento3)
+mi_tupla_sin_parentesis = elemento1, elemento2, elemento3
+```
+
+```python
+# Ejemplo de tuplas
+tuplas_numeros = (1,2,3,4,5)
+tupla_mixta = ("manzana", 10, 3.14, [1, 2, 3])
+tupla_sin_parentesis = 'Juan', 'Karla'
+tupla_un_elemento = 10, # La coma no es opcional
+```
+
+**📄 Código :**
+
+```python
+print("*** Manejo de Tuplas ***")
+
+mi_tupla = (1, 2, 3, 4, 5)
+print(mi_tupla)
+# No podemos modificar una tupla
+# mi_tupla[0] = 10
+# No podemos agregar un elemento de la tupla
+# mi_tupla.append(6)
+
+# Iteramos los elementos de una tupla
+for elemento in mi_tupla:
+    print(elemento, end=" ")
+
+# Crear una tupla para una coordenada x, y
+coordenadas = (3, 5)
+# Accedemos a cada elemento de la tupla
+print(f"\nCoordenada en el eje x:{coordenadas[0]}")
+print(f"Coordenada en el eje y:{coordenadas[1]}")
+
+# Crear una tupla unitaria
+tupla_un_elemento = (10,)
+print(f"Tupla de un elemento {tupla_un_elemento}")
+
+# Tupla anidada
+tuplas_anidada = (1, (2, 3), (4, 5))
+print(f"Segundo elemento tupla anidada: {tuplas_anidada[1]}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Manejo de Tuplas ***
+(1, 2, 3, 4, 5)
+1 2 3 4 5 
+Coordenada en el eje x:3
+Coordenada en el eje y:5
+Tupla de un elemento (10,)
+Segundo elemento tupla anidada: (2, 3)
 ```
