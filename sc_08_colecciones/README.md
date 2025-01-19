@@ -88,3 +88,34 @@ Modificamos el valor del indice 1: 10
 [1, 15, 4, 6] -> Se eliminó el índice 2
 sublista [1:3]: [15, 4]
 ```
+
+### Iterar elementos de una lista
+
+**📄 Código :**
+
+```python
+print("*** Iterar Listas ***")
+
+nombres = ["Karla", "Juan", "Laura"]
+
+for nombre in nombres:
+    print(nombre)
+
+lista_heterogenea = [100, True, "Ivonne"]
+print()
+for elemento in lista_heterogenea:
+    print(elemento)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Iterar Listas ***
+Karla
+Juan
+Laura
+
+100
+True
+Ivonne
+```
