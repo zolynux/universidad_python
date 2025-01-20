@@ -1,3 +1,5 @@
+from sc_02_variables.py_04_tipos_de_datos import direccionfrom sc_02_variables.py_02_modificado import telefono
+
 # Colecciones en Python
 
 ## Colecciones
@@ -637,4 +639,117 @@ Valores de diccionario:
 - Valor: 35
 - nombre
 - edad
+```
+
+### Agenda de Contactos
+
+Crear una agenda de contactos utilizando un diccionario de Python con la siguiente estructura
+
+````python
+agenda
+{
+    nombre
+{
+    telefono
+email
+dirección
+}
+}
+````
+
+**📄 Código :**
+
+```python
+print("*** Agenda de contactos ***")
+
+agenda = {
+    "Carlos": {
+        "telefono": "34235435",
+        "email": "carlos@mail.com",
+        "direccion": "Calle Principal 132",
+    },
+    "María": {
+        "telefono": "4353344",
+        "email": "maria@mail.com",
+        "direccion": "Avenida Central 453",
+    },
+    "Pedro": {
+        "telefono": "4334344",
+        "email": "pedro@mail.com",
+        "direccion": "Plaza Mayor 898",
+    },
+}
+
+print(agenda)
+
+# Acceder a la información de un contacto en especifico
+print(
+    f"""Información del contacto de María:
+Teléfono: {agenda['María']['telefono']}
+Email: {agenda.get('María').get('email')}
+Dirección: {agenda.get('María').get('direccion')}
+"""
+)
+
+# Agregar un nuevo contacto
+agenda["Ana"] = {
+    "telefono": "453563443",
+    "email": "ana@mail.com",
+    "direccion": "Calle Salvador Diaz 321",
+}
+
+print(agenda)
+
+# Eliminar un contacto existente
+agenda.pop("Pedro")
+# del agenda["Pedro"]
+print(agenda)
+
+# Mostramos los contactos de la agenda
+# Usar iterable
+print()
+print("Contactos en la agena".center(35, "="))
+for nombre, detalles in agenda.items():
+    print(
+        f"""
+{'=' * 50}
+Nombre: {nombre}
+    Teléfono: {detalles.get('telefono')}
+    Email: {detalles.get('email')}
+    Dirección: {detalles.get('direccion')}"""
+    )
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Agenda de contactos ***
+{'Carlos': {'telefono': '34235435', 'email': 'carlos@mail.com', 'direccion': 'Calle Principal 132'}, 'María': {'telefono': '4353344', 'email': 'maria@mail.com', 'direccion': 'Avenida Central 453'}, 'Pedro': {'telefono': '4334344', 'email': 'pedro@mail.com', 'direccion': 'Plaza Mayor 898'}}
+Información del contacto de María:
+Teléfono: 4353344
+Email: maria@mail.com
+Dirección: Avenida Central 453
+
+{'Carlos': {'telefono': '34235435', 'email': 'carlos@mail.com', 'direccion': 'Calle Principal 132'}, 'María': {'telefono': '4353344', 'email': 'maria@mail.com', 'direccion': 'Avenida Central 453'}, 'Pedro': {'telefono': '4334344', 'email': 'pedro@mail.com', 'direccion': 'Plaza Mayor 898'}, 'Ana': {'telefono': '453563443', 'email': 'ana@mail.com', 'direccion': 'Calle Salvador Diaz 321'}}
+{'Carlos': {'telefono': '34235435', 'email': 'carlos@mail.com', 'direccion': 'Calle Principal 132'}, 'María': {'telefono': '4353344', 'email': 'maria@mail.com', 'direccion': 'Avenida Central 453'}, 'Ana': {'telefono': '453563443', 'email': 'ana@mail.com', 'direccion': 'Calle Salvador Diaz 321'}}
+
+=======Contactos en la agena=======
+
+==================================================
+Nombre: Carlos
+    Teléfono: 34235435
+    Email: carlos@mail.com
+    Dirección: Calle Principal 132
+
+==================================================
+Nombre: María
+    Teléfono: 4353344
+    Email: maria@mail.com
+    Dirección: Avenida Central 453
+
+==================================================
+Nombre: Ana
+    Teléfono: 453563443
+    Email: ana@mail.com
+    Dirección: Calle Salvador Diaz 321
 ```
