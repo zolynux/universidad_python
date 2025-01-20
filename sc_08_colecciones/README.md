@@ -2,7 +2,8 @@
 
 ## Colecciones
 
-Una colección es un conjunto de datos. En Python tenemos varios tipos que podemos utilizar con el objetivo de almacenar, organizar y manipular múltiples conjuntos de datos, por ello también se les conoce como Estructures de Datos.
+Una colección es un conjunto de datos. En Python tenemos varios tipos que podemos utilizar con el objetivo de almacenar,
+organizar y manipular múltiples conjuntos de datos, por ello también se les conoce como Estructures de Datos.
 
 Los tipos que vamos a estudiar son:
 
@@ -15,7 +16,8 @@ Estos son los tipos más comunes y más utilizados. Comencemos con el tipo lista
 
 ### Listas
 
-Las listas son colecciones ordenadas y mutables de elementos que pueden ser de diferentes tipos. Las listas son dinámicas, lo que significa que pueden cambiar de tamaño, podemos añadir, modificar o eliminar elementos.
+Las listas son colecciones ordenadas y mutables de elementos que pueden ser de diferentes tipos. Las listas son
+dinámicas, lo que significa que pueden cambiar de tamaño, podemos añadir, modificar o eliminar elementos.
 
 ```python
 # Sintaxis Listas
@@ -124,7 +126,8 @@ Ivonne
 
 Crea un programa para administrar una lista de canciones.
 
-Debes solicitar al usuario cuántas canciones desea agregar a la lista y posteriormente ir solicitando cada canción que desea agregar a la lista.
+Debes solicitar al usuario cuántas canciones desea agregar a la lista y posteriormente ir solicitando cada canción que
+desea agregar a la lista.
 
 Finalmente, debe desplegar la lista de canciones en orden alfabético.
 
@@ -180,7 +183,7 @@ Iteramos el Playlist
 - Staying Alive - Bee Gees
 ```
 
-### Promedio de calificaiones
+### Promedio de calificaciones
 
 Crea un programa para realizar el cálculo promedio de calificaciones.
 
@@ -188,7 +191,7 @@ El programa debe solicitar el número de calificaciones a utilizar para obtener 
 
 Posteriormente, se debe solicitar cada calificación al usuario.
 
-Posteriormente realizar la suma de todas las calificaciones y finalmente mandar a imprimir el promedio.
+Posteriormente, realizar la suma de todas las calificaciones y finalmente mandar a imprimir el promedio.
 
 **📄 Código :**
 
@@ -236,7 +239,9 @@ Promedio de las calificaciones: 6.50
 
 ### Tuplas
 
-Las tuplas son similares a las listas, ya que también son una colección de datos ordenados, pero las tuplas son inmutables, lo que significa que una vez creada una tupla no es posible modificar su tamaño, ni podemos agregar más elementos, ni modificarlos ni eliminarlos.
+Las tuplas son similares a las listas, ya que también son una colección de datos ordenados, pero las tuplas son
+inmutables, lo que significa que una vez creada una tupla no es posible modificar su tamaño, ni podemos agregar más
+elementos, ni modificarlos ni eliminarlos.
 
 Las tuplas suelen utilizarse para crear colecciones de datos que no deben cambiar con el tiempo
 
@@ -248,10 +253,10 @@ mi_tupla_sin_parentesis = elemento1, elemento2, elemento3
 
 ```python
 # Ejemplo de tuplas
-tuplas_numeros = (1,2,3,4,5)
+tuplas_numeros = (1, 2, 3, 4, 5)
 tupla_mixta = ("manzana", 10, 3.14, [1, 2, 3])
 tupla_sin_parentesis = 'Juan', 'Karla'
-tupla_un_elemento = 10, # La coma no es opcional
+tupla_un_elemento = 10,  # La coma no es opcional
 ```
 
 **📄 Código :**
@@ -362,7 +367,8 @@ Precio total de los productos: 90.0
 
 ### Sets en Python
 
-Los sets (conjuntos) son colecciones de datos no ordenados de elementos únicos. Son muy útiles cuando debemos asegurarnos de que no haya elementos duplicados en nuestra colección.
+Los sets (conjuntos) son colecciones de datos no ordenados de elementos únicos. Son muy útiles cuando debemos
+asegurarnos de que no haya elementos duplicados en nuestra colección.
 
 ```python
 # Sintaxis de un set
@@ -374,7 +380,7 @@ mi_set = {elemento1, elemento2, elemento3}
 set_a = {1, 2, 3, 4}
 set_b = {3, 'Juan', True, 6.5}
 numeros = {1, 2, 2, 3, 4}
-print(numeros) # Salida: {1, 2, 3, 4}
+print(numeros)  # Salida: {1, 2, 3, 4}
 ```
 
 **📄 Código :**
@@ -523,7 +529,6 @@ numero_suscriptores = int(input("Proporciona el número de suscriptores iniciale
 for _ in range(numero_suscriptores):
     suscriptores.add(input("Nuevo Suscriptor (email): "))
 
-
 suscriptores = {"luisa@mail.com", "marcos@mail", "elena@mail.com"}
 print(f"Lista de suscriptores inicial: {suscriptores}")
 
@@ -550,4 +555,46 @@ print(f"Cantidad total suscriptores: {len(suscriptores)}")
 print("-" * 5, "Lista de Suscriptores", "-" * 5)
 for suscriptor in suscriptores:
     print(f"- {suscriptor}")
+```
+
+### Diccionarios en Python
+
+Los diccionarios son una colección de datos ordenada (3.7+). Y se almacenan en forma de llave:valor. Es una estructura
+muy útil cuando necesitas asociar un conjunto de valores con un conjunto de claves o llaves que sirven como índices
+únicos.
+
+```python
+# Sintaxis de un diccionario
+mi_diccionario = {clave1: valor1, clave2: valor2}
+```
+
+```python
+# Ejemplo de un diccionario
+persona = {'nombre': 'Pedro', 'edad': 30, 'es_casado': True}
+```
+
+**📄 Código :**
+
+```python
+print("*** Diccionarios en Python ***")
+
+# Creamos un dict de persona con clave y valor
+persona = {"nombre": "Sergio", "edad": 30, "ciudad": "México"}
+
+print(f"Diccionario de persona: {persona}")
+
+# Acceder a los elementos del diccionario
+print(f"Nombre: {persona['nombre']}")
+print(f"Edad: {persona.get('edad')}")
+print(f"Ciudad: {persona.get('ciudad')}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Diccionarios en Python ***
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 30, 'ciudad': 'México'}
+Nombre: Sergio
+Edad: 30
+Ciudad: México
 ```
