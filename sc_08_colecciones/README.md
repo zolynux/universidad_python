@@ -587,6 +587,34 @@ print(f"Diccionario de persona: {persona}")
 print(f"Nombre: {persona['nombre']}")
 print(f"Edad: {persona.get('edad')}")
 print(f"Ciudad: {persona.get('ciudad')}")
+
+# Modificar un valor del diccionario
+persona["edad"] = 35
+print(f"Diccionario de persona: {persona}")
+
+# Agregar un nuevo elemento
+persona["profesion"] = "Ingeniero"
+print(f"Diccionario de persona: {persona}")
+
+# Eliminar un elemento
+del persona["ciudad"]
+print(f"Diccionario de persona: {persona}")
+
+persona.pop("profesion")
+print(f"Diccionario de persona: {persona}")
+
+# Iterar los elementos de un dict (llave, valor)
+for llave, valor in persona.items():
+    print(f"Llave: {llave}, Valor: {valor}")
+
+# Obtener los valores
+print(f"\nValores de diccionario:")
+for valor in persona.values():
+    print(f"- Valor: {valor}")
+
+# Obtener las llaves
+for llave in persona.keys():
+    print(f"- {llave}")
 ```
 
 **🟢 Ejecutar:**
@@ -597,4 +625,16 @@ Diccionario de persona: {'nombre': 'Sergio', 'edad': 30, 'ciudad': 'México'}
 Nombre: Sergio
 Edad: 30
 Ciudad: México
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35, 'ciudad': 'México'}
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35, 'ciudad': 'México', 'profesion': 'Ingeniero'}
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35, 'profesion': 'Ingeniero'}
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35}
+Llave: nombre, Valor: Sergio
+Llave: edad, Valor: 35
+
+Valores de diccionario:
+- Valor: Sergio
+- Valor: 35
+- nombre
+- edad
 ```
