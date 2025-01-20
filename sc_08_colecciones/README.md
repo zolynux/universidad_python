@@ -359,3 +359,30 @@ Product: id = P002, descripción = Jeans, precio = 30.0
 Product: id = P003, descripción = Sudadera, precio = 40.0
 Precio total de los productos: 90.0
 ```
+
+### Sets en Python
+
+Los sets (conjuntos) son colecciones de datos no ordenados de elementos únicos. Son muy útiles cuando debemos asegurarnos de que no haya elementos duplicados en nuestra colección.
+
+```python
+# Sintaxis de un set
+mi_set = {elemento1, elemento2, elemento3}
+```
+
+```python
+# Ejemplo de sets
+set_a = {1, 2, 3, 4}
+set_b = {3, 'Juan', True, 6.5}
+numeros = {1, 2, 2, 3, 4}
+print(numeros) # Salida: {1, 2, 3, 4}
+```
+
+**📄 Código :**
+
+```python
+```
+
+**🟢 Ejecutar:**
+
+```console
+```
