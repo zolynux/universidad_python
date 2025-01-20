@@ -753,3 +753,50 @@ Nombre: Ana
     Email: ana@mail.com
     Dirección: Calle Salvador Diaz 321
 ```
+
+### Combinar Listas y Diccionarios en Python
+
+**📄 Código :**
+
+```python
+print("*** Listas y Diccionarios ***")
+
+personas = [
+    {"nombre": "Regina", "apellido": "Flores", "edad": 21},
+    {"nombre": "Alejandro", "apellido": "Reyes", "edad": 32},
+]
+
+print(personas)
+
+# Acceder a un diccionario desde una lista
+print(
+    f"""{'=' * 20}
+Detalle del primer elemento de la lista
+    Nombre:{personas[0].get('nombre')}
+    Apellido: {personas[0].get('apelliod')}
+    Edad: {personas[0].get('edad')}"""
+)
+
+# Recorrer los elementos de la lista
+print()
+for contador, persona in enumerate(personas):
+    print(f"{contador}. Persona: {persona}")
+    """print(
+        f"Detalle: Nombre: {persona.get('nombre')}, Apellido: {persona.get('apellido')}, Edad: {persona.get('edad')}"
+    )"""
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Listas y Diccionarios ***
+[{'nombre': 'Regina', 'apellido': 'Flores', 'edad': 21}, {'nombre': 'Alejandro', 'apellido': 'Reyes', 'edad': 32}]
+====================
+Detalle del primer elemento de la lista
+    Nombre:Regina
+    Apellido: None
+    Edad: 21
+
+0. Persona: {'nombre': 'Regina', 'apellido': 'Flores', 'edad': 21}
+1. Persona: {'nombre': 'Alejandro', 'apellido': 'Reyes', 'edad': 32}
+```
