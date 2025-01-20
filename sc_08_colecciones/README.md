@@ -419,3 +419,32 @@ Mi set modificado: {1, 2, 3, 4, 5, 6, 7}
 Existe el valor de 4 en el set? False
 Longitud del conjunto: 6
 ```
+
+### Operaciones con Set
+
+**📄 Código :**
+
+```python
+print("*** Operaciones con Set ***")
+
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+union = a | b
+print(f"Unión a | b: {union}")
+
+interseccion = a & b
+print(f"Intersección a & b: {interseccion}")
+
+diferencia = a - b
+print(f"Diferencia a - b: {diferencia}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operaciones con Set ***
+Unión a | b: {1, 2, 3, 4, 5, 6}
+Intersección a & b: {3, 4}
+Diferencia a - b: {1, 2}
+```
