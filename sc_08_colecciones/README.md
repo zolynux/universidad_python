@@ -448,3 +448,62 @@ Unión a | b: {1, 2, 3, 4, 5, 6}
 Intersección a & b: {3, 4}
 Diferencia a - b: {1, 2}
 ```
+
+### Lista de suscriptores
+
+Crea un programa para administrar una lista de suscriptores utilizando su email.
+
+Supón que una persona se suscribe al boletín información utilizando su email.
+
+A medida que la lista crece, hay que asegurarnos que no tengamos suscriptores duplicados.
+
+También deberemos poder agregar y eliminar suscriptores.
+
+**📄 Código :**
+
+```python
+print("*** Lista de Suscriptores ***")
+
+suscriptores = {"luisa@mail.com", "marcos@mail", "elena@mail.com"}
+print(f"Lista de suscriptores inicial: {suscriptores}")
+
+# Verifica si un nuevo suscriptor ya está en la lista
+nuevo_suscriptor = "karla@mail.com"
+if nuevo_suscriptor in suscriptores:
+    print(f"El nuevo suscriptor ya está en lista {nuevo_suscriptor}")
+else:
+    suscriptores.add(nuevo_suscriptor)
+    print(f"El nuevo suscriptor se ha agregado a la lista {nuevo_suscriptor}")
+
+print(f"Lista de suscriptores: {suscriptores}")
+
+# Eliminamos un suscriptor
+suscriptor_eliminar = "elena@mail.com"
+suscriptores.remove(suscriptor_eliminar)
+print(f"El suscriptor {suscriptor_eliminar} ha sido eliminado de la lista")
+print(f"Lista de suscriptores: {suscriptores}")
+
+# Verificamos la cantidad total de suscriptores
+print(f"Cantidad total suscriptores: {len(suscriptores)}")
+
+# Mostramos todos los suscriptores
+print("-" * 5, "Lista de Suscriptores", "-" * 5)
+for suscriptor in suscriptores:
+    print(f"- {suscriptor}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Lista de Suscriptores ***
+Lista de suscriptores inicial: {'luisa@mail.com', 'marcos@mail', 'elena@mail.com'}
+El nuevo suscriptor se ha agregado a la lista karla@mail.com
+Lista de suscriptores: {'luisa@mail.com', 'marcos@mail', 'elena@mail.com', 'karla@mail.com'}
+El suscriptor elena@mail.com ha sido eliminado de la lista
+Lista de suscriptores: {'luisa@mail.com', 'marcos@mail', 'karla@mail.com'}
+Cantidad total suscriptores: 3
+----- Lista de Suscriptores -----
+- luisa@mail.com
+- marcos@mail
+- karla@mail.com
+```
