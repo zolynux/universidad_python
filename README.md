@@ -99,6 +99,23 @@
     - [Imprimir mensaje función range](#imprimir-mensaje-función-range)
     - [Dibujar un Triángulo](#dibujar-un-triángulo)
     - [Palabra `break` y `continue` en ciclos](#palabra-break-y-continue-en-ciclos)
+  - [Colecciones](#colecciones)
+    - [Listas](#listas)
+    - [Iterar elementos de una lista](#iterar-elementos-de-una-lista)
+    - [Lista de Reproducción](#lista-de-reproducción)
+    - [Promedio de calificaciones](#promedio-de-calificaciones)
+    - [Tuplas](#tuplas)
+    - [Desempaquetado de Tuplas (unpacking)](#desempaquetado-de-tuplas-unpacking)
+    - [Combinación de Listas y Tuplas](#combinación-de-listas-y-tuplas)
+    - [Sets en Python](#sets-en-python)
+    - [Operaciones con Set](#operaciones-con-set)
+    - [Lista de suscriptores](#lista-de-suscriptores)
+    - [Lista de Suscriptores dinámica con Sets](#lista-de-suscriptores-dinámica-con-sets)
+    - [Diccionarios en Python](#diccionarios-en-python)
+    - [Agenda de Contactos](#agenda-de-contactos)
+    - [Combinar Listas y Diccionarios en Python](#combinar-listas-y-diccionarios-en-python)
+    - [Gestión de Inventario](#gestión-de-inventario)
+    - [Comprensión de Listas en Python](#comprensión-de-listas-en-python)
 
 ## Introducción a Python
 
@@ -992,12 +1009,13 @@ Indice la subcadena de Hola: 0
 
 ### Reemplazar subcadena
 
-- **Reemplazar subcadena (`replace`)** El método `replace()` reemplaza una subcadena por otra dentro de una cadena principaal
+- **Reemplazar subcadena (`replace`)** El método `replace()` reemplaza una subcadena por otra dentro de una cadena
+  principaal
 
 ```python
 cadena = 'Hola mundo'
 nueva_cadena = cadena.replace('mundo', 'a todos')
-print(nueva_cadena) # 'Hola a todos'
+print(nueva_cadena)  # 'Hola a todos'
 ```
 
 **📄 Código :**
@@ -1023,14 +1041,15 @@ Nueva cadena reemplazada: Adiós, mundo!
 
 ### Separar en Subcadenas
 
-- **Extraer subcadenas por separadores (`split`):** La función `split()` permite dividir una cadena en una lista de subcadenas basadas en un caracter separador.
+- **Extraer subcadenas por separadores (`split`):** La función `split()` permite dividir una cadena en una lista de
+  subcadenas basadas en un caracter separador.
 
 **Ejemplo:**
 
 ```python
 datos = 'Juan, 30, Colombia'
 lista = datos.split(',')
-print(lista) # ['Juan', '30', 'Colombia']
+print(lista)  # ['Juan', '30', 'Colombia']
 ```
 
 **📄 Código :**
@@ -1140,7 +1159,8 @@ Email final generado: ubaldo.acosta.soto@globalmentoringcom.mx
 
 **Conversión de tippos de datos:**
 
-La conversiós de tipos de datos, también conocida como casting, es una técnica para manipular datos que no están en el tipo requerido.
+La conversiós de tipos de datos, también conocida como casting, es una técnica para manipular datos que no están en el
+tipo requerido.
 
 Podemos hacer conversiones desde y hacia distintos tipos de datos
 
@@ -1251,8 +1271,10 @@ Una vez que el usuario presiona Enter, el texto introducido se devuelve como una
 
 #### Características de la función `input`
 
-- **Interactividad:** Permite a los usuarios de nuestros programas proporcionar valores dinámicos, en lugar de utilizar valores en código duro o estáticos.
-- **Sencillez:** La función `input` es muy fácil de usar y solo necesita, opcionalmente, indicar la cadena o mensaje a mostrar al usuario, para que éste sepa lo que se le está solicitando.
+- **Interactividad:** Permite a los usuarios de nuestros programas proporcionar valores dinámicos, en lugar de utilizar
+  valores en código duro o estáticos.
+- **Sencillez:** La función `input` es muy fácil de usar y solo necesita, opcionalmente, indicar la cadena o mensaje a
+  mostrar al usuario, para que éste sepa lo que se le está solicitando.
 - **Tipo de Datos:** Siempre devuelve una cadena, si riquiere otro tipo hay que Convertirlo
 
 **📄 Código :**
@@ -1296,7 +1318,6 @@ nombre_empleado = input("Nombre del empleado: ")
 edad_empleado = int(input("Edad del empleado: "))
 salario_empleado = float(input("Salario de empleado: "))
 es_jefe_departamento = str(input("¿Es jefe de departamento (Si/No)? "))
-
 
 # Vamos a convertir a un tipo bool la variable es_jefe_departamento
 es_jefe_departamento = es_jefe_departamento.lower() == "si"
@@ -1387,8 +1408,8 @@ Para importar un módulo, usamos la sintaxis `import random`
 ```python
 ### Valores aleatorios con la función randint
 
-#import random
-import random 
+# import random
+import random
 
 # Generar un numero aleatorio entre 1 y 10
 numero = random.randint(1, 10)
@@ -1440,12 +1461,11 @@ nombre = str(input('¿Cuál es tu nombre?: '))
 apellido = str(input('¿Cuál es tu apellido?: '))
 anio_nacimiento = str(input('¿Cuál es tu año de nacimiento (YYYY)?: '))
 
-
 # Normalizar los valores
 
 nombre_2 = nombre.strip().upper()[0:2]
 apellido_2 = apellido.strip().upper()[0:2]
-anio_nacimiento_2 = anio_nacimiento.strip()[2:] # También puede ser [2:4]
+anio_nacimiento_2 = anio_nacimiento.strip()[2:]  # También puede ser [2:4]
 
 # Generar el valor aleatorio
 aleatorio = randint(1000, 9999)
@@ -1507,7 +1527,7 @@ extension_dominio = extension_dominio.strip().lower().replace(" ", "")
 email = f"{nombre}.{apellidos}@{empresa}{extension_dominio}"
 
 print(
-    f"""
+  f"""
 Tu nuevo email generado por el sistema de es:
       {email}
 ¡Felicidades!"""
@@ -1530,14 +1550,17 @@ Tu nuevo email generado por el sistema de es:
 
 ## Operadores
 
-Los operadores son símbolos especiales que están disñados para realizar operaciones específicas. Tenemos varios tipos, como son:
+Los operadores son símbolos especiales que están disñados para realizar operaciones específicas. Tenemos varios tipos,
+como son:
 
-- **Operadores Aritméticos:** Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o división.
+- **Operadores Aritméticos:** Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o
+  división.
 - **Operadres de asisgnació:** Se utilizan para asignar valores a variables.
 - **Operadores de Comparación:** Se utiliza para comparar un valor con otro.
 - **Operadores Lógicos:** Se utilizan para combinar expreseiones condicionales o lógicas
 - **Operadores de Identidad:** Se utlizan para comparar si dos variables son el mismo objeto.
-- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una subcadena) se presenta en un objeto.
+- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una subcadena) se presenta en un
+  objeto.
 
 ### Operadores Aritméticos
 
@@ -1584,7 +1607,7 @@ modulo = a % b
 print(f"Módulo: {modulo}")
 
 # Exponente **
-exponente = a**b
+exponente = a ** b
 print(f"Exponente: {exponente}")
 ```
 
@@ -1615,7 +1638,8 @@ numero = 10
 texto = "Hola, mundo"
 ```
 
-En Python también tenemos la asignación múltiple, lo que nos permite asignar valores a varias variables en una sola línea de código.. El código es más compacto y fácil de leer
+En Python también tenemos la asignación múltiple, lo que nos permite asignar valores a varias variables en una sola
+línea de código.. El código es más compacto y fácil de leer
 
 ```python
 # Sintaxis de Asignación Múltiple
@@ -1722,20 +1746,22 @@ Nombre: Juan, Apellido: Perez
 
 ### Operadores de Arignación Compuestos
 
-Los operadores de asignación compuesto combinan una operación aritmética con una asignación, haciendo las operaciones más conscisas
+Los operadores de asignación compuesto combinan una operación aritmética con una asignación, haciendo las operaciones
+más conscisas
 
 Los operadores pueden ser +=, -=, *=, /=, etc.
 Operador `=`
 
 ```python
 # Sintaxis operador Asignación compuesto
-variable OPERADOR= valor
+variable
+OPERADOR = valor
 ```
 
 ```python
 # Ejemplo Operador Asginación Compuesto
 contador = 0
-contador += 1 # contador = contador + 1
+contador += 1  # contador = contador + 1
 ```
 
 **📄 Código :**
@@ -1794,7 +1820,8 @@ Valor de módulo a = 10, b = 15
 
 ### Operadores de Comparación
 
-Los operadores de comparación en Python se utilizan para comparar dos valores. El resultado de una comparación es un valor booleano: `True` o `False`. Aquí tienes una lista de los operadores de comparación más comunes:
+Los operadores de comparación en Python se utilizan para comparar dos valores. El resultado de una comparación es un
+valor booleano: `True` o `False`. Aquí tienes una lista de los operadores de comparación más comunes:
 
 1. **Igual a (`==`)**: Comprueba si dos valores son iguales.
    ```python
@@ -1835,13 +1862,14 @@ b = 20
 
 print(a == b)  # False
 print(a != b)  # True
-print(a > b)   # False
-print(a < b)   # True
+print(a > b)  # False
+print(a < b)  # True
 print(a >= b)  # False
 print(a <= b)  # True
 ```
 
-Estos operadores son fundamentales para controlar el flujo de un programa, especialmente en estructuras de control como condicionales (`if`, `else`) y bucles (`while`, `for`).
+Estos operadores son fundamentales para controlar el flujo de un programa, especialmente en estructuras de control como
+condicionales (`if`, `else`) y bucles (`while`, `for`).
 
 **📄 Código :**
 
@@ -1891,10 +1919,11 @@ Resultado a <= b es: False
 
 ### Operadores Lógicos
 
-Los operadores lógicos nos permiten combinar múltiples condiciones o valores booleanos y obtener un resultado verdadero o falso. Los principales operadores lógicos en Python son:
+Los operadores lógicos nos permiten combinar múltiples condiciones o valores booleanos y obtener un resultado verdadero
+o falso. Los principales operadores lógicos en Python son:
 
 - `and`: Devuelve True si ambas condiciones son verdaderas
-- `or`: Devuelve True si al menos una condición es verdadera  
+- `or`: Devuelve True si al menos una condición es verdadera
 - `not`: Invierte el valor booleano (True a False o False a True)
 
 | a     | b     | a and b | a or b | not a |
@@ -1934,8 +1963,8 @@ cantidad_productos = int(input("¿Cuántos productos compraste hoy?: "))
 tiene_membresia = str(input("¿Tienes la membresía de la tienda (Si/No)?: "))
 
 es_elegible_descuento = (
-    cantidad_productos >= NO_PRODUCTOS_DESCUENTOS
-    and tiene_membresia.strip().lower() == "si"
+        cantidad_productos >= NO_PRODUCTOS_DESCUENTOS
+        and tiene_membresia.strip().lower() == "si"
 )
 
 print(f"¿Tienes acceso al descuento VIP?: {es_elegible_descuento}")
@@ -1973,7 +2002,8 @@ Resultado True or False = True
 
 #### Sistema Préstamo de Libros
 
-Se pide crear un sistema para una biblioteca, la cual desea prestar libros si cumples con cualquiera de las siguientes condicionales.
+Se pide crear un sistema para una biblioteca, la cual desea prestar libros si cumples con cualquiera de las siguientes
+condicionales.
 
 1. El usuario tiene credencial de estudiante
 2. El usuario vive a no más de 3 km a la redonda
@@ -1990,8 +2020,8 @@ tiene_credencial = input("¿Cuentas con credencial de estudiante (Si/No)?: ")
 distancia_biblioteca_km = int(input("¿A cuántos km vives de la biblioteca?: "))
 
 es_elegible_prestamo = (
-    tiene_credencial.strip().lower() == "si"
-    or distancia_biblioteca_km <= DISTANCIA_PERMITIDA_KM
+        tiene_credencial.strip().lower() == "si"
+        or distancia_biblioteca_km <= DISTANCIA_PERMITIDA_KM
 )
 
 print(f"¿Eres elegible para préstamo de libros?: {es_elegible_prestamo}")
@@ -2022,14 +2052,14 @@ print(f"Operador not store {condicion} = {resultado}")
 nombre = ""
 es_cadena_vacia = not nombre
 print(
-    f"Varaible es cadena vacía '{nombre}'\nLa variable NO tiene ningún valor? {es_cadena_vacia}"
+  f"Varaible es cadena vacía '{nombre}'\nLa variable NO tiene ningún valor? {es_cadena_vacia}"
 )
 
 # Revisar si una variable no tiene ningún valor asignado
 variable = None
 es_variable_sin_valor = not variable
 print(
-    f"Varaible es sin valor asignado {variable} \n¿La variable NO tiene ningún valor asignado?: {es_variable_sin_valor}"
+  f"Varaible es sin valor asignado {variable} \n¿La variable NO tiene ningún valor asignado?: {es_variable_sin_valor}"
 )
 ```
 
@@ -2071,9 +2101,11 @@ Variable está fuera de rango (entre 1 y 10): False
 
 ### Generación Ticket Venta
 
-Supongamos que compramos varios artículos en el supermercado y queremos obtener el ticket de venta total incluyendo impuestos.
+Supongamos que compramos varios artículos en el supermercado y queremos obtener el ticket de venta total incluyendo
+impuestos.
 
-El sistema solicitará el precio de cada producto a comprar y el usuario deberá indicar su precio (valor de tipo de punto decimal)
+El sistema solicitará el precio de cada producto a comprar y el usuario deberá indicar su precio (valor de tipo de punto
+decimal)
 
 El sistema debe realizar la suma de cada producto, calcular el impuesto y finalmente imprimir el total de la compra.
 
@@ -2096,7 +2128,7 @@ impuesto = subtotal * 0.16
 # Calculo total de la compra (con impuesto)
 costo_total_compra = subtotal + impuesto
 print(
-    f"""
+  f"""
 subtotal: ${subtotal:.2f}
 impuesto: ${impuesto:.2f}
 Costo total de la compra: ${costo_total_compra:.2f}
@@ -2146,7 +2178,7 @@ impuesto = subtotal_con_descuento * 0.16
 # Calculo total de la compra (con impuesto)
 costo_total_compra = subtotal_con_descuento + impuesto
 print(
-    f"""
+  f"""
 subtotal: ${subtotal:.2f}
 Descuento: ${descuento} ({descuento_porcentaje})
 Subtotal: con descuento: ${subtotal_con_descuento}
@@ -2177,9 +2209,11 @@ Costo total de la compra: $31.32
 
 Crea un programa para validar el usuairo y password proporcionados por el usuario
 
-crea 2 constantes con los valores correctos y posteriormente compara que el usuario y password proporcionados por el usuario sean válidos.
+crea 2 constantes con los valores correctos y posteriormente compara que el usuario y password proporcionados por el
+usuario sean válidos.
 
-Debe solicitar el usuario y el password al usuario y si son iguales que los valorss correctos almacenados en las contantes debe imprimir True, de lo contrario debe imprimir False.
+Debe solicitar el usuario y el password al usuario y si son iguales que los valorss correctos almacenados en las
+contantes debe imprimir True, de lo contrario debe imprimir False.
 
 **📄 Código :**
 
@@ -2278,7 +2312,8 @@ El perímetro del rectángulo es: 14.0
 
 La precedencia de operadores determina el orden en que se evalúan los operaciones en una expresión.
 
-Python aplica la siguiente tabla para asegurar que algunos operadores tengan mayor prioridad que otros durante la evaluación de expresiones.
+Python aplica la siguiente tabla para asegurar que algunos operadores tengan mayor prioridad que otros durante la
+evaluación de expresiones.
 
 1. Operador de paréntesis `()`
 2. Exponente `**`
@@ -2290,8 +2325,8 @@ Python aplica la siguiente tabla para asegurar que algunos operadores tengan may
 8. Operadores Asignación `=`, `+=`, `-=`, `/=`, `%=`, `//==`, `**=`
 
 ```python
-resultado = 5 + 3 * 2 ** 2 # 17
-resultado = (5 + 3) * 2 ** 2 # 32
+resultado = 5 + 3 * 2 ** 2  # 17
+resultado = (5 + 3) * 2 ** 2  # 32
 ```
 
 **📄 Código :**
@@ -2321,13 +2356,14 @@ Las sentencias de decisión nos permiten controlar el flujo de ejecución de un 
 
 Las estructuras que podemos usar son: `if`, `else`, y `elif`
 
-- La sentencia `if` permite ejecutar un bloque de código si la condición a evaluar es verdadera. Una condición es una expresión que evaluar a  `True` o `False`, Ej: `edad >= 18`
-  
+- La sentencia `if` permite ejecutar un bloque de código si la condición a evaluar es verdadera. Una condición es una
+  expresión que evaluar a  `True` o `False`, Ej: `edad >= 18`
+
 ```python
 # Sintaxis sentencias if
 if condicion:
-  # Bloque de código que se
-  # Ejecuta si la condición es True
+# Bloque de código que se
+# Ejecuta si la condición es True
 ```
 
 ```python
@@ -2343,14 +2379,14 @@ Un programa de flujo es una representación gráfica de los pasos a ejecutar par
 
 Se utilizan símbolos estandarizados para representar distintos tipos de acciones:
 
-- Un óvalo  representa el inicio o fin de un proceso:
-![alt text](./screenshot/decisiones/image.png)
+- Un óvalo representa el inicio o fin de un proceso:
+  ![alt text](./screenshot/decisiones/image.png)
 - Un rectángulo muestra instrucciones o acciones a ejecutar
-![alt text](./screenshot/decisiones/image-1.png)
+  ![alt text](./screenshot/decisiones/image-1.png)
 - Un rombo o diamante indica decisiones, con múltiples flujos dependiendo si la respuesta es verdadera o falsa
-![alt text](./screenshot/decisiones/image-2.png)
+  ![alt text](./screenshot/decisiones/image-2.png)
 - Las fechas dirigen el flujo del proceso, mostrando la dirección en que se mueven la secuencia de acciones.
-![alt text](./screenshot/decisiones/image-3.png)
+  ![alt text](./screenshot/decisiones/image-3.png)
 
 ### Diagrama de Flujo Sentencia `if`
 
@@ -2372,7 +2408,7 @@ print("*** Sentencia IF ***")
 
 edad = 30
 if edad >= 18:
-    print(f"Eres mayor de edad. Tienes {edad} años")
+  print(f"Eres mayor de edad. Tienes {edad} años")
 #     print()
 #     print()
 # print()
@@ -2393,11 +2429,11 @@ Eres mayor de edad. Tienes 30 años
 ```python
 # Sintaxis sentecia if else
 if condicion:
-  # Bloque de código que se ejecuta
-  # si la condición es verdadera
+# Bloque de código que se ejecuta
+# si la condición es verdadera
 else:
-  # Bloque de código que se ejecuta
-  # Si la condición es falsa
+# Bloque de código que se ejecuta
+# Si la condición es falsa
 ```
 
 ```python
@@ -2431,9 +2467,9 @@ print("*** Sentencia IF ***")
 
 edad = 10
 if edad >= 18:
-    print(f"Eres mayor de edad. Tienes {edad} años")
+  print(f"Eres mayor de edad. Tienes {edad} años")
 else:
-    print(f"Eres menor de edad. Tienes {edad} años")
+  print(f"Eres menor de edad. Tienes {edad} años")
 ```
 
 **🟢 Ejecutar:**
@@ -2445,18 +2481,20 @@ Eres menor de edad. Tienes 10 años
 
 ### Sentencia `if` `elif` `else`
 
-La sentencia `elif` es una abreviatura de `else if`, y se utiliza cuando necesitamos verificar múltiples condiciones, una tras otra.
+La sentencia `elif` es una abreviatura de `else if`, y se utiliza cuando necesitamos verificar múltiples condiciones,
+una tras otra.
 
-Se pueden agregar tantas nuevas condiciones de tipo `elif` como necesitemos, pero deben después de un `if` y antes de un `else`.
+Se pueden agregar tantas nuevas condiciones de tipo `elif` como necesitemos, pero deben después de un `if` y antes de un
+`else`.
 
 ```python
 # Sintaxis sentencia if else
 if condicion1:
-  # Bloque de código condicion1 True
+# Bloque de código condicion1 True
 elif condicion2:
-  # Bloque de código condicion2 True
+# Bloque de código condicion2 True
 else:
-  # Bloque de código condiciones False
+# Bloque de código condiciones False
 ```
 
 ```python
@@ -2479,11 +2517,11 @@ print("*** Sentencia IF ***")
 
 edad = 9
 if edad >= 18:
-    print(f"Eres mayor de edad. Tienes {edad} años")
+  print(f"Eres mayor de edad. Tienes {edad} años")
 elif 13 <= edad < 18:
-    print(f"Eres un adolescente. Tienes {edad} años")
+  print(f"Eres un adolescente. Tienes {edad} años")
 else:
-    print(f"Eres un niño. Tienes {edad} años")
+  print(f"Eres un niño. Tienes {edad} años")
 ```
 
 **🟢 Ejecutar:**
@@ -2505,11 +2543,11 @@ print("*** Ejemplo Valor Positivo ***")
 numero = int(input("Proporciona un número positivo: "))
 
 if numero > 0:
-    print(f"Número es positivo: {numero}")
+  print(f"Número es positivo: {numero}")
 elif numero < 0:
-    print(f"Número es negativo: {numero}")
+  print(f"Número es negativo: {numero}")
 else:
-    print(f"Número es cero: {numero}")
+  print(f"Número es cero: {numero}")
 ```
 
 **🟢 Ejecutar:**
@@ -2544,34 +2582,34 @@ es_miembro = input("¿Eres miembro de la tienda (Si/No)?: ")
 descuento = 0
 # verificar cada case, con los datos proporcionados
 if monto_compra >= MONTO_COMPRA_DESC and es_miembro.strip().lower() == "si":
-    descuento = 0.1  # Descuento del 10%
+  descuento = 0.1  # Descuento del 10%
 elif es_miembro.strip().lower() == "si":
-    descuento = 0.05  # Descuento del 5%
+  descuento = 0.05  # Descuento del 5%
 elif monto_compra >= MONTO_COMPRA_DESC:
-    descuento = 0.03  # Descuento del 3%
+  descuento = 0.03  # Descuento del 3%
 else:
-    descuento = 0
+  descuento = 0
 
 # Hacemos los cálculos respectivos para obtener el monto final
 if descuento != 0:
-    monto_descuento = monto_compra * descuento
-    monto_final = monto_compra - monto_descuento
-    print(
-        f"""
+  monto_descuento = monto_compra * descuento
+  monto_final = monto_compra - monto_descuento
+  print(
+    f"""
 Felicidades, has obtenido un descuento del {descuento * 100:.0f}%
 Monto de la compra: ${monto_compra:.2f}
 Monto del descuento: ${monto_descuento:.2f}
 Monto final de la compra con descuento: ${monto_final:.2f}
           """
-    )
+  )
 else:
-    print(
-        f"""
+  print(
+    f"""
 No obtuviste ningún tipo de descuento
 Te invitamos a hacerte miembro de la tienda
 Monto final de la compra: ${monto_compra:.2f}
           """
-    )
+  )
 
 ```
 
@@ -2590,7 +2628,8 @@ Monto final de la compra con descuento: $1350.00
 
 ### Sistema de Bancario
 
-Considerando que estamos dentro de un sistema bancario, se solicita preguntar al usuario si desea continuar dentro del sistema.
+Considerando que estamos dentro de un sistema bancario, se solicita preguntar al usuario si desea continuar dentro del
+sistema.
 
 Utilizando el operador `not` para aplicar una lógica inversa se debe programar las siguientes condiciones:
 
@@ -2606,9 +2645,9 @@ salir_sistema_txt = input("¿Deseas salir del sistema (Si/No)? ")
 salir_sistema = salir_sistema_txt.strip().lower() == "si"
 
 if not salir_sistema:
-    print("Continuamos dentro del sistema")
+  print("Continuamos dentro del sistema")
 else:
-    print("Salimos del sistema")
+  print("Salimos del sistema")
 ```
 
 **🟢 Ejecutar:**
@@ -2644,9 +2683,9 @@ tienes_miedo_oscuridad = input("¿Tienes miedo a la oscuridad (Si/No)?: ")
 tienes_miedo_oscuridad = tienes_miedo_oscuridad.strip().lower() == "si"
 
 if not tienes_miedo_oscuridad and edad >= 10:
-    print("Puedes entrar a la casa de los espejos")
+  print("Puedes entrar a la casa de los espejos")
 else:
-    print("Lo siento, la casa de los espejos podría darte miedo")
+  print("Lo siento, la casa de los espejos podría darte miedo")
 ```
 
 **🟢 Ejecutar:**
@@ -2660,7 +2699,8 @@ Puedes entrar a la casa de los espejos
 
 ### Operador Ternario
 
-El operador ternario en Python es una forma compacto del agregar una condición, y el objetivo es asignar una valor a una variable dependiendo del valor de la condición.
+El operador ternario en Python es una forma compacto del agregar una condición, y el objetivo es asignar una valor a una
+variable dependiendo del valor de la condición.
 
 ```python
 # Sintaxis Operador Ternario
@@ -2705,7 +2745,7 @@ Además, definiremos las siguientes constantes:
 
 ```python
 META_PASOS_DIARIO = 10000
-CALORIAS_POR_PASO = 0.04 # Valor aproximado en kilocalorias
+CALORIAS_POR_PASO = 0.04  # Valor aproximado en kilocalorias
 ```
 
 Con los valores anteriores debemos calcular las calorías quemadas según los pasos caminados
@@ -2741,7 +2781,7 @@ calorias_quemada = pasos_diarios * CALORIAS_POR_PASO
 
 # Mostramos la información
 print(
-    f"""
+  f"""
 Usuario: {nombre_usuario}
 Pasos dados hoy: {pasos_diarios}
 Calorías quemadas: {calorias_quemada} kcal
@@ -2778,7 +2818,8 @@ El hotel tiene las siguientes tarifas:
 - Cuarto sin vista al mar: $150.50 por día
 - Cuarto con vista al mar: $190.50 por día
 
-El sistema debe calcular el costo total de la estadía dependiendo si escogió un cuarto con vista al mar o no. Además de indicar si escogió un cuarto con vista al mar o no.
+El sistema debe calcular el costo total de la estadía dependiendo si escogió un cuarto con vista al mar o no. Además de
+indicar si escogió un cuarto con vista al mar o no.
 
 **📄 Código :**
 
@@ -2797,14 +2838,14 @@ vista_al_mar = vista_al_mar_txt.strip().lower == "si"
 
 # Cálculo del costo total de la estancia
 costo_total = (
-    dias_estadia * TARIFA_DIARIA_CON_VISTA_MAR
-    if vista_al_mar
-    else dias_estadia * TARIFA_DIARIA_SIN_VISTA_MAR
+  dias_estadia * TARIFA_DIARIA_CON_VISTA_MAR
+  if vista_al_mar
+  else dias_estadia * TARIFA_DIARIA_SIN_VISTA_MAR
 )
 
 # Mostramos los detalles de la reserva
 print(
-    f"""
+  f"""
 {'-' * 10} Detalles de la Reservación {'-' * 10}
 Cliente: {nombre_cliente}
 Días de estandía: {dias_estadia}
@@ -2844,11 +2885,11 @@ numero1 = int(input("Ingresa un primer número entero: "))
 numero2 = int(input("Ingresa un segundo número entero: "))
 
 numero_mayor = (
-    "El primer numero es mayor." if numero1 > numero2 else "El segundo numero es mayor."
+  "El primer numero es mayor." if numero1 > numero2 else "El segundo numero es mayor."
 )
 
 print(
-    f"El primer es: {numero1}\nEl segundo es: {numero2}\n Resultado: *** {numero_mayor} ***"
+  f"El primer es: {numero1}\nEl segundo es: {numero2}\n Resultado: *** {numero_mayor} ***"
 )
 ```
 
@@ -2865,7 +2906,8 @@ El segundo es: -1
 
 ### Identifica la estación del año
 
-Se solicita proporcionar el valor de un mes (valor numérico entre 1 y 12), e indicar la estación del año según lo siguiente:
+Se solicita proporcionar el valor de un mes (valor numérico entre 1 y 12), e indicar la estación del año según lo
+siguiente:
 
 meses 1, 2 o 12 -> Invierno
 meses 3, 4 o 5 -> Primavera
@@ -2882,19 +2924,19 @@ numero_mes = int(input("Introduce el número de mes entre 1 y 12: "))
 mensaje = ""
 
 match numero_mes:
-    case 1 | 2 | 12:
-        mensaje = "Es Invierno"
-    case 3 | 4 | 5:
-        mensaje = "Es Primavera"
-    case 6 | 7 | 8:
-        mensaje = "Es Verano"
-    case 9 | 10 | 11:
-        mensaje = "Es Otoño"
-    case _:
-        mensaje = "Introdujiste es un inválido"
+  case 1 | 2 | 12:
+    mensaje = "Es Invierno"
+  case 3 | 4 | 5:
+    mensaje = "Es Primavera"
+  case 6 | 7 | 8:
+    mensaje = "Es Verano"
+  case 9 | 10 | 11:
+    mensaje = "Es Otoño"
+  case _:
+    mensaje = "Introdujiste es un inválido"
 
 print(
-    f"""{'-' * 10} Estación del Año {'-' * 10}
+  f"""{'-' * 10} Estación del Año {'-' * 10}
 Esta la estación: {mensaje}
 """
 )
@@ -2911,7 +2953,7 @@ Esta la estación: Es Otoño
 
 ### Sistema de Calificaciones
 
-Crear un programa para convertir una calificación numérica (entre 0 y 10) a  una letra (de la F a la A)
+Crear un programa para convertir una calificación numérica (entre 0 y 10) a una letra (de la F a la A)
 
 - Si es mayor o igual a 9 y menor o igual a 10 es una A
 - Si es mayor o igual a 8 y menor a 9 es una B
@@ -2933,17 +2975,17 @@ calificacion_letra = None
 
 # Revisamos si está en los siguientes rangos
 if 9 <= calificacion <= 10:
-    calificacion_letra = "A"
+  calificacion_letra = "A"
 elif 8 <= calificacion < 9:
-    calificacion_letra = "B"
+  calificacion_letra = "B"
 elif 7 <= calificacion < 8:
-    calificacion_letra = "C"
+  calificacion_letra = "C"
 elif 6 <= calificacion < 7:
-    calificacion_letra = "D"
+  calificacion_letra = "D"
 elif 0 <= calificacion < 6:
-    calificacion_letra = "F"
+  calificacion_letra = "F"
 else:
-    calificacion_letra = "Valor Desconocido"
+  calificacion_letra = "Valor Desconocido"
 
 # Imprimir el resultado
 print(f"Calificación {calificacion} es equivalente a {calificacion_letra}")
@@ -2959,15 +3001,16 @@ Calificación 9.0 es equivalente a A
 
 ### Sistema de Envíos
 
-Crea un programa para determinar el costo de envío de un paquete según el destino (nacional o internacional) y el peso del paquete
+Crea un programa para determinar el costo de envío de un paquete según el destino (nacional o internacional) y el peso
+del paquete
 
 costo tarifas:
-    - Nacional = $10 x kilo
-    - Internacional = $20 x kilo
+- Nacional = $10 x kilo
+- Internacional = $20 x kilo
 
 El programa debe solicitar 2 valores:
-    1. Destino (nacional o internacional)
-    2. Peso (kilogramos) del paquete
+1. Destino (nacional o internacional)
+2. Peso (kilogramos) del paquete
 
 Al final debe imprimir el costo envío del paquete
 
@@ -2989,15 +3032,15 @@ costo_envio = None
 destino = destino.strip().lower()
 
 if destino == "nacional":
-    costo_envio = peso * TARIFA_NACIONAL
+  costo_envio = peso * TARIFA_NACIONAL
 elif destino == "internacional":
-    costo_envio = peso * TARIFA_INTERNACIONAL
+  costo_envio = peso * TARIFA_INTERNACIONAL
 else:
-    print("Destino no válido. Ingresa el valor de nacional o internacional")
+  print("Destino no válido. Ingresa el valor de nacional o internacional")
 
 # Mostramos el costo de envío sólo si es un valor válido
 if costo_envio is not None:
-    print(f"El costo de envío del paquete es: ${costo_envio:.2f}")
+  print(f"El costo de envío del paquete es: ${costo_envio:.2f}")
 ```
 
 **🟢 Ejecutar:**
@@ -3033,13 +3076,13 @@ usuario = str(input("Ingresa tu usuario: "))
 password = str(input("Ingresa tu password: "))
 
 if usuario == USUARIO_VALIDO and password == PASSWORD_VALIDO:
-    print("Bienvenido al sistema")
+  print("Bienvenido al sistema")
 elif usuario == USUARIO_VALIDO:
-    print("password es inválido, favor de corregirlo!")
+  print("password es inválido, favor de corregirlo!")
 elif password == PASSWORD_VALIDO:
-    print("Usuario es inválido, favor de corregirlo!")
+  print("Usuario es inválido, favor de corregirlo!")
 else:
-    print("usuario y password son inválidos, favor de corregirlo!")
+  print("usuario y password son inválidos, favor de corregirlo!")
 ```
 
 **🟢 Ejecutar:**
@@ -3055,16 +3098,18 @@ password es inválido, favor de corregirlo!
 
 ### Ciclo while
 
-Los ciclos en Python son estructuras de control que repitan una serie de instrucciones hasta que se cumple una condición específica.
+Los ciclos en Python son estructuras de control que repitan una serie de instrucciones hasta que se cumple una condición
+específica.
 
-En Python tenemos dos tipos de estructuras para ejecutar ciclos: Ciclo `while` y ciclo `for`. Comencemos con el ciclo `while`.
+En Python tenemos dos tipos de estructuras para ejecutar ciclos: Ciclo `while` y ciclo `for`. Comencemos con el ciclo
+`while`.
 
 El ciclo `while` repite una serie de instrucciones mientras la condición a evaluar sea verdadera.
 
 ```python
 # Sintaxis ciclo while:
 while condicion:
-  # Bloque de código a ejecutar
+# Bloque de código a ejecutar
 ```
 
 ```python
@@ -3104,8 +3149,8 @@ print("*** Ciclo while ***")
 # Imprimir los valores del 1 al 5
 contador = 1
 while contador <= 5:
-    print(contador, end=" ")
-    contador += 1  # contador = contador + 1
+  print(contador, end=" ")
+  contador += 1  # contador = contador + 1
 ```
 
 **🟢 Ejecutar:**
@@ -3117,12 +3162,13 @@ while contador <= 5:
 
 ### Ciclo for
 
-El ciclo `for` itera o recorre una secuencia de valores, por ejemplo los caracteres de una cadena, una lista, etc. y ejecuta bloque de código por cada elemento de la secuencia.
+El ciclo `for` itera o recorre una secuencia de valores, por ejemplo los caracteres de una cadena, una lista, etc. y
+ejecuta bloque de código por cada elemento de la secuencia.
 
 ```python
 # Sintaxis ciclo for
 for variable in secuencia:
-  # Bloque de código a ejecutar
+# Bloque de código a ejecutar
 ```
 
 ```python
@@ -3147,12 +3193,12 @@ print("Recorremos los caracteres de una cadena")
 cadena = "Hola Mundo"
 # Iteramos los caracteres
 for letra in cadena:
-    print(letra, end=" ")
+  print(letra, end=" ")
 
 print("\n\nRecorremos la lista de frutas:")
 frutas = ["Plátano", "Fresa", "Mango", "Uva", "Manzana", "Pera", "Naranja"]
 for fruta in frutas:
-    print(fruta, end=" ")
+  print(fruta, end=" ")
 ```
 
 **🟢 Ejecutar:**
@@ -3184,13 +3230,13 @@ acumulador_suma = 0
 
 # Empezamos a iterar
 while numero <= MAXIMO:
-    # Imprimir lo que se va a sumar
-    print(f"(acumulador_suma + numer) -> {acumulador_suma} + {numero}")
-    acumulador_suma += numero
-    numero += 1
+  # Imprimir lo que se va a sumar
+  print(f"(acumulador_suma + numer) -> {acumulador_suma} + {numero}")
+  acumulador_suma += numero
+  numero += 1
 
-    # Imprimir el resultado de la suma parcial
-    print(f"Suma parcial acumulada: {acumulador_suma}")
+  # Imprimir el resultado de la suma parcial
+  print(f"Suma parcial acumulada: {acumulador_suma}")
 
 print(f"\nResultado suma acumulado: {acumulador_suma}")
 ```
@@ -3222,25 +3268,25 @@ print("*** Sistema de Administración de Cuenta ***")
 
 salir = False
 while not salir:
-    print(
-        f"""Menú:
+  print(
+    f"""Menú:
           1. Crear cuenta
           2. Eliminar cuenta
           3. Salir"""
-    )
-    opcion = int(input("Escoge una opción: "))
-    match opcion:
-        case 1:
-            print("Creando tu cuenta... \n")
-        case 2:
-            print("Eliminado tu cuenta... \n")
-        case 3:
-            print("Salimos del sistema. Hasta pronto!\n")
-            salir = True
-        case _:
-            print("Opción inválida, proporciona otra opción...\n")
+  )
+  opcion = int(input("Escoge una opción: "))
+  match opcion:
+    case 1:
+      print("Creando tu cuenta... \n")
+    case 2:
+      print("Eliminado tu cuenta... \n")
+    case 3:
+      print("Salimos del sistema. Hasta pronto!\n")
+      salir = True
+    case _:
+      print("Opción inválida, proporciona otra opción...\n")
 else:
-    print("Terminando el sistema de Administración de Cuentas")
+  print("Terminando el sistema de Administración de Cuentas")
 ```
 
 **🟢 Ejecutar:**
@@ -3291,39 +3337,39 @@ salir = False
 saldo = 1000.00
 
 while not salir:
-    print(
-        """Operaciones que puedes realizar:
-          1. Consultar Saldo
-          2. Retirar
-          3. Depositar
-          4. Salir."""
-    )
-    opcion = int(input("Escoge un número de opción: "))
+  print(
+    """Operaciones que puedes realizar:
+      1. Consultar Saldo
+      2. Retirar
+      3. Depositar
+      4. Salir."""
+  )
+  opcion = int(input("Escoge un número de opción: "))
 
-    match opcion:
-        case 1:
-            print(f"\nTu saldo actual es: {saldo:.2f}\n")
-        case 2:
-            monto_retirar = float(input("Ingresa el monto a retirar: "))
-            if monto_retirar <= saldo:
-                saldo -= monto_retirar
-                print(f"\nTu nuevo saldo es: ${saldo:.2f}\n")
-            else:
-                print(
-                    f"\nNo cuentas con el saldo suficiente. Tu saldo actual: ${saldo:.2f}\n"
-                )
-        case 3:
-            monto_depositar = float(input("Ingresa el monto a depositar: "))
-            saldo += monto_depositar
-            print(f"\nTu nuevo saldo es: ${saldo:.2f}\n")
-        case 4:
-            salir = True
-        case _:
-            print(
-                "\nLa opción es inválida. Ingresa de nuevo debe ser un número entero de opción...\n"
-            )
+  match opcion:
+    case 1:
+      print(f"\nTu saldo actual es: {saldo:.2f}\n")
+    case 2:
+      monto_retirar = float(input("Ingresa el monto a retirar: "))
+      if monto_retirar <= saldo:
+        saldo -= monto_retirar
+        print(f"\nTu nuevo saldo es: ${saldo:.2f}\n")
+      else:
+        print(
+          f"\nNo cuentas con el saldo suficiente. Tu saldo actual: ${saldo:.2f}\n"
+        )
+    case 3:
+      monto_depositar = float(input("Ingresa el monto a depositar: "))
+      saldo += monto_depositar
+      print(f"\nTu nuevo saldo es: ${saldo:.2f}\n")
+    case 4:
+      salir = True
+    case _:
+      print(
+        "\nLa opción es inválida. Ingresa de nuevo debe ser un número entero de opción...\n"
+      )
 else:
-    print("\nSaliendo del cajero automático. ¡Hasta Pronto!")
+  print("\nSaliendo del cajero automático. ¡Hasta Pronto!")
 ```
 
 **🟢 Ejecutar:**
@@ -3369,7 +3415,8 @@ Crear una aplicación de calculadora con las opciones de:
 3. Multiplicación
 4. División
 
-El programa debe mostrar un menú con cada opción, y debe solicitar los valores de operando 1 y operando 2 para realizar la operación seleccionada.
+El programa debe mostrar un menú con cada opción, y debe solicitar los valores de operando 1 y operando 2 para realizar
+la operación seleccionada.
 
 **📄 Código :**
 
@@ -3381,49 +3428,49 @@ operadores = ["Suma", "Resta", "Multiplicación", "División"]
 num1 = num2 = resultado = 0
 
 while not salir:
-    print(
-        f"""Operaciones que puedes realizar:
+  print(
+    f"""Operaciones que puedes realizar:
         1. {operadores[0]}
         2. {operadores[1]}
         3. {operadores[2]}
         4. {operadores[3]}
         5. Salir"""
-    )
-    opcion = int(input("Escoge una opción con número: "))
+  )
+  opcion = int(input("Escoge una opción con número: "))
 
-    match opcion:
-        case 1:
-            print("-" * 5, f"{operadores[0]}", "-" * 5)
-            num1 = float(input("Ingresa el primer número: "))
-            num2 = float(input("Ingresa el segundo número: "))
-            resultado = num1 + num2
-            print(f"\nEl resultado de la {operadores[0]} es: {resultado}\n")
-        case 2:
-            print("-" * 5, f"{operadores[1]}", "-" * 5)
-            num1 = float(input("Ingresa el primer número: "))
-            num2 = float(input("Ingresa el segundo número: "))
-            resultado = num1 - num2
-            print(f"\nEl resultado de la {operadores[1]} es: {resultado}\n")
-        case 3:
-            print("-" * 5, f"{operadores[2]}", "-" * 5)
-            num1 = float(input("Ingresa el primer número: "))
-            num2 = float(input("Ingresa el segundo número: "))
-            resultado = num1 * num2
-            print(f"\nEl resultado de la {operadores[2]} es: {resultado}\n")
-        case 4:
-            print("-" * 5, f"{operadores[3]}", "-" * 5)
-            num1 = float(input("Ingresa el primer número: "))
-            num2 = float(input("Ingresa el segundo número: "))
-            if num1 == 0 or num2 == 0:
-                print("Error. Debes ingresar números sin cero.\n")
-            else:
-                resultado = num1 / num2
-                print(f"\nEl resultado de la {operadores[3]} es: {resultado}\n")
-        case 5:
-            print("Saliendo del aplicación calculadora. ¡Hasta pronto!")
-            salir = True
-        case _:
-            print("Opción inválida. Debe ingresar correctamente a la opción...")
+  match opcion:
+    case 1:
+      print("-" * 5, f"{operadores[0]}", "-" * 5)
+      num1 = float(input("Ingresa el primer número: "))
+      num2 = float(input("Ingresa el segundo número: "))
+      resultado = num1 + num2
+      print(f"\nEl resultado de la {operadores[0]} es: {resultado}\n")
+    case 2:
+      print("-" * 5, f"{operadores[1]}", "-" * 5)
+      num1 = float(input("Ingresa el primer número: "))
+      num2 = float(input("Ingresa el segundo número: "))
+      resultado = num1 - num2
+      print(f"\nEl resultado de la {operadores[1]} es: {resultado}\n")
+    case 3:
+      print("-" * 5, f"{operadores[2]}", "-" * 5)
+      num1 = float(input("Ingresa el primer número: "))
+      num2 = float(input("Ingresa el segundo número: "))
+      resultado = num1 * num2
+      print(f"\nEl resultado de la {operadores[2]} es: {resultado}\n")
+    case 4:
+      print("-" * 5, f"{operadores[3]}", "-" * 5)
+      num1 = float(input("Ingresa el primer número: "))
+      num2 = float(input("Ingresa el segundo número: "))
+      if num1 == 0 or num2 == 0:
+        print("Error. Debes ingresar números sin cero.\n")
+      else:
+        resultado = num1 / num2
+        print(f"\nEl resultado de la {operadores[3]} es: {resultado}\n")
+    case 5:
+      print("Saliendo del aplicación calculadora. ¡Hasta pronto!")
+      salir = True
+    case _:
+      print("Opción inválida. Debe ingresar correctamente a la opción...")
 ```
 
 **🟢 Ejecutar:**
@@ -3511,7 +3558,8 @@ Crear un programa para solicitar la validación al momento de crear un valor de 
 
 La contraseña debe tener al menos 6 caracteres
 
-En caso de no cumplir con esta condición el programa debe volver a solicitar un nuevo valor hasta que cumpla con la condición.
+En caso de no cumplir con esta condición el programa debe volver a solicitar un nuevo valor hasta que cumpla con la
+condición.
 
 Si el valor proporcionado es válido, se debe imprimir: 'Password válido' y debe terminar la ejecución del sistema.
 
@@ -3524,10 +3572,10 @@ password = input("Ingresa un password (debe tener al menos 6 caracteres): ")
 
 # Validar el password
 while len(password) < 6:
-    print("El password no cumple con los requisitos. Debe tener al menos 6 caracteres.")
-    password = input("Ingresa un nuevo valor de password: ")
+  print("El password no cumple con los requisitos. Debe tener al menos 6 caracteres.")
+  password = input("Ingresa un nuevo valor de password: ")
 else:
-    print("El valor de password es válido")
+  print("El valor de password es válido")
 ```
 
 **🟢 Ejecutar:**
@@ -3561,7 +3609,6 @@ Opcionalmente, se puede limitar el juego a un número de intentos máximo (ej: 1
 ```python
 from random import randint
 
-
 print("*** Juego de Adivinanzas ***")
 
 numero_secreto = int(randint(1, 50))
@@ -3570,20 +3617,20 @@ adivinanza = None
 INTENTOS_MAXIMOS = 5
 
 while adivinanza != numero_secreto and intentos < INTENTOS_MAXIMOS:
-    adivinanza = int(input("Adivina el número secreto (1-50): "))
-    # Agregamos un ayuda para orientar al jugador
-    if adivinanza < numero_secreto:
-        print("El número secreto es mayor")
-    elif adivinanza > numero_secreto:
-        print("El número secreto es menor")
-    # Incrementamos la variable de intentos
-    intentos += 1
+  adivinanza = int(input("Adivina el número secreto (1-50): "))
+  # Agregamos un ayuda para orientar al jugador
+  if adivinanza < numero_secreto:
+    print("El número secreto es mayor")
+  elif adivinanza > numero_secreto:
+    print("El número secreto es menor")
+  # Incrementamos la variable de intentos
+  intentos += 1
 # Conclusion del juego
 if adivinanza == numero_secreto:
-    print(f"Felicidades, adivinaste el número secreto en {intentos} intentos")
+  print(f"Felicidades, adivinaste el número secreto en {intentos} intentos")
 else:
-    print(f"Lo siento, has agotado tus intentos máximos: {INTENTOS_MAXIMOS}")
-    print(f"El número secreto era: {numero_secreto}")
+  print(f"Lo siento, has agotado tus intentos máximos: {INTENTOS_MAXIMOS}")
+  print(f"El número secreto era: {numero_secreto}")
 ```
 
 **🟢 Ejecutar:**
@@ -3608,7 +3655,7 @@ print("*** Validación Campo de un Formulario ***")
 nombre_usuario = None
 
 while not nombre_usuario:
-    nombre_usuario = str(input("Ingresa tu nombre de usuario: "))
+  nombre_usuario = str(input("Ingresa tu nombre de usuario: "))
 
 print(f"Nombre de usuario válido: {nombre_usuario}")
 ```
@@ -3640,12 +3687,12 @@ range(inicio, fin, incremento)
 ```python
 # usar range para imprimir 0 al 4
 for i int range(5):
-    print(i)
+  print(i)
 
 # Usar range para imprimir del 0 al 9
 # con incremento de 2
-for i in range(0,10, 2):
-    print(i) # imprime 0, 2, 4, 6, 8
+for i in range(0, 10, 2):
+  print(i)  # imprime 0, 2, 4, 6, 8
 ```
 
 **📄 Código :**
@@ -3658,16 +3705,16 @@ print("Secuencia del 0 al 4")
 # fin = 5 - 1 = 4
 # incremento = 1 (opcional)
 for i in range(5):  # fin = 5 - 1
-    print(i, end=" ")
+  print(i, end=" ")
 
 print("\n\nSecuencia del 10 al 20:")
 # incremento = 1 (default y es opcional)
 for i in range(10, 20 + 1):
-    print(i, end=" ")
+  print(i, end=" ")
 
 print("\n\nSecuencia del 20 al 30 de 2 en 2:")
 for i in range(20, 30 + 1, 2):
-    print(i, end=" ")
+  print(i, end=" ")
 ```
 
 **🟢 Ejecutar:**
@@ -3696,8 +3743,8 @@ numero_de_repeticion = int(input("Proporciona el número de repeticiones: "))
 
 # Iterar sobre el rango de repeticiones
 for _ in range(numero_de_repeticion):
-    # print(f"{i+1} - {mensaje}")
-    print(mensaje)
+  # print(f"{i+1} - {mensaje}")
+  print(mensaje)
 ```
 
 **🟢 Ejecutar:**
@@ -3722,9 +3769,9 @@ numero_fila = int(input("Proporciona el número de filas: "))
 
 # Iterar sobre cada fila del triángulo
 for fila in range(1, numero_fila + 1):
-    espacios_blanco = " " * (numero_fila - fila)
-    asteriscos = "*" * (2 * fila - 1)
-    print(f"{espacios_blanco}{asteriscos}")
+  espacios_blanco = " " * (numero_fila - fila)
+  asteriscos = "*" * (2 * fila - 1)
+  print(f"{espacios_blanco}{asteriscos}")
 ```
 
 **🟢 Ejecutar:**
@@ -3747,16 +3794,16 @@ print("*** Palabra break y continue en ciclos ***")
 # Ejemplo con break
 print("Palabra break:")
 for numero in range(1, 10):
-    if numero % 2 == 0:  # Numero par
-        print(numero)
-        break  # Salimos del ciclo inmediatamente
+  if numero % 2 == 0:  # Numero par
+    print(numero)
+    break  # Salimos del ciclo inmediatamente
 
 # Ejemplo con continue
 print("Palabra continue:")
 for numero in range(1, 10):
-    if numero % 2 == 1:  # Numero impar
-        continue
-    print(numero)  # números pares
+  if numero % 2 == 1:  # Numero impar
+    continue
+  print(numero)  # números pares
 ```
 
 **🟢 Ejecutar:**
@@ -3770,4 +3817,1049 @@ Palabra continue:
 4
 6
 8
+```
+
+## Colecciones
+
+Una colección es un conjunto de datos. En Python tenemos varios tipos que podemos utilizar con el objetivo de almacenar,
+organizar y manipular múltiples conjuntos de datos, por ello también se les conoce como Estructures de Datos.
+
+Los tipos que vamos a estudiar son:
+
+- Listas
+- Tuplas
+- Set (conjunto)
+- Diccionarios
+
+Estos son los tipos más comunes y más utilizados. Comencemos con el tipo lista.
+
+### Listas
+
+Las listas son colecciones ordenadas y mutables de elementos que pueden ser de diferentes tipos. Las listas son
+dinámicas, lo que significa que pueden cambiar de tamaño, podemos añadir, modificar o eliminar elementos.
+
+```python
+# Sintaxis Listas
+mi_list = [elemento1, elemento2, elemento3, ...]
+```
+
+```python
+# Ejemplos de listas
+numeros = [1, 2, 3, 4, 5]
+frutas = ["manzana", "banana", "cereza"]
+mixta = [1, "dos", 3.0, [4, 5]]
+```
+
+**📄 Código :**
+
+```python
+print("*** Manejo de Listas ***")
+
+mi_lista = [1, 2, 3, 4, 5]
+print(f"{mi_lista} -> Lista original")
+
+# Largo de una lista
+print(f"Largo de la lista: {len(mi_lista)}")
+
+# Acceder a los elementos de la lista por indice
+print(f"Accedemos al valor del indice 4: {mi_lista[4]}")
+print(f"Accedemos al último índice de la lista: {mi_lista[-1]}")
+
+# Modificar los elementos de una lista
+mi_lista[1] = 10
+print(f"Modificamos el valor del indice 1: {mi_lista[1]}")
+
+# Agregar un nuevo elemento al final de la lista
+mi_lista.append(6)
+print(f"{mi_lista} -> Se agregó el elemento 6")
+
+# Añadir un nuevo elemento en un indice específico
+mi_lista.insert(2, 15)
+print(f"{mi_lista} -> Se añadió el valor de 15 en el índice 2")
+
+# Eliminar elementos de una lista
+# Usando el método remove
+mi_lista.remove(5)
+print(f"{mi_lista} -> Se removió el valor 5")
+# Removemos por índice con el método pop
+mi_lista.pop(1)  # Remueve el elemento del índice 1
+print(f"{mi_lista} -> Se eliminó el índice 1 ")
+# Eliminar usando la palabra del
+del mi_lista[2]
+print(f"{mi_lista} -> Se eliminó el índice 2")
+
+# Obtener sublistas
+sublista = mi_lista[1:3]  # Genera una sublista del índice 1 al 2 (3 no se incluye)
+print(f"sublista [1:3]: {sublista}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Manejo de Listas ***
+[1, 2, 3, 4, 5] -> Lista original
+Largo de la lista: 5
+Accedemos al valor del indice 4: 5
+Accedemos al último índice de la lista: 5
+Modificamos el valor del indice 1: 10
+[1, 10, 3, 4, 5, 6] -> Se agregó el elemento 6
+[1, 10, 15, 3, 4, 5, 6] -> Se añadió el valor de 15 en el índice 2
+[1, 10, 15, 3, 4, 6] -> Se removió el valor 5
+[1, 15, 3, 4, 6] -> Se eliminó el índice 1
+[1, 15, 4, 6] -> Se eliminó el índice 2
+sublista [1:3]: [15, 4]
+```
+
+### Iterar elementos de una lista
+
+**📄 Código :**
+
+```python
+print("*** Iterar Listas ***")
+
+nombres = ["Karla", "Juan", "Laura"]
+
+for nombre in nombres:
+  print(nombre)
+
+lista_heterogenea = [100, True, "Ivonne"]
+print()
+for elemento in lista_heterogenea:
+  print(elemento)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Iterar Listas ***
+Karla
+Juan
+Laura
+
+100
+True
+Ivonne
+```
+
+### Lista de Reproducción
+
+Crea un programa para administrar una lista de canciones.
+
+Debes solicitar al usuario cuántas canciones desea agregar a la lista y posteriormente ir solicitando cada canción que
+desea agregar a la lista.
+
+Finalmente, debe desplegar la lista de canciones en orden alfabético.
+
+**📄 Código :**
+
+```python
+print("*** PlayList de canciones ***")
+
+# creamos la lista vacia
+lista_reproduccion = []
+
+numero_canciones = int(input("¿Cuentas  canciones deseas agregar?: "))
+
+# iteramos cada elemento de la lista para agregar un nuevo elemento
+for indice in range(numero_canciones):
+  cancion = input(f"Proporciona la cancion {indice + 1}: ")
+  lista_reproduccion.append(cancion)
+
+# Empezamos a agregar canciones
+"""
+lista_reproduccion.append("Hotel California - Eaglles")
+lista_reproduccion.append("Staying Alive - Bee Gees")
+lista_reproduccion.append("Dream on - Aerosmith")
+"""
+# Ordenar la lista en orden alfabético (sort)
+# lista_reproduccion.sort(reverse=True)
+lista_reproduccion.sort()
+
+# Mostrar la lista de canciones
+print(f"\nLista de Reproducción en orden alfabético:\n{lista_reproduccion}")
+
+# Mostrar la lista iteramos sus elementos
+print(f"\nIteramos el Playlist")
+for cancion in lista_reproduccion:
+  print(f"- {cancion}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** PlayList de canciones ***
+¿Cuentas  canciones deseas agregar?: 3
+Proporciona la cancion 1: Hotel California - Eaglles
+Proporciona la cancion 2: Staying Alive - Bee Gees
+Proporciona la cancion 3: Dream on - Aerosmith
+
+Lista de Reproducción en orden alfabético:
+['Dream on - Aerosmith', 'Hotel California - Eaglles', 'Staying Alive - Bee Gees']
+
+Iteramos el Playlist
+- Dream on - Aerosmith
+- Hotel California - Eaglles
+- Staying Alive - Bee Gees
+```
+
+### Promedio de calificaciones
+
+Crea un programa para realizar el cálculo promedio de calificaciones.
+
+El programa debe solicitar el número de calificaciones a utilizar para obtener el promedio.
+
+Posteriormente, se debe solicitar cada calificación al usuario.
+
+Posteriormente, realizar la suma de todas las calificaciones y finalmente mandar a imprimir el promedio.
+
+**📄 Código :**
+
+```python
+print("*** Promedio de Calificaciones ***")
+
+total_calificaciones = int(input("Proporciona el no. de calificaciones a evaluar: "))
+calificaciones = []
+promedio = 0
+
+# Iterar las calificaciones
+for indice in range(total_calificaciones):
+  calificacion = int(input(f"Calificación[{indice + 1}] = "))
+  calificaciones.append(calificacion)
+
+# Imprimimos las calificaciones proporcionadas
+print(
+  f"""
+Las calificaciones proporcionadas son: {calificaciones}
+"""
+)
+
+# Calculamos el promedio de las calificaciones
+# sum(iterable)
+suma_calificaciones = sum(calificaciones)
+promedio = suma_calificaciones / total_calificaciones
+
+print(f"Promedio de las calificaciones: {promedio:.2f}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Promedio de Calificaciones ***
+Proporciona el no. de calificaciones a evaluar: 4      
+Calificación[1] = 3
+Calificación[2] = 6
+Calificación[3] = 8 
+Calificación[4] = 9
+
+Las calificaciones proporcionadas son: [3, 6, 8, 9]    
+
+Promedio de las calificaciones: 6.50
+```
+
+### Tuplas
+
+Las tuplas son similares a las listas, ya que también son una colección de datos ordenados, pero las tuplas son
+inmutables, lo que significa que una vez creada una tupla no es posible modificar su tamaño, ni podemos agregar más
+elementos, ni modificarlos ni eliminarlos.
+
+Las tuplas suelen utilizarse para crear colecciones de datos que no deben cambiar con el tiempo
+
+```python
+# Sintaxis de una tupla
+mi_tupla = (elemento1, elemento2, elemento3)
+mi_tupla_sin_parentesis = elemento1, elemento2, elemento3
+```
+
+```python
+# Ejemplo de tuplas
+tuplas_numeros = (1, 2, 3, 4, 5)
+tupla_mixta = ("manzana", 10, 3.14, [1, 2, 3])
+tupla_sin_parentesis = 'Juan', 'Karla'
+tupla_un_elemento = 10,  # La coma no es opcional
+```
+
+**📄 Código :**
+
+```python
+print("*** Manejo de Tuplas ***")
+
+mi_tupla = (1, 2, 3, 4, 5)
+print(mi_tupla)
+# No podemos modificar una tupla
+# mi_tupla[0] = 10
+# No podemos agregar un elemento de la tupla
+# mi_tupla.append(6)
+
+# Iteramos los elementos de una tupla
+for elemento in mi_tupla:
+  print(elemento, end=" ")
+
+# Crear una tupla para una coordenada x, y
+coordenadas = (3, 5)
+# Accedemos a cada elemento de la tupla
+print(f"\nCoordenada en el eje x:{coordenadas[0]}")
+print(f"Coordenada en el eje y:{coordenadas[1]}")
+
+# Crear una tupla unitaria
+tupla_un_elemento = (10,)
+print(f"Tupla de un elemento {tupla_un_elemento}")
+
+# Tupla anidada
+tuplas_anidada = (1, (2, 3), (4, 5))
+print(f"Segundo elemento tupla anidada: {tuplas_anidada[1]}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Manejo de Tuplas ***
+(1, 2, 3, 4, 5)
+1 2 3 4 5 
+Coordenada en el eje x:3
+Coordenada en el eje y:5
+Tupla de un elemento (10,)
+Segundo elemento tupla anidada: (2, 3)
+```
+
+### Desempaquetado de Tuplas (unpacking)
+
+**📄 Código :**
+
+```python
+print("*** Desempaquetado de Tuplas ***")
+
+producto = ("P001", "Camisa", 20.00)
+
+# Desempaquetado
+id, descripcion, precio = producto
+
+# imprimir los valores
+print(f"Tupla completa: {producto}")
+# Valores independientes ya desempaquetados
+print(f"Producto: id = {id}, descripción = {descripcion}, precio = {precio}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Desempaquetado de Tuplas ***
+Tupla completa: ('P001', 'Camisa', 20.0)
+Producto: id = P001, descripción = Camisa, precio = 20.0
+```
+
+### Combinación de Listas y Tuplas
+
+**📄 Código :**
+
+```python
+print("*** Combinación de Listas y Tuplas ***")
+
+# definir una lista que almacena tuplas de productos.
+productos = [
+  ("P001", "Camiseta", 20.00),
+  ("P002", "Jeans", 30.00),
+  ("P003", "Sudadera", 40.00),
+]
+
+# Imprimir la información de cada producto
+#  y además calculamos el precio total
+precio_total = 0
+
+print("Información de los productos: ")
+for producto in productos:
+  id, descripcion, precio = producto  # unpacking
+  print(f"Product: id = {id}, descripción = {descripcion}, precio = {precio}")
+  precio_total += precio  # Productos[2]
+print(f"Precio total de los productos: {precio_total}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Combinación de Listas y Tuplas ***
+Información de los productos:
+Product: id = P001, descripción = Camiseta, precio = 20.0
+Product: id = P002, descripción = Jeans, precio = 30.0 
+Product: id = P003, descripción = Sudadera, precio = 40.0
+Precio total de los productos: 90.0
+```
+
+### Sets en Python
+
+Los sets (conjuntos) son colecciones de datos no ordenados de elementos únicos. Son muy útiles cuando debemos
+asegurarnos de que no haya elementos duplicados en nuestra colección.
+
+```python
+# Sintaxis de un set
+mi_set = {elemento1, elemento2, elemento3}
+```
+
+```python
+# Ejemplo de sets
+set_a = {1, 2, 3, 4}
+set_b = {3, 'Juan', True, 6.5}
+numeros = {1, 2, 2, 3, 4}
+print(numeros)  # Salida: {1, 2, 3, 4}
+```
+
+**📄 Código :**
+
+```python
+print("*** Manejo de Sets ***")
+# Crear un conjunto
+mi_set = {1, 2, 3, 4, 5, 4}
+print(f"Mi set: {mi_set}")
+
+# Agregar elementos al set
+mi_set.add(6)
+mi_set.add(7)
+
+# Intentamos agregar un elemento duplicado
+mi_set.add(3)
+print(f"Mi set modificado: {mi_set}")
+
+# Eliminar un elemento del conjunto
+mi_set.remove(4)
+
+# Iterar los elementos del set
+for elemento in mi_set:
+  print(elemento, end=" ")
+
+# Comprobar si existe un elemento en el set
+print(
+  f"\nExiste el valor de 4 en el set? {4 in mi_set}"
+)  # False, fue eliminado un elemento de 4 anterior en el código
+
+# Obtener la longitud del set
+print(f"Longitud del conjunto: {len(mi_set)}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Manejo de Sets ***
+Mi set: {1, 2, 3, 4, 5}
+Mi set modificado: {1, 2, 3, 4, 5, 6, 7}
+1 2 3 5 6 7
+Existe el valor de 4 en el set? False
+Longitud del conjunto: 6
+```
+
+### Operaciones con Set
+
+**📄 Código :**
+
+```python
+print("*** Operaciones con Set ***")
+
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+union = a | b
+print(f"Unión a | b: {union}")
+
+interseccion = a & b
+print(f"Intersección a & b: {interseccion}")
+
+diferencia = a - b
+print(f"Diferencia a - b: {diferencia}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Operaciones con Set ***
+Unión a | b: {1, 2, 3, 4, 5, 6}
+Intersección a & b: {3, 4}
+Diferencia a - b: {1, 2}
+```
+
+### Lista de suscriptores
+
+Crea un programa para administrar una lista de suscriptores utilizando su email.
+
+Supón que una persona se suscribe al boletín información utilizando su email.
+
+A medida que la lista crece, hay que asegurarnos que no tengamos suscriptores duplicados.
+
+También deberemos poder agregar y eliminar suscriptores.
+
+**📄 Código :**
+
+```python
+print("*** Lista de Suscriptores ***")
+
+suscriptores = {"luisa@mail.com", "marcos@mail", "elena@mail.com"}
+print(f"Lista de suscriptores inicial: {suscriptores}")
+
+# Verifica si un nuevo suscriptor ya está en la lista
+nuevo_suscriptor = "karla@mail.com"
+if nuevo_suscriptor in suscriptores:
+  print(f"El nuevo suscriptor ya está en lista {nuevo_suscriptor}")
+else:
+  suscriptores.add(nuevo_suscriptor)
+  print(f"El nuevo suscriptor se ha agregado a la lista {nuevo_suscriptor}")
+
+print(f"Lista de suscriptores: {suscriptores}")
+
+# Eliminamos un suscriptor
+suscriptor_eliminar = "elena@mail.com"
+suscriptores.remove(suscriptor_eliminar)
+print(f"El suscriptor {suscriptor_eliminar} ha sido eliminado de la lista")
+print(f"Lista de suscriptores: {suscriptores}")
+
+# Verificamos la cantidad total de suscriptores
+print(f"Cantidad total suscriptores: {len(suscriptores)}")
+
+# Mostramos todos los suscriptores
+print("-" * 5, "Lista de Suscriptores", "-" * 5)
+for suscriptor in suscriptores:
+  print(f"- {suscriptor}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Lista de Suscriptores ***
+Lista de suscriptores inicial: {'luisa@mail.com', 'marcos@mail', 'elena@mail.com'}
+El nuevo suscriptor se ha agregado a la lista karla@mail.com
+Lista de suscriptores: {'luisa@mail.com', 'marcos@mail', 'elena@mail.com', 'karla@mail.com'}
+El suscriptor elena@mail.com ha sido eliminado de la lista
+Lista de suscriptores: {'luisa@mail.com', 'marcos@mail', 'karla@mail.com'}
+Cantidad total suscriptores: 3
+----- Lista de Suscriptores -----
+- luisa@mail.com
+- marcos@mail
+- karla@mail.com
+```
+
+### Lista de Suscriptores dinámica con Sets
+
+```python
+print("*** Lista de Suscriptores ***")
+
+# Definimos el set inicial
+# suscriptores = {} # Aquí se define un diccionario vacío
+suscriptores = set()  # Definimos un set vacío
+
+# Definimos el número entero con entrada de datos
+numero_suscriptores = int(input("Proporciona el número de suscriptores iniciales: "))
+# Iteramos el numero de suscriptores
+for _ in range(numero_suscriptores):
+  suscriptores.add(input("Nuevo Suscriptor (email): "))
+
+suscriptores = {"luisa@mail.com", "marcos@mail", "elena@mail.com"}
+print(f"Lista de suscriptores inicial: {suscriptores}")
+
+# Verifica si un nuevo suscriptor ya está en la lista
+nuevo_suscriptor = input("Proporciona el  nuevo suscriptor: ")
+if nuevo_suscriptor in suscriptores:
+  print(f"El nuevo suscriptor ya está en lista {nuevo_suscriptor}")
+else:
+  suscriptores.add(nuevo_suscriptor)
+  print(f"El nuevo suscriptor se ha agregado a la lista {nuevo_suscriptor}")
+
+print(f"Lista de suscriptores: {suscriptores}")
+
+# Eliminamos un suscriptor
+suscriptor_eliminar = input("Proporciona el suscriptor a eliminar: ")
+suscriptores.remove(suscriptor_eliminar)
+print(f"El suscriptor {suscriptor_eliminar} ha sido eliminado de la lista")
+print(f"Lista de suscriptores: {suscriptores}")
+
+# Verificamos la cantidad total de suscriptores
+print(f"Cantidad total suscriptores: {len(suscriptores)}")
+
+# Mostramos todos los suscriptores
+print("-" * 5, "Lista de Suscriptores", "-" * 5)
+for suscriptor in suscriptores:
+  print(f"- {suscriptor}")
+```
+
+### Diccionarios en Python
+
+Los diccionarios son una colección de datos ordenada (3.7+). Y se almacenan en forma de llave:valor. Es una estructura
+muy útil cuando necesitas asociar un conjunto de valores con un conjunto de claves o llaves que sirven como índices
+únicos.
+
+```python
+# Sintaxis de un diccionario
+mi_diccionario = {clave1: valor1, clave2: valor2}
+```
+
+```python
+# Ejemplo de un diccionario
+persona = {'nombre': 'Pedro', 'edad': 30, 'es_casado': True}
+```
+
+**📄 Código :**
+
+```python
+print("*** Diccionarios en Python ***")
+
+# Creamos un dict de persona con clave y valor
+persona = {"nombre": "Sergio", "edad": 30, "ciudad": "México"}
+
+print(f"Diccionario de persona: {persona}")
+
+# Acceder a los elementos del diccionario
+print(f"Nombre: {persona['nombre']}")
+print(f"Edad: {persona.get('edad')}")
+print(f"Ciudad: {persona.get('ciudad')}")
+
+# Modificar un valor del diccionario
+persona["edad"] = 35
+print(f"Diccionario de persona: {persona}")
+
+# Agregar un nuevo elemento
+persona["profesion"] = "Ingeniero"
+print(f"Diccionario de persona: {persona}")
+
+# Eliminar un elemento
+del persona["ciudad"]
+print(f"Diccionario de persona: {persona}")
+
+persona.pop("profesion")
+print(f"Diccionario de persona: {persona}")
+
+# Iterar los elementos de un dict (llave, valor)
+for llave, valor in persona.items():
+  print(f"Llave: {llave}, Valor: {valor}")
+
+# Obtener los valores
+print(f"\nValores de diccionario:")
+for valor in persona.values():
+  print(f"- Valor: {valor}")
+
+# Obtener las llaves
+for llave in persona.keys():
+  print(f"- {llave}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Diccionarios en Python ***
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 30, 'ciudad': 'México'}
+Nombre: Sergio
+Edad: 30
+Ciudad: México
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35, 'ciudad': 'México'}
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35, 'ciudad': 'México', 'profesion': 'Ingeniero'}
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35, 'profesion': 'Ingeniero'}
+Diccionario de persona: {'nombre': 'Sergio', 'edad': 35}
+Llave: nombre, Valor: Sergio
+Llave: edad, Valor: 35
+
+Valores de diccionario:
+- Valor: Sergio
+- Valor: 35
+- nombre
+- edad
+```
+
+### Agenda de Contactos
+
+Crear una agenda de contactos utilizando un diccionario de Python con la siguiente estructura
+
+````python
+agenda
+{
+  nombre
+{
+  telefono
+email
+dirección
+}
+}
+````
+
+**📄 Código :**
+
+```python
+print("*** Agenda de contactos ***")
+
+agenda = {
+  "Carlos": {
+    "telefono": "34235435",
+    "email": "carlos@mail.com",
+    "direccion": "Calle Principal 132",
+  },
+  "María": {
+    "telefono": "4353344",
+    "email": "maria@mail.com",
+    "direccion": "Avenida Central 453",
+  },
+  "Pedro": {
+    "telefono": "4334344",
+    "email": "pedro@mail.com",
+    "direccion": "Plaza Mayor 898",
+  },
+}
+
+print(agenda)
+
+# Acceder a la información de un contacto en especifico
+print(
+  f"""Información del contacto de María:
+Teléfono: {agenda['María']['telefono']}
+Email: {agenda.get('María').get('email')}
+Dirección: {agenda.get('María').get('direccion')}
+"""
+)
+
+# Agregar un nuevo contacto
+agenda["Ana"] = {
+  "telefono": "453563443",
+  "email": "ana@mail.com",
+  "direccion": "Calle Salvador Diaz 321",
+}
+
+print(agenda)
+
+# Eliminar un contacto existente
+agenda.pop("Pedro")
+# del agenda["Pedro"]
+print(agenda)
+
+# Mostramos los contactos de la agenda
+# Usar iterable
+print()
+print("Contactos en la agena".center(35, "="))
+for nombre, detalles in agenda.items():
+  print(
+    f"""
+{'=' * 50}
+Nombre: {nombre}
+    Teléfono: {detalles.get('telefono')}
+    Email: {detalles.get('email')}
+    Dirección: {detalles.get('direccion')}"""
+  )
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Agenda de contactos ***
+{'Carlos': {'telefono': '34235435', 'email': 'carlos@mail.com', 'direccion': 'Calle Principal 132'}, 'María': {'telefono': '4353344', 'email': 'maria@mail.com', 'direccion': 'Avenida Central 453'}, 'Pedro': {'telefono': '4334344', 'email': 'pedro@mail.com', 'direccion': 'Plaza Mayor 898'}}
+Información del contacto de María:
+Teléfono: 4353344
+Email: maria@mail.com
+Dirección: Avenida Central 453
+
+{'Carlos': {'telefono': '34235435', 'email': 'carlos@mail.com', 'direccion': 'Calle Principal 132'}, 'María': {'telefono': '4353344', 'email': 'maria@mail.com', 'direccion': 'Avenida Central 453'}, 'Pedro': {'telefono': '4334344', 'email': 'pedro@mail.com', 'direccion': 'Plaza Mayor 898'}, 'Ana': {'telefono': '453563443', 'email': 'ana@mail.com', 'direccion': 'Calle Salvador Diaz 321'}}
+{'Carlos': {'telefono': '34235435', 'email': 'carlos@mail.com', 'direccion': 'Calle Principal 132'}, 'María': {'telefono': '4353344', 'email': 'maria@mail.com', 'direccion': 'Avenida Central 453'}, 'Ana': {'telefono': '453563443', 'email': 'ana@mail.com', 'direccion': 'Calle Salvador Diaz 321'}}
+
+=======Contactos en la agena=======
+
+==================================================
+Nombre: Carlos
+    Teléfono: 34235435
+    Email: carlos@mail.com
+    Dirección: Calle Principal 132
+
+==================================================
+Nombre: María
+    Teléfono: 4353344
+    Email: maria@mail.com
+    Dirección: Avenida Central 453
+
+==================================================
+Nombre: Ana
+    Teléfono: 453563443
+    Email: ana@mail.com
+    Dirección: Calle Salvador Diaz 321
+```
+
+### Combinar Listas y Diccionarios en Python
+
+**📄 Código :**
+
+```python
+print("*** Listas y Diccionarios ***")
+
+personas = [
+  {"nombre": "Regina", "apellido": "Flores", "edad": 21},
+  {"nombre": "Alejandro", "apellido": "Reyes", "edad": 32},
+]
+
+print(personas)
+
+# Acceder a un diccionario desde una lista
+print(
+  f"""{'=' * 20}
+Detalle del primer elemento de la lista
+    Nombre:{personas[0].get('nombre')}
+    Apellido: {personas[0].get('apelliod')}
+    Edad: {personas[0].get('edad')}"""
+)
+
+# Recorrer los elementos de la lista
+print()
+for contador, persona in enumerate(personas):
+  print(f"{contador}. Persona: {persona}")
+  """print(
+      f"Detalle: Nombre: {persona.get('nombre')}, Apellido: {persona.get('apellido')}, Edad: {persona.get('edad')}"
+  )"""
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Listas y Diccionarios ***
+[{'nombre': 'Regina', 'apellido': 'Flores', 'edad': 21}, {'nombre': 'Alejandro', 'apellido': 'Reyes', 'edad': 32}]
+====================
+Detalle del primer elemento de la lista
+    Nombre:Regina
+    Apellido: None
+    Edad: 21
+
+0. Persona: {'nombre': 'Regina', 'apellido': 'Flores', 'edad': 21}
+1. Persona: {'nombre': 'Alejandro', 'apellido': 'Reyes', 'edad': 32}
+```
+
+### Gestión de Inventario
+
+Crea un programa para gestionar el inventario de un almacén.
+
+Para ello se debe utilizar una lista de Python para mantener un registro de los productos disponibles en el almacén.
+
+Y Para almacenar el detalle del producto se debe utilizar un diccionario, con el id, nombre, precio y cantidad
+disponible del producto en almacén.
+
+**📄 Código :**
+
+```python
+print("*** Sistema de Inventario ***")
+
+inventario = []
+
+while True:
+  print(
+    f"""{'-' * 10}Inventario de menú:{'-' * 10}
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir"""
+  )
+  try:
+    opcion: int = int(input("Ingresa un número de menú (opción): "))
+    match opcion:
+      case 1:
+        if not inventario:
+          print(
+            "\nInventario no tiene los productos.\nPor favor ingresar los productos en la opción de 2...\n"
+          )
+        else:
+          # Mostrar el inventario detalle
+          print(f"\n{'=' * 10} Inventario detallado {'=' * 10}")
+          for producto in inventario:
+            print(f"ID: {producto.get('id')}")
+            print(f"Nombre: {producto.get('nombre')}")
+            print(f"Precio: ${producto.get('precio'):.2f}")
+            print(f"Cantidad: {producto.get('cantidad')}")
+            print("-" * 20)
+          print("=" * 42)
+        print()
+      case 2:
+        # Definimos a los productos agregan a pedir al usuario
+        numero_productos = int(
+          input("Cuanto producto deseas agregar al inventario?: ")
+        )
+
+        # Iteramos a las variables de productos para diccionario
+        for indice in range(numero_productos):
+          print(f"Proporciona los valores del producto {indice + 1} ")
+          nombre = input("Nombre: ")
+          precio = float(input("Precio: "))
+          cantidad = int(input("Cantidad: "))
+          # Creamos el diccionario con el detalle del producto
+          producto = {
+            "id": indice,
+            "nombre": nombre,
+            "precio": precio,
+            "cantidad": cantidad,
+          }
+          # Agregamos el nuevo producto al inventario
+          inventario.append(producto)
+        # Mostrar el inventario inicial
+        print(f"\nInventario inicial: {inventario}\n")
+      case 3:
+        if not inventario:
+          print(
+            "\nInventario no tiene los productos.\nPor favor ingresar los productos en la opción de 2...\n"
+          )
+        else:
+          # Buscar un producto por ID
+          id_buscar = int(input("\nIngresa el ID del producto a buscar: "))
+          producto_encontrado = None
+          for producto in inventario:
+            if producto.get("id") == id_buscar:
+              producto_encontrado = producto
+              break
+          if producto_encontrado is not None:
+            print("Información de producto encontrado")
+            print(f"ID: {producto_encontrado.get('id')}")
+            print(f"Nombre: {producto_encontrado.get('nombre')}")
+            print(f"Precio: ${producto_encontrado.get('precio'):.2f}")
+            print(f"Cantidad: {producto_encontrado.get('cantidad')}")
+          else:
+            print(f"Producto con ID {id_buscar} No encontrado")
+          print()
+      case 4:
+        print("Salido de sistema de Inventario")
+        break
+      case _:
+        print("\nOpción inválida. Por favor Ingresa una opción correcta.\n")
+  except ValueError:
+    print("Error: entrada no válida. Debes ingresar un número entero.")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema de Inventario ***
+----------Inventario de menú:----------
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir
+Ingresa un número de menú (opción): 1
+
+Inventario no tiene los productos.
+Por favor ingresar los productos en la opción de 2...
+
+
+----------Inventario de menú:----------
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir
+Ingresa un número de menú (opción): 2
+Cuanto producto deseas agregar al inventario?: 2
+Proporciona los valores del producto 1 
+Nombre: Camiseta
+Precio: 34.2
+Cantidad: 5
+Proporciona los valores del producto 2 
+Nombre: Pantalón
+Precio: 45.3
+Cantidad: 6
+
+Inventario inicial: [{'id': 0, 'nombre': 'Camiseta', 'precio': 34.2, 'cantidad': 5}, {'id': 1, 'nombre': 'Pantalón', 'precio': 45.3, 'cantidad': 6}]
+
+----------Inventario de menú:----------
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir
+Ingresa un número de menú (opción): 1
+
+========== Inventario detallado ==========
+ID: 0
+Nombre: Camiseta
+Precio: $34.20
+Cantidad: 5
+ID: 1
+Nombre: Pantalón
+Precio: $45.30
+Cantidad: 6
+==========================================
+
+----------Inventario de menú:----------
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir
+Ingresa un número de menú (opción): 3
+
+Ingresa el ID del producto a buscar: 5
+Producto con ID 5 No encontrado
+
+----------Inventario de menú:----------
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir
+Ingresa un número de menú (opción): 3
+
+Ingresa el ID del producto a buscar: 1
+Información de producto encontrado
+ID: 1
+Nombre: Pantalón
+Precio: $45.30
+Cantidad: 6
+
+----------Inventario de menú:----------
+1. Mostrar el Inventario
+2. Ingresar los productos
+3. Buscar ID
+4. Salir
+Ingresa un número de menú (opción): 4
+Salido de sistema de Inventario
+```
+
+### Comprensión de Listas en Python
+
+La comprensión de listas es una forma concisa y eficiente de crear listas a partir de otros iterables (listas, tuplas,
+set o diccionarios)
+
+Permite filtrar elementos y aplicar expresiones a cada elemento de un iterable, de manera muy legible y en una sola
+línea de código.
+
+```python
+# sintaxis comprension de listas
+[nueva_expresion for elemento in iterabl if condicion]
+```
+
+**nueva_expresion:** Es la expresión que define cómo se modifica o procesa cada elemento del iterable.
+**elemento:** Variable que representa cada elemento del iterable original
+**iterable:** La secuencia o colección sobre la cual se itera
+**condicion:** (opcional) Es una condición para filtrar los elementos del iterable
+
+````python
+# Ejemplo comprension de listas
+numeros = [1, 2, 3, 4, 5, 6]
+pares = x
+for x in numeros if x % 2 == 0
+  print(pares)  # salida: [2, 4, 6]
+````
+
+````python
+# Ejemplo comprensión de listas
+numeros[1, 2, 3, 4, 5]
+cuadrados = [x ** 2 for x in numeros]
+print(cuadrados)  # Salida: [1, 4, 9, 16, 25]
+````
+
+**📄 Código :**
+
+```python
+print("*** Comprensión de la Listas ***")
+
+# Una lista con el cuadrado de cada número
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [x ** 2 for x in numeros]
+print(cuadrados)
+
+# Lista de números pares
+numeros = range(10 + 1)
+print(numeros)
+pares = [x for x in numeros if x % 2 == 0]
+print(pares)
+
+# Lista saludando a cada nombre
+nombres = ["Ana", "Jerónimo", "Carlos"]
+saludando = [f"Hola {nombre}" for nombre in nombres]
+print(saludando)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Comprensión de la Listas ***
+[1, 4, 9, 16, 25]
+range(0, 11)
+[0, 2, 4, 6, 8, 10]
+['Hola Ana', 'Hola Jerónimo', 'Hola Carlos']
 ```
