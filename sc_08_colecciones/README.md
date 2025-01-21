@@ -1,5 +1,3 @@
-from sc_02_variables.py_04_tipos_de_datos import direccionfrom sc_02_variables.py_02_modificado import telefono
-
 # Colecciones en Python
 
 ## Colecciones
@@ -980,4 +978,69 @@ Cantidad: 6
 4. Salir
 Ingresa un número de menú (opción): 4
 Salido de sistema de Inventario
+```
+
+### Comprensión de Listas en Python
+
+La comprensión de listas es una forma concisa y eficiente de crear listas a partir de otros iterables (listas, tuplas,
+set o diccionarios)
+
+Permite filtrar elementos y aplicar expresiones a cada elemento de un iterable, de manera muy legible y en una sola
+línea de código.
+
+```python
+# sintaxis comprension de listas
+[nueva_expresion for elemento in iterabl if condicion]
+```
+
+**nueva_expresion:** Es la expresión que define cómo se modifica o procesa cada elemento del iterable.
+**elemento:** Variable que representa cada elemento del iterable original
+**iterable:** La secuencia o colección sobre la cual se itera
+**condicion:** (opcional) Es una condición para filtrar los elementos del iterable
+
+````python
+# Ejemplo comprension de listas
+numeros = [1, 2, 3, 4, 5, 6]
+pares = x
+for x in numeros if x % 2 == 0
+    print(pares)  # salida: [2, 4, 6]
+````
+
+````python
+# Ejemplo comprensión de listas
+numeros[1, 2, 3, 4, 5]
+cuadrados = [x ** 2 for x in numeros]
+print(cuadrados)  # Salida: [1, 4, 9, 16, 25]
+````
+
+**📄 Código :**
+
+```python
+print("*** Comprensión de la Listas ***")
+
+# Una lista con el cuadrado de cada número
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [x ** 2 for x in numeros]
+print(cuadrados)
+
+# Lista de números pares
+numeros = range(10 + 1)
+print(numeros)
+pares = [x for x in numeros if x % 2 == 0]
+print(pares)
+
+# Lista saludando a cada nombre
+nombres = ["Ana", "Jerónimo", "Carlos"]
+saludando = [f"Hola {nombre}" for nombre in nombres]
+print(saludando)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Comprensión de la Listas ***
+[1, 4, 9, 16, 25]
+range(0, 11)
+[0, 2, 4, 6, 8, 10]
+['Hola Ana', 'Hola Jerónimo', 'Hola Carlos']
 ```
