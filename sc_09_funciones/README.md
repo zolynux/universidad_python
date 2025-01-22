@@ -460,3 +460,50 @@ if __name__ == "__main__":
 Proporciona un valor numérico: 3
 ¿Número par?: False
 ```
+
+### Funciones Recursivas
+
+![img.png](funciones/img.png)
+
+#### Reglas Funciones Recursivas
+
+1. Una función que se llama a si misma
+   ![img.png](funciones/img.png)
+2. Debe avanzar hacia un caso base, de lo contrario caemos en ciclos infinitos.
+
+````text
+# Con cada llamada recursiva nos acercamos al caso base
+mi_funcion(n)
+    Si n == 1 Entonces
+        regresa n
+    SiNo
+        mi_funcion(n - 1)
+````
+
+**📄 Código :**
+
+```python
+print("*** Imprimir del 1 al 5 de forma recursiva ***")
+
+
+# Definir la función recursiva
+def funcion_recursiva(numero):
+    # Caso Base
+    if numero == 1:
+        print(numero, end=" ")  # 1
+    else:
+        funcion_recursiva(numero - 1)
+        print(numero, end=" ")  # 1
+
+
+# Programa Principal
+funcion_recursiva(5)
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Imprimir del 1 al 5 de forma recursiva ***
+1 2 3 4 5 
+```
