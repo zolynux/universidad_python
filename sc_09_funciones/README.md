@@ -228,3 +228,60 @@ print(f"Coordenada x = {x1}, Coordenada y = {y1}, Coordenada z = {z1}")
 (10, 20, 30)
 Coordenada x = 10, Coordenada y = 20, Coordenada z = 30
 ```
+
+### Alcance de Variables
+
+Las variables pueden tener un alcance global o local dependiendo de dónde y cómo se declaren
+
+Las variables globales son aquellos que están disponibles a lo largo de todo el programa
+
+Mientras que las variables locales sólo están disponibles dentro del bloque de código o la función donde fueron
+declaradas.
+
+**📄 Código :**
+
+```python
+print("*** Alcance de Variables ***")
+
+# Variable global
+contador_global: int = 0
+
+
+def incrementar_contador():
+    # Declaramos una variable local
+    contador_local = 0
+    # usar la variable global
+    global contador_global
+    # Incrementamos la variable global
+    contador_global += 1
+    # Incrementamos la variable local
+    contador_local += 1
+    # Imprimimos ambos contadores
+    print("Contador local:", contador_local)
+    print("Contador global:", contador_global, "\n")
+
+
+#  Llamamos varias veces la función
+incrementar_contador()
+incrementar_contador()
+incrementar_contador()
+
+# Terminando el programa
+print("Valor variable global:", contador_global)
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Alcance de Variables ***
+Contador local: 1
+Contador global: 1 
+
+Contador local: 1
+Contador global: 2 
+
+Contador local: 1
+Contador global: 3 
+
+Valor variable global: 3
+```
