@@ -363,3 +363,32 @@ Superheroe: Spiderman - ('Instinto Arácnido',) - Más info: {'edad': 17, 'empre
 Superheroe: Ironman - ('Armadura', 'Playboy') - Más info: {'edad': 45}
 Superheroe: Mi vecino - () - Más info: {'personalidad': 'Buena onda!'}
 ```
+
+### Suma con Argumentos Variables
+
+**📄 Código :**
+
+```python
+print("*** Suma con Argumentos Variables ***")
+
+
+# Función sumar que acepta argumentos variables
+def sumar(*args):
+    total = 0
+    for numero in args:
+        total += numero
+    return total
+
+
+# Llamamos a la función sumar
+resultado = sumar(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print("Resultado de la suma:", resultado)
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Suma con Argumentos Variables ***
+Resultado de la suma: 55
+```
