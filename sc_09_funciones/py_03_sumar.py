@@ -1,4 +1,5 @@
-print("*** Función suma ***")
+if __name__ == "__main__":
+    print("*** Función suma ***")
 
 
 # Definimos la función
@@ -7,9 +8,6 @@ def sumar(a, b):
     return resultado_suma
 
 
-# Llamar a la función
-resultado_funcion = sumar(8, 5)
-print(f"Resultado función Suma: {resultado_funcion}")
-
-resultado_funcion = sumar(9, 15)
-print(f"Resultado función Suma: {resultado_funcion}")
+# Prueba de la función sumar
+if __name__ == "__main__":
+    print(f"Prueba función sumar desde el módulo: {sumar(15,30)}")
