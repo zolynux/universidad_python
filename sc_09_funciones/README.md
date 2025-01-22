@@ -285,3 +285,48 @@ Contador global: 3
 
 Valor variable global: 3
 ```
+
+### Argumentos variables *args
+
+En Python, los argumentos variables permiten que una función acepte un número arbitrario de elementos. Hay dos tipos
+principales
+
+1. **Argumentos posicionales variables `*args`:** Permite pasar múltiples argumentos posicionales a una función,
+   recibiéndolos como una tupla dentro de la función.
+2. **Argumentos con Palabra Clave `**kwargs`:** Recibe los argumentos en forma de diccionario (llave - valor o key -
+   value).
+
+**📄 Código :**
+
+```python
+print("*** Argumentos Variables ***")
+
+
+def superheroe_superpoderes(superheroe, nombre, *args):
+    print(f"Superheroe: {superheroe} - {nombre} - {args}")
+    for superporder in args:
+        print(f"\tSuperpoder: {superporder}")
+
+
+# Llama la función
+superheroe_superpoderes("Spiderman", "Peter Parker", "Instinto Arácnido", "Teleraña")
+superheroe_superpoderes("Ironman", "Tony Stark", "Armadura", "Playboy", "Millonario")
+
+# Es opcional enviar argumentos variables
+superheroe_superpoderes("Mi vecino", "Juan Perez")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Argumentos Variables ***
+Superheroe: Spiderman - Peter Parker - ('Instinto Arácnido', 'Teleraña')
+	Superpoder: Instinto Arácnido
+	Superpoder: Teleraña
+Superheroe: Ironman - Tony Stark - ('Armadura', 'Playboy', 'Millonario')
+	Superpoder: Armadura
+	Superpoder: Playboy
+	Superpoder: Millonario
+Superheroe: Mi vecino - Juan Perez - ()
+```
