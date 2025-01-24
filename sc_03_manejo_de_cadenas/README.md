@@ -11,7 +11,7 @@ Los caracteres pueden ser letras, números, símbolos o espacios.
 cadena1 = "Hola Mundo"
 ```
 
-![img_3.png](img_3.png)
+![img_3.png](/screenshot/img_3.png)
 
 **Código 📄:**
 
@@ -45,7 +45,7 @@ Los caracteres de una cadena están indexados de manera secuencial.
 
 Por lo tanto, podemos acceder cada carácter indicando el índice del carácter que deseamos recuperar
 
-![img_4.png](img_4.png)
+![img_4.png](/screenshot/img_4.png)
 
 **📄 Código :**
 
@@ -76,7 +76,7 @@ Si deseamos modificar una cadena, entonces tenemos que crear una nueva cadena.
 
 Las cadenas no se pueden modificar, son inmutables:
 
-![img_5.png](img_5.png)
+![img_5.png](/screenshot/img_5.png)
 
 Nuevo valor.
 
@@ -107,8 +107,8 @@ Estos caracteres se introducen usando el caracter de diagonal invertida (`\`). E
 
 - **Nueva línea: `\n`** Inserta un salto de línea
 - **Tabulación: `\t`** Inserta un tabulador horizontal, útil para alinear texto.
-- **Comilla Simple: `\'`** Permite incluir comillas Simples en una cadena delimitada por comillas simples.
-- **Comilla Doble: `\"`** Permite incluir comillas Dobles en una cadena delimitada por comillas simples.
+- **Comillas Simple: `\'`** Permite incluir comillas Simples en una cadena delimitada por comillas simples.
+- **Comillas Doble: `\"`** Permite incluir comillas Dobles en una cadena delimitada por comillas simples.
 - **Barra invertida:  `\\`** Permite incluir una barra invertida en la cadena
 
 Existen más caracteres especiales, pero esto son los esenciales.
@@ -141,7 +141,7 @@ La concatenación de cadenas es una operación que permite combinar dos o más c
 
 En python existen varias formas, vamos a ver varias.
 
-- **Uso del operador +:** El operador `+` es el más directo para concatenas. Simplemente tenemos que poner el operador
+- **Uso del operador +:** El operador `+` es el más directo para concatenar. Simplemente, tenemos que poner el operador
   `+` entre las cadenas que deseamos unir.
 
 **Ejemplo:**
@@ -189,7 +189,7 @@ Hola Mundo
 Python ofrece varias maneras de formatear cadenas, que incluyen la capacidad de concatenar texto, variables e incluso
 dar indicar el número de decimales a utilizar en el formato.
 
-- **f-string (Python 3.6+)**: Esta es la opción más recomendan, por ser la más sencilla, rápida y legible.
+- **f-string (Python 3.6+)**: Esta es la opción más recomendada, por ser la más sencilla, rápida y legible.
 
 ```python
 resultado = f'hola {variable}'
@@ -332,12 +332,13 @@ Indice la subcadena de Hola: 0
 
 ## Reemplazar subcadena
 
-- **Reemplazar subcadena (`replace`)** El método `replace()` reemplaza una subcadena por otra dentro de una cadena principaal
+- **Reemplazar subcadena (`replace`)** El método `replace()` reemplaza una subcadena por otra dentro de una cadena
+  principal
 
 ```python
 cadena = 'Hola mundo'
 nueva_cadena = cadena.replace('mundo', 'a todos')
-print(nueva_cadena) # 'Hola a todos'
+print(nueva_cadena)  # 'Hola a todos'
 ```
 
 **📄 Código :**
@@ -363,14 +364,15 @@ Nueva cadena reemplazada: Adiós, mundo!
 
 ## Separar en Subcadenas
 
-- **Extraer subcadenas por separadores (`split`):** La función `split()` permite dividir una cadena en una lista de subcadenas basadas en un caracter separador.
+- **Extraer subcadenas por separadores (`split`):** La función `split()` permite dividir una cadena en una lista de
+  subcadenas basadas en un caracter separador.
 
 **Ejemplo:**
 
 ```python
 datos = 'Juan, 30, Colombia'
 lista = datos.split(',')
-print(lista) # ['Juan', '30', 'Colombia']
+print(lista)  # ['Juan', '30', 'Colombia']
 ```
 
 **📄 Código :**
@@ -422,7 +424,7 @@ Crea un programa para generar un email a partir de los siguientes datos:
 - **Empresa:** Global Mentoring
 - **Dominio:** com.mx
 
-Resutlado Final:
+Resultado Final:
 
 **Email:** `ubaldo.acosta.soto@globalmentoring.com.mx`
 

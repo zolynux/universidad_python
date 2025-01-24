@@ -1,8 +1,9 @@
 # Entrada de Datos
 
-**Conversión de tippos de datos:**
+**Conversión de tipos de datos:**
 
-La conversiós de tipos de datos, también conocida como casting, es una técnica para manipular datos que no están en el tipo requerido.
+La conversión de tipos de datos, también conocida como casting, es una técnica para manipular datos que no están en el
+tipo requerido.
 
 Podemos hacer conversiones desde y hacia distintos tipos de datos
 
@@ -103,19 +104,21 @@ concatenación: 1020
 Suma: 30
 ```
 
-## Entrada de Datos por Conosla
+## Entrada de Datos por Consola
 
 En Python, la entrada de datos se realiza usando la función `input()`
 
-Esta función puasa la ejecución del programa y espera a que el usuario introduzca algún texto desde el teclado.
+Esta función pasa la ejecución del programa y espera a que el usuario introduzca algún texto desde el teclado.
 
 Una vez que el usuario presiona Enter, el texto introducido se devuelve como una cadena (str)
 
 ### Características de la función `input`
 
-- **Interactividad:** Permite a los usuarios de nuestros programas proporcionar valores dinámicos, en lugar de utilizar valores en código duro o estáticos.
-- **Sencillez:** La función `input` es muy fácil de usar y solo necesita, opcionalmente, indicar la cadena o mensaje a mostrar al usuario, para que éste sepa lo que se le está solicitando.
-- **Tipo de Datos:** Siempre devuelve una cadena, si riquiere otro tipo hay que Convertirlo
+- **Interactividad:** Permite a los usuarios de nuestros programas proporcionar valores dinámicos, en lugar de utilizar
+  valores en código duro o estáticos.
+- **Sencillez:** La función `input` es muy fácil de usar y solo necesita, opcionalmente, indicar la cadena o mensaje a
+  mostrar al usuario, para que este sepa lo que se le está solicitando.
+- **Tipo de Datos:** Siempre devuelve una cadena, si requiere otro tipo hay que Convertirlo
 
 **📄 Código :**
 
@@ -159,7 +162,6 @@ edad_empleado = int(input("Edad del empleado: "))
 salario_empleado = float(input("Salario de empleado: "))
 es_jefe_departamento = str(input("¿Es jefe de departamento (Si/No)? "))
 
-
 # Vamos a convertir a un tipo bool la variable es_jefe_departamento
 es_jefe_departamento = es_jefe_departamento.lower() == "si"
 
@@ -197,7 +199,7 @@ Los valores que debe introducir el usuario son:
 - Nombre de la receta
 - Ingredientes
 - Tiempo de preparación (en minutos)
-- Dificultad (Facil, Media, Alta)
+- Dificultad (Fácil, Media, Alta)
 
 Mandar a imprimir la receta
 
@@ -240,7 +242,7 @@ La función `randint()`, que es parte de módulo `random`, nos permite generar n
 
 `randint(a, b)` devuelve un número aleatorio entre a y b, incluyendo estos valores.
 
-Es necesario importar en primer línea el módulo `random` antes de usar la función `randint()```
+Es necesario importar en primera línea el módulo `random` antes de usar la función `randint()```
 
 Para importar un módulo, usamos la sintaxis `import random`
 
@@ -249,8 +251,8 @@ Para importar un módulo, usamos la sintaxis `import random`
 ```python
 ## Valores aleatorios con la función randint
 
-#import random
-import random 
+# import random
+import random
 
 # Generar un numero aleatorio entre 1 y 10
 numero = random.randint(1, 10)
@@ -272,11 +274,11 @@ Resultado de lanzar el dado: 4
 
 Con los datos recibidos el sistema deberá realizar lo siguiente:
 
-1. Del valor recibido de nombre, usar sólo los 2 primeras letras y convertirlas a mayúsculas
+1. Del valor recibido de nombre, usar sólo las 2 primeras letras y convertirlas a mayúsculas
 2. Del valor de apellido, usar las 2 primeras letras y convertirlas a mayúsculas.
-3. Del valor de año, tomar los 2 últimos digitos.
+3. Del valor de año, tomar los 2 últimos dígitos.
 
-Además, el sistema deberá generar un valor aleatorio de 4 dígitos, con ayuda de la función rantint
+Además, el sistema deberá generar un valor aleatorio de 4 dígitos, con ayuda de la función `rantint`
 
 Finalmente, con los datos obtenidos generar un ID único uniendo los valores como sigue:
 
@@ -302,12 +304,11 @@ nombre = str(input('¿Cuál es tu nombre?: '))
 apellido = str(input('¿Cuál es tu apellido?: '))
 anio_nacimiento = str(input('¿Cuál es tu año de nacimiento (YYYY)?: '))
 
-
 # Normalizar los valores
 
 nombre_2 = nombre.strip().upper()[0:2]
 apellido_2 = apellido.strip().upper()[0:2]
-anio_nacimiento_2 = anio_nacimiento.strip()[2:] # También puede ser [2:4]
+anio_nacimiento_2 = anio_nacimiento.strip()[2:]  # También puede ser [2:4]
 
 # Generar el valor aleatorio
 aleatorio = randint(1000, 9999)

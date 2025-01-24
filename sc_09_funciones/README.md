@@ -553,7 +553,7 @@ Calcular la potencia de un número usando una función recursiva la fórmula es:
 
 ![img.png](funciones/img-2.png)
 
-Donde "a" es la base y "b" es la potencia, lo que significa multiplicar a por sí mismo b veces
+Donde "a" es la base y "b" es la potencia, lo que significa multiplicar a por sí mismo 'b' veces
 
 ![img.png](funciones/img-3.png)
 

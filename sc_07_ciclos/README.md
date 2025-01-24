@@ -2,16 +2,18 @@
 
 ## Ciclo while
 
-Los ciclos en Python son estructuras de control que repitan una serie de instrucciones hasta que se cumple una condición específica.
+Los ciclos en Python son estructuras de control que repitan una serie de instrucciones hasta que se cumple una condición
+específica.
 
-En Python tenemos dos tipos de estructuras para ejecutar ciclos: Ciclo `while` y ciclo `for`. Comencemos con el ciclo `while`.
+En Python tenemos dos tipos de estructuras para ejecutar ciclos: Ciclo `while` y ciclo `for`. Comencemos con el ciclo
+`while`.
 
 El ciclo `while` repite una serie de instrucciones mientras la condición a evaluar sea verdadera.
 
 ```python
 # Sintaxis ciclo while:
 while condicion:
-  # Bloque de código a ejecutar
+# Bloque de código a ejecutar
 ```
 
 ```python
@@ -64,12 +66,13 @@ while contador <= 5:
 
 ## Ciclo for
 
-El ciclo `for` itera o recorre una secuencia de valores, por ejemplo los caracteres de una cadena, una lista, etc. y ejecuta bloque de código por cada elemento de la secuencia.
+El ciclo `for` itera o recorre una secuencia de valores, por ejemplo los caracteres de una cadena, una lista, etc. y
+ejecuta bloque de código por cada elemento de la secuencia.
 
 ```python
 # Sintaxis ciclo for
 for variable in secuencia:
-  # Bloque de código a ejecutar
+# Bloque de código a ejecutar
 ```
 
 ```python
@@ -316,7 +319,8 @@ Crear una aplicación de calculadora con las opciones de:
 3. Multiplicación
 4. División
 
-El programa debe mostrar un menú con cada opción, y debe solicitar los valores de operando 1 y operando 2 para realizar la operación seleccionada.
+El programa debe mostrar un menú con cada opción, y debe solicitar los valores de operando 1 y operando 2 para realizar
+la operación seleccionada.
 
 **📄 Código :**
 
@@ -458,7 +462,8 @@ Crear un programa para solicitar la validación al momento de crear un valor de 
 
 La contraseña debe tener al menos 6 caracteres
 
-En caso de no cumplir con esta condición el programa debe volver a solicitar un nuevo valor hasta que cumpla con la condición.
+En caso de no cumplir con esta condición el programa debe volver a solicitar un nuevo valor hasta que cumpla con la
+condición.
 
 Si el valor proporcionado es válido, se debe imprimir: 'Password válido' y debe terminar la ejecución del sistema.
 
@@ -499,9 +504,9 @@ Por cada intento fallido se debe incrementar una variable que lleve el conteo de
 
 El programa debe orientar al jugador indicándole si el valor que proporcionó fue mayor o menor que el número secreto
 
-Finalmente si adivina el número secreto debe felicitar al usuario e indicar cuántos intentos realizó
+Finalmente, si adivina el número secreto debe felicitar al usuario e indicar cuántos intentos realizó
 
-Opcionalmente, se puede limitar el juego a un número de intentos máximo (ej: 10) de lo contrario termina el juego.
+Opcionalmente, se puede limitar el juego a un número de intentos máximo (Ej.: 10) de lo contrario termina el juego.
 
 **📄 Código :**
 

@@ -32,7 +32,7 @@ Access Memory) o memoria de corto plazo
 **Ejemplo:**
 
 | Paso | Variable y valores | RAM  | Dir. Memoria (hex) |
-| ---- | ------------------ | ---- | ------------------ |
+|------|--------------------|------|--------------------|
 | 1    | edad = 30          | 30   | 0x333              |
 | 2    | edad=60.5          | 60.5 | 0x444              |
 | 3    | edad = 32          | 32   | ...                |
@@ -48,7 +48,7 @@ edad = 30
 altura = 1.75
 ````
 
-![img_1.png](img_1.png)
+![img_1.png](/screenshot/img_1.png)
 
 ### Variables y Memoria Simplificado
 
@@ -59,7 +59,7 @@ edad = 30
 altura = 1.68
 ````
 
-![img_2.png](img_2.png)
+![img_2.png](/screenshot/img_2.png)
 
 ## Ejemplo de Variables
 

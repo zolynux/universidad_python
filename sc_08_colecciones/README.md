@@ -805,7 +805,7 @@ Crea un programa para gestionar el inventario de un almacén.
 
 Para ello se debe utilizar una lista de Python para mantener un registro de los productos disponibles en el almacén.
 
-Y Para almacenar el detalle del producto se debe utilizar un diccionario, con el id, nombre, precio y cantidad
+Y Para almacenar el detalle del producto se debe utilizar un diccionario, con el ID, nombre, precio y cantidad
 disponible del producto en almacén.
 
 **📄 Código :**
@@ -993,10 +993,10 @@ línea de código.
 [nueva_expresion for elemento in iterabl if condicion]
 ```
 
-**nueva_expresion:** Es la expresión que define cómo se modifica o procesa cada elemento del iterable.
-**elemento:** Variable que representa cada elemento del iterable original
-**iterable:** La secuencia o colección sobre la cual se itera
-**condicion:** (opcional) Es una condición para filtrar los elementos del iterable
+**`nueva_expresion`:** Es la expresión que define cómo se modifica o procesa cada elemento del iterable.
+**`elemento`:** Variable que representa cada elemento del iterable original
+**`iterable`:** La secuencia o colección sobre la cual se itera
+**`condicion`:** (opcional) Es una condición para filtrar los elementos del iterable
 
 ````python
 # Ejemplo comprension de listas

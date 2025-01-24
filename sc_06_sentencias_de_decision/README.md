@@ -4,8 +4,9 @@ Las sentencias de decisión nos permiten controlar el flujo de ejecución de un 
 
 Las estructuras que podemos usar son: `if`, `else`, y `elif`
 
-- La sentencia `if` permite ejecutar un bloque de código si la condición a evaluar es verdadera. Una condición es una expresión que evaluar a  `True` o `False`, Ej: `edad >= 18`
-  
+- La sentencia `if` permite ejecutar un bloque de código si la condición a evaluar es verdadera. Una condición es una
+  expresión que evaluar a  `True` o `False`, Ej.: `edad >= 18`
+
 ```python
 # Sintaxis sentencias if
 if condicion:
@@ -26,14 +27,14 @@ Un programa de flujo es una representación gráfica de los pasos a ejecutar par
 
 Se utilizan símbolos estandarizados para representar distintos tipos de acciones:
 
-- Un óvalo  representa el inicio o fin de un proceso:
-![alt text](../screenshot/decisiones/image.png)
+- Un óvalo representa el inicio o fin de un proceso:
+  ![alt text](../screenshot/decisiones/image.png)
 - Un rectángulo muestra instrucciones o acciones a ejecutar
-![alt text](../screenshot/decisiones/image-1.png)
+  ![alt text](../screenshot/decisiones/image-1.png)
 - Un rombo o diamante indica decisiones, con múltiples flujos dependiendo si la respuesta es verdadera o falsa
-![alt text](../screenshot/decisiones/image-2.png)
+  ![alt text](../screenshot/decisiones/image-2.png)
 - Las fechas dirigen el flujo del proceso, mostrando la dirección en que se mueven la secuencia de acciones.
-![alt text](../screenshot/decisiones/image-3.png)
+  ![alt text](../screenshot/decisiones/image-3.png)
 
 ## Diagrama de Flujo Sentencia `if`
 
@@ -128,9 +129,11 @@ Eres menor de edad. Tienes 10 años
 
 ## Sentencia `if` `elif` `else`
 
-La sentencia `elif` es una abreviatura de `else if`, y se utiliza cuando necesitamos verificar múltiples condiciones, una tras otra.
+La sentencia `elif` es una abreviatura de `else if`, y se utiliza cuando necesitamos verificar múltiples condiciones,
+una tras otra.
 
-Se pueden agregar tantas nuevas condiciones de tipo `elif` como necesitemos, pero deben después de un `if` y antes de un `else`.
+Se pueden agregar tantas nuevas condiciones de tipo `elif` como necesitemos, pero deben después de un `if` y antes de un
+`else`.
 
 ```python
 # Sintaxis sentencia if else
@@ -273,7 +276,8 @@ Monto final de la compra con descuento: $1350.00
 
 ## Sistema de Bancario
 
-Considerando que estamos dentro de un sistema bancario, se solicita preguntar al usuario si desea continuar dentro del sistema.
+Considerando que estamos dentro de un sistema bancario, se solicita preguntar al usuario si desea continuar dentro del
+sistema.
 
 Utilizando el operador `not` para aplicar una lógica inversa se debe programar las siguientes condiciones:
 
@@ -306,16 +310,16 @@ Salimos del sistema
 
 ![alt text](../screenshot/decisiones/image-8.png)
 
-Supón que estás en un parque de diversiones y quieres entrar a la case de los espejos.
+Supón que estás en un parque de diversiones y quieres entrar a la casa de los espejos.
 
 Sin embargo, debes cumplir con algunas condiciones.
 
 1. Debes tener más de años
 2. No debe darte miedo la oscuridad
 
-Si se cumplen los condiciones anteriores puedes entrar.
+Si se cumplen las condiciones anteriores puedes entrar.
 
-Para realizar este ejemplos vamos utilizar el operador `not` para aplicar una lógica inversa.
+Para realizar estes ejemplos vamos a utilizar el operador `not` para aplicar una lógica inversa.
 
 **📄 Código :**
 
@@ -343,7 +347,8 @@ Puedes entrar a la casa de los espejos
 
 ## Operador Ternario
 
-El operador ternario en Python es una forma compacto del agregar una condición, y el objetivo es asignar una valor a una variable dependiendo del valor de la condición.
+El operador ternario en Python es una forma compacta del agregar una condición, y el objetivo es asignar un valor a una
+variable dependiendo del valor de la condición.
 
 ```python
 # Sintaxis Operador Ternario
@@ -397,7 +402,7 @@ Con los valores anteriores debemos calcular las calorías quemadas según los pa
 calorias_quemadas = pasos_diarios * CALORIAS_POR_PASO
 ```
 
-y Verificaremos si se cumplió la meta de paso diarios
+Y verificaremos si se cumplió la meta de pasos diarios
 
 ```python
 meta_alcanzada = pasos_diarios >= META_PASOS_DIARIOS
@@ -454,14 +459,15 @@ Se solicita crear un sistema de Reservación de un Hotel se debe pedir la siguie
 
 - Nombre del Usuario
 - Días de estadía en el hotel
-- Cuarto con vista al mar?
+- ¿Cuarto con vista al mar?
 
 El hotel tiene las siguientes tarifas:
 
 - Cuarto sin vista al mar: $150.50 por día
 - Cuarto con vista al mar: $190.50 por día
 
-El sistema debe calcular el costo total de la estadía dependiendo si escogió un cuarto con vista al mar o no. Además de indicar si escogió un cuarto con vista al mar o no.
+El sistema debe calcular el costo total de la estadía dependiendo si escogió un cuarto con vista al mar o no. Además de
+indicar si escogió un cuarto con vista al mar o no.
 
 **📄 Código :**
 
@@ -514,9 +520,9 @@ Habitación con Vista al mar: No
 
 ## El mayor de 2 números
 
-crear un programa para indicar cual es el mayor de dos números
+Crear un programa para indicar cuál es el mayor de dos números
 El programa debe pedir al usuario dos números enteros.
-Posteriormente se deben comparar y mandar a imprimir el número mayor.
+Posteriormente, se deben comparar y mandar a imprimir el número mayor.
 
 **📄 Código :**
 
@@ -548,7 +554,8 @@ El segundo es: -1
 
 ## Identifica la estación del año
 
-Se solicita proporcionar el valor de un mes (valor numérico entre 1 y 12), e indicar la estación del año según lo siguiente:
+Se solicita proporcionar el valor de un mes (valor numérico entre 1 y 12), e indicar la estación del año según lo
+siguiente:
 
 meses 1, 2 o 12 -> Invierno
 meses 3, 4 o 5 -> Primavera
@@ -594,7 +601,7 @@ Esta la estación: Es Otoño
 
 ## Sistema de Calificaciones
 
-Crear un programa para convertir una calificación numérica (entre 0 y 10) a  una letra (de la F a la A)
+Crear un programa para convertir una calificación numérica (entre 0 y 10) a una letra (de la F a la A)
 
 - Si es mayor o igual a 9 y menor o igual a 10 es una A
 - Si es mayor o igual a 8 y menor a 9 es una B
@@ -642,15 +649,16 @@ Calificación 9.0 es equivalente a A
 
 ## Sistema de Envíos
 
-Crea un programa para determinar el costo de envío de un paquete según el destino (nacional o internacional) y el peso del paquete
+Crea un programa para determinar el costo de envío de un paquete según el destino (nacional o internacional) y el peso
+del paquete
 
 costo tarifas:
-    - Nacional = $10 x kilo
-    - Internacional = $20 x kilo
+- Nacional = $10 x kilo
+- Internacional = $20 x kilo
 
 El programa debe solicitar 2 valores:
-    1. Destino (nacional o internacional)
-    2. Peso (kilogramos) del paquete
+1. Destino (nacional o internacional)
+2. Peso (kilogramos) del paquete
 
 Al final debe imprimir el costo envío del paquete
 
@@ -696,7 +704,7 @@ El costo de envío del paquete es: $30.00
 
 Crear un sistema para validar los valores de usuario y password proporcionados.
 Se deben definir dos constantes con los valores válidos de usuario y password
-Y el sistema debe comparar los valores validos contra los valores proporcionadas
+Y el sistema debe comparar los valores válidos contra los valores proporcionados
 Se deben considerar 4 casos:
 
 1. Usuario y password válidos. Debe imprimir 'Bienvenido al Sistema'

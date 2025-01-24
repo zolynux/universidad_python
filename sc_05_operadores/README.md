@@ -1,14 +1,16 @@
-
 # Operadores
 
-Los operadores son símbolos especiales que están diseñados para realizar operaciones específicas. Tenemos varios tipos, como son:
+Los operadores son símbolos especiales que están diseñados para realizar operaciones específicas. Tenemos varios tipos,
+como son:
 
-- **Operadores Aritméticos:** Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o división.
+- **Operadores Aritméticos:** Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o
+  división.
 - **Operadores de asignación:** Se utilizan para asignar valores a variables.
 - **Operadores de Comparación:** Se utiliza para comparar un valor con otro.
 - **Operadores Lógicos:** Se utilizan para combinar expresiones condicionales o lógicas
 - **Operadores de Identidad:** Se utilizan para comparar si dos variables son el mismo objeto.
-- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una sub-cadena) se presenta en un objeto.
+- **Operadores de membresía:** Se utilizan para poder probar si una secuencia (Ej. una subcadena) se presenta en un
+  objeto.
 
 ## Operadores Aritméticos
 
@@ -20,7 +22,7 @@ Los operadores aritméticos nos permiten realizar cálculos matemáticos básico
 - **División (`/`):** Divide el primer operando enter el segundo. Resulta un valor flotante.
 - **División Entera (`//`):** Divide el primer operando entre el segundo. Resulta un tipo entero.
 - **Módulo (`%`):** Regresa el residuo de la división.
-- **Exponente (`**`):** Eleva el primer operando a la potencia del segunda.
+- **Exponente (`**`):** Eleva el primer operando a la potencia de segunda.
 
 **📄 Código :**
 
@@ -55,7 +57,7 @@ modulo = a % b
 print(f"Módulo: {modulo}")
 
 # Exponente **
-exponente = a**b
+exponente = a ** b
 print(f"Exponente: {exponente}")
 ```
 
@@ -86,7 +88,8 @@ numero = 10
 texto = "Hola, mundo"
 ```
 
-En Python también tenemos la asignación múltiple, lo que nos permite asignar valores a varias variables en una sola línea de código.. El código es más compacto y fácil de leer
+En Python también tenemos la asignación múltiple, lo que nos permite asignar valores a varias variables en una sola
+línea de código. El código es más compacto y fácil de leer
 
 ```python
 # Sintaxis de Asignación Múltiple
@@ -143,7 +146,7 @@ Valor de a = 10, b = Saludo, c = 14.5
 Valor de x = 10, y = 10, z = 10
 ```
 
-## Asingación Multiple
+## Asignación Multiple
 
 **📄 Código :**
 
@@ -191,22 +194,24 @@ Ingresa tu nombre y apellido separados por coma: Juan, Perez
 Nombre: Juan, Apellido: Perez
 ```
 
-## Operadores de Arignación Compuestos
+## Operadores de Asignación Compuestos
 
-Los operadores de asignación compuesto combinan una operación aritmética con una asignación, haciendo las operaciones más conscisas
+Los operadores de asignación compuesta combinan una operación aritmética con una asignación, haciendo las operaciones
+más concisas
 
 Los operadores pueden ser +=, -=, *=, /=, etc.
 Operador `=`
 
 ```python
 # Sintaxis operador Asignación compuesto
-variable OPERADOR= valor
+variable
+OPERADOR = valor
 ```
 
 ```python
 # Ejemplo Operador Asginación Compuesto
 contador = 0
-contador += 1 # contador = contador + 1
+contador += 1  # contador = contador + 1
 ```
 
 **📄 Código :**
@@ -265,7 +270,8 @@ Valor de módulo a = 10, b = 15
 
 ## Operadores de Comparación
 
-Los operadores de comparación en Python se utilizan para comparar dos valores. El resultado de una comparación es un valor booleano: `True` o `False`. Aquí tienes una lista de los operadores de comparación más comunes:
+Los operadores de comparación en Python se utilizan para comparar dos valores. El resultado de una comparación es un
+valor booleano: `True` o `False`. Aquí tienes una lista de los operadores de comparación más comunes:
 
 1. **Igual a (`==`)**: Comprueba si dos valores son iguales.
    ```python
@@ -306,13 +312,14 @@ b = 20
 
 print(a == b)  # False
 print(a != b)  # True
-print(a > b)   # False
-print(a < b)   # True
+print(a > b)  # False
+print(a < b)  # True
 print(a >= b)  # False
 print(a <= b)  # True
 ```
 
-Estos operadores son fundamentales para controlar el flujo de un programa, especialmente en estructuras de control como condicionales (`if`, `else`) y bucles (`while`, `for`).
+Estos operadores son fundamentales para controlar el flujo de un programa, especialmente en estructuras de control como
+condicionales (`if`, `else`) y bucles (`while`, `for`).
 
 **📄 Código :**
 
@@ -362,14 +369,15 @@ Resultado a <= b es: False
 
 ## Operadores Lógicos
 
-Los operadores lógicos nos permiten combinar múltiples condiciones o valores booleanos y obtener un resultado verdadero o falso. Los principales operadores lógicos en Python son:
+Los operadores lógicos nos permiten combinar múltiples condiciones o valores booleanos y obtener un resultado verdadero
+o falso. Los principales operadores lógicos en Python son:
 
 - `and`: Devuelve True si ambas condiciones son verdaderas
-- `or`: Devuelve True si al menos una condición es verdadera  
+- `or`: Devuelve True si al menos una condición es verdadera
 - `not`: Invierte el valor booleano (True a False o False a True)
 
 | a     | b     | a and b | a or b | not a |
-| ----- | ----- | ------- | ------ | ----- |
+|-------|-------|---------|--------|-------|
 | True  | True  | True    | True   | False |
 | True  | False | False   | True   | False |
 | False | True  | False   | True   | True  |
@@ -405,8 +413,8 @@ cantidad_productos = int(input("¿Cuántos productos compraste hoy?: "))
 tiene_membresia = str(input("¿Tienes la membresía de la tienda (Si/No)?: "))
 
 es_elegible_descuento = (
-    cantidad_productos >= NO_PRODUCTOS_DESCUENTOS
-    and tiene_membresia.strip().lower() == "si"
+        cantidad_productos >= NO_PRODUCTOS_DESCUENTOS
+        and tiene_membresia.strip().lower() == "si"
 )
 
 print(f"¿Tienes acceso al descuento VIP?: {es_elegible_descuento}")
@@ -444,7 +452,8 @@ Resultado True or False = True
 
 ### Sistema Préstamo de Libros
 
-Se pide crear un sistema para una biblioteca, la cual desea prestar libros si cumples con cualquiera de las siguientes condicionales.
+Se pide crear un sistema para una biblioteca, la cual desea prestar libros si cumples con cualquiera de las siguientes
+condicionales.
 
 1. El usuario tiene credencial de estudiante
 2. El usuario vive a no más de 3 km a la redonda
@@ -461,8 +470,8 @@ tiene_credencial = input("¿Cuentas con credencial de estudiante (Si/No)?: ")
 distancia_biblioteca_km = int(input("¿A cuántos km vives de la biblioteca?: "))
 
 es_elegible_prestamo = (
-    tiene_credencial.strip().lower() == "si"
-    or distancia_biblioteca_km <= DISTANCIA_PERMITIDA_KM
+        tiene_credencial.strip().lower() == "si"
+        or distancia_biblioteca_km <= DISTANCIA_PERMITIDA_KM
 )
 
 print(f"¿Eres elegible para préstamo de libros?: {es_elegible_prestamo}")
@@ -542,9 +551,11 @@ Variable está fuera de rango (entre 1 y 10): False
 
 ## Generación Ticket Venta
 
-Supongamos que compramos varios artículos en el supermercado y queremos obtener el ticket de venta total incluyendo impuestos.
+Supongamos que compramos varios artículos en el supermercado y queremos obtener el ticket de venta total incluyendo
+impuestos.
 
-El sistema solicitará el precio de cada producto a comprar y el usuario deberá indicar su precio (valor de tipo de punto decimal)
+El sistema solicitará el precio de cada producto a comprar y el usuario deberá indicar su precio (valor de tipo de punto
+decimal)
 
 El sistema debe realizar la suma de cada producto, calcular el impuesto y finalmente imprimir el total de la compra.
 
@@ -646,11 +657,13 @@ Costo total de la compra: $31.32
 
 ## Sistema de Autenticación
 
-Crea un programa para validar el usuairo y password proporcionados por el usuario
+Crea un programa para validar el usuario y password proporcionado por el usuario
 
-crea 2 constantes con los valores correctos y posteriormente compara que el usuario y password proporcionados por el usuario sean válidos.
+Crea 2 constantes con los valores correctos y posteriormente compara que el usuario y password proporcionados por el
+usuario sean válidos.
 
-Debe solicitar el usuario y el password al usuario y si son iguales que los valorss correctos almacenados en las contantes debe imprimir True, de lo contrario debe imprimir False.
+Debe solicitar el usuario y el password al usuario y si son iguales que los valores correctos almacenados en las
+contantes debe imprimir True, de lo contrario debe imprimir False.
 
 **📄 Código :**
 
@@ -680,7 +693,7 @@ print(f"¿Datos correctos?: {valido}")
 
 Solicitar al usuario un valor entre 0 y 5 e indicarle si el valor proporcionado está dentro de rango.
 
-Se deben definir 2 constante, `VALOR_MINIMO = 0` y `VALOR_MAXIMO = 5`
+Se deben definir 2 constantes, `VALOR_MINIMO = 0` y `VALOR_MAXIMO = 5`
 
 Y debemos comprobar si el valor proporcionado se encuentra en el rango entre 0 y 5
 
@@ -713,7 +726,7 @@ Valor dentro de rango: True
 
 Se solicita calcular el área y perímetro de un rectángulo aplicando las siguientes fórmulas:
 
-![alt text](image.png)
+![alt text](/screenshot/image.png)
 
 ```python
 area = base * altura
@@ -747,9 +760,10 @@ El perímetro del rectángulo es: 14.0
 
 ## Precedencia de Operadores
 
-La precedencia de operadores determina el orden en que se evalúan los operaciones en una expresión.
+La precedencia de operadores determina el orden en que se evalúan las operaciones en una expresión.
 
-Python aplica la siguiente tabla para asegurar que algunos operadores tengan mayor prioridad que otros durante la evaluación de expresiones.
+Python aplica la siguiente tabla para asegurar que algunos operadores tengan mayor prioridad que otros durante la
+evaluación de expresiones.
 
 1. Operador de paréntesis `()`
 2. Exponente `**`
@@ -758,11 +772,11 @@ Python aplica la siguiente tabla para asegurar que algunos operadores tengan may
 5. Suma y resta `+`, `-`
 6. Comparación `==`, `!=`, `>`, `>=`, `<`, `<=`
 7. Operadores Lógicos `not`, `and` y `or`
-8. Operadores Asignación `=`, `+=`, `-=`, `/=`, `%=`, `//==`, `**=`
+8. Operadores de Asignación `=`, `+=`, `-=`, `/=`, `%=`, `//==`, `**=`
 
 ```python
-resultado = 5 + 3 * 2 ** 2 # 17
-resultado = (5 + 3) * 2 ** 2 # 32
+resultado = 5 + 3 * 2 ** 2  # 17
+resultado = (5 + 3) * 2 ** 2  # 32
 ```
 
 **📄 Código :**
