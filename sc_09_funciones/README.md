@@ -467,7 +467,7 @@ Proporciona un valor numérico: 3
 
 #### Reglas Funciones Recursivas
 
-1. Una función que se llama a si misma
+1. Una función que se llama a sí misma
    ![img.png](funciones/img.png)
 2. Debe avanzar hacia un caso base, de lo contrario caemos en ciclos infinitos.
 
@@ -507,3 +507,43 @@ funcion_recursiva(5)
 *** Imprimir del 1 al 5 de forma recursiva ***
 1 2 3 4 5 
 ```
+
+### Factorial de un Número con Recursividad
+
+![img.png](funciones/img-1.png)
+
+**📄 Código :**
+
+```python
+print("*** Factorial de un Número con Recursividad ***")
+
+
+# Definimos la función factorial recursiva
+def factorial_recursiva(numero):
+    # Caso Base, factorial 0! = 1, 1! = 1
+    if numero == 0 or numero == 1:
+        print(f"Resultado factorial parcial {numero} es: 1")
+        return 1
+    else:  # Caso Recursivo
+        factorial_parcial = numero * factorial_recursiva(numero - 1)
+        print(f"Resultado factorial parcial {numero} es: {factorial_parcial}")
+        return factorial_parcial
+
+
+numero = 5
+resultado = factorial_recursiva(numero)
+print(f"El factorial de {numero} es: {resultado}")
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Factorial de un Número con Recursividad ***
+Resultado factorial parcial 1 es: 1
+Resultado factorial parcial 2 es: 2
+Resultado factorial parcial 3 es: 6
+Resultado factorial parcial 4 es: 24
+Resultado factorial parcial 5 es: 120
+El factorial de 5 es: 120
+```
+
