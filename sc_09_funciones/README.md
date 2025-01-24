@@ -547,3 +547,43 @@ Resultado factorial parcial 5 es: 120
 El factorial de 5 es: 120
 ```
 
+### Potencia de un Número usando funciones recursivas
+
+Calcular la potencia de un número usando una función recursiva la fórmula es:
+
+![img.png](funciones/img-2.png)
+
+Donde "a" es la base y "b" es la potencia, lo que significa multiplicar a por sí mismo b veces
+
+![img.png](funciones/img-3.png)
+
+El caso base, exponente == 0 -> 1
+
+**📄 Código :**
+
+```python
+print("*** Potencia de un Número usando funciones recursivas ***")
+
+
+def potencia(base, exponente):
+    # Caso  Base
+    if exponente == 0:
+        return 1
+    else:  # Caso recursivo
+        return base * potencia(base, exponente - 1)
+
+
+print(f"2 elevado a la 3: {potencia(2, 3)}")
+print(f"5 elevado a la 0: {potencia(5, 0)}")
+print(f"4 elevado a la 5: {potencia(4, 5)}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Potencia de un Número usando funciones recursivas ***
+2 elevado a la 3: 8
+5 elevado a la 0: 1
+4 elevado a la 5: 1024
+```
