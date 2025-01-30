@@ -20,3 +20,46 @@ asocian con una clase se les llama métodos.
 Una vez que hemos definido nuestra clase, podemos crear objetos, a esto se le llama instancia una clase.
 
 ![img.png](img.png)
+
+**📄 Código :**
+
+```python
+# Definición de una clase
+class Persona:
+    def inicializar_persona(self, nombre, apellido):
+        # Creamos los atributos de la clase
+        self.nombre = nombre
+        self.apellido = apellido
+
+    def mostrar_persona(self):
+        print(
+            f"""Persona:
+    Nombre: {self.nombre}
+    Apellido: {self.apellido}"""
+        )
+
+
+# Creación de objetos
+if __name__ == "__main__":
+    # Creación de un primer objeto
+    persona1 = Persona()  # Crea un objeto vacio en memoria
+    persona1.inicializar_persona("Layla", "Acosta")
+    persona1.mostrar_persona()
+
+    # Creamos un segundo objeto
+    persona2 = Persona()  # Crea un objeto vacío en memoria
+    persona2.inicializar_persona("Ian", "Sánchez")
+    persona2.mostrar_persona()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Persona:
+    Nombre: Layla
+    Apellido: Acosta
+Persona:
+    Nombre: Ian
+    Apellido: Sánchez
+```
