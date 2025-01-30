@@ -463,12 +463,12 @@ Proporciona un valor numérico: 3
 
 ### Funciones Recursivas
 
-![img.png](funciones/img.png)
+![img.png](/screenshot/funciones/img.png)
 
 #### Reglas Funciones Recursivas
 
 1. Una función que se llama a sí misma
-   ![img.png](funciones/img.png)
+   ![img.png](/screenshot/funciones/img.png)
 2. Debe avanzar hacia un caso base, de lo contrario caemos en ciclos infinitos.
 
 ````text
@@ -510,7 +510,7 @@ funcion_recursiva(5)
 
 ### Factorial de un Número con Recursividad
 
-![img.png](funciones/img-1.png)
+![img.png](/screenshot/funciones/img-1.png)
 
 **📄 Código :**
 
@@ -551,11 +551,11 @@ El factorial de 5 es: 120
 
 Calcular la potencia de un número usando una función recursiva la fórmula es:
 
-![img.png](funciones/img-2.png)
+![img.png](/screenshot/funciones/img-2.png)
 
 Donde "a" es la base y "b" es la potencia, lo que significa multiplicar a por sí mismo 'b' veces
 
-![img.png](funciones/img-3.png)
+![img.png](/screenshot/funciones/img-3.png)
 
 El caso base, exponente == 0 -> 1
 
