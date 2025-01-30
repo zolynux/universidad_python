@@ -1034,3 +1034,41 @@ Operaciones que puedes realizar:
 Escoge una opción: 5
 Saliendo del programa de calculadora, ¡Hasta pronto!
 ```
+
+### Ejercicio: Calculadora de Impuestos
+
+Crear una función para calcular el total de un pago un impuesto aplicado.
+
+**Formula:** `pago_total = pago_sin_impuesto + pago_sin_impuesto * (impuesto/100)`
+
+**📄 Código :**
+
+```python
+# Ejercicio: Calculadora de impuesto
+
+print("*** Calculadora de Impuestos")
+
+
+# Función que calcula el total de un pago incluyendo el impuesto
+def calcular_total_pago(pago_sin_impuesto, impuesto):
+    pago_total: float = pago_sin_impuesto + pago_sin_impuesto * (impuesto / 100)
+    return pago_total
+
+
+# Programa Principal
+if __name__ == "__main__":
+    pago_sin_impuesto = float(input("Proporcione el pago sin impuesto: "))
+    impuesto = float(input("Proporcione el monto del impuesto: "))
+    pago_con_impuesto = calcular_total_pago(pago_sin_impuesto, impuesto)
+    print(f"Pago con impuesto: {pago_con_impuesto}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Calculadora de Impuestos
+Proporcione el pago sin impuesto: 1000
+Proporcione el monto del impuesto: 16
+Pago con impuesto: 1160.0
+```
