@@ -63,3 +63,69 @@ Persona:
     Nombre: Ian
     Apellido: Sánchez
 ```
+
+### Constructores
+
+Un constructor es un método especial y se utiliza para crear un objeto, o instancia una clase.
+
+Además, nos puede servir para crear e inicializar los atributos de un nuevo objeto.
+
+````python
+# Sintaxis de un constructor
+class NombreDeLaClase:
+    # __init()__ -> El método init se conoce como un método mágico o de tipo dunder (double underscore)
+    def __init__(self, parametro1, parametro2):
+        self.parametro1 = parametro1
+        self.parametro2 = parametro2
+````
+
+````python
+# Ejemplo de un contructor
+class Persona:
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+````
+
+**📄 Código :**
+
+```python
+# Definición de una clase
+class Persona:
+    def __init__(self, nombre, apellido):
+        # Creamos los atributos de la clase
+        self.nombre = nombre
+        self.apellido = apellido
+
+    def mostrar_persona(self):
+        print(
+            f"""Persona:
+    Nombre: {self.nombre}
+    Apellido: {self.apellido}"""
+        )
+
+
+# Creación de objetos
+if __name__ == "__main__":
+    # Creación de un primer objeto
+    persona1 = Persona("Layla", "Acosta")  # Crea un objeto vacio en memoria
+    # persona1.inicializar_persona("Layla", "Acosta")
+    persona1.mostrar_persona()
+
+    # Creamos un segundo objeto
+    persona2 = Persona("Ian", "Sánchez")  # Crea un objeto vacío en memoria
+    # persona2.inicializar_persona("Ian", "Sánchez")
+    persona2.mostrar_persona()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Persona:
+    Nombre: Layla
+    Apellido: Acosta
+Persona:
+    Nombre: Ian
+    Apellido: Sánchez
+```
