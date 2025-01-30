@@ -1072,3 +1072,81 @@ Proporcione el pago sin impuesto: 1000
 Proporcione el monto del impuesto: 16
 Pago con impuesto: 1160.0
 ```
+
+### Ejercicio: Convertidor de Temperatura
+
+Realizar dos funciones para convertir de grados celsius a fahrenheit y viceversa.
+
+**📄 Código :**
+
+```python
+print("*** Convertidor de Temperatura ***")
+
+
+# Función que convierte de fehrenheit a celsius
+def fahrenheit_a_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5 / 9
+
+
+# Función que convierte de celsius a fehrenheit
+def celsius_a_fahrenheit(celsius):
+    return (celsius * 9 / 5) + 32
+
+
+if __name__ == "__main__":
+    salir = False
+    while not salir:
+        print(
+            """Menú
+        1. Convertido en Fahrenheit a Celsius
+        2. Convertido en Celsius a Fahrenheit
+        3. Salir"""
+        )
+        option = int(input("Escoge una opción: "))
+        match option:
+            case 1:
+                fahrenheit = float(
+                    input("Proporcione un número de fahrenheit en grado: ")
+                )
+                print(
+                    f"Resultado de que a celsius: {fahrenheit_a_celsius(fahrenheit):.2f}"
+                )
+            case 2:
+                celsius = float(input("Proporcione un número de celsius en grado: "))
+                print(
+                    f"Resultado de que a fahrenheit: {celsius_a_fahrenheit(celsius):.2f}"
+                )
+            case 3:
+                print("Salida de Convertidor de Temperatura.\n¡Hasta Pronto!")
+            case _:
+                print("Opción inválida. Escoge otra opción correcta.")
+                salir = True
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Convertidor de Temperatura ***
+Menú
+        1. Convertido en Fahrenheit a Celsius
+        2. Convertido en Celsius a Fahrenheit
+        3. Salir
+Escoge una opción: 1
+Proporcione un número de fahrenheit en grado: 50
+Resultado de que a celsius: 10.00
+Menú
+        1. Convertido en Fahrenheit a Celsius
+        2. Convertido en Celsius a Fahrenheit
+        3. Salir
+Escoge una opción: 2
+Proporcione un número de celsius en grado: 32
+Resultado de que a fahrenheit: 89.60
+Menú
+        1. Convertido en Fahrenheit a Celsius
+        2. Convertido en Celsius a Fahrenheit
+        3. Salir
+Escoge una opción: 3
+Salida de Convertidor de Temperatura.
+¡Hasta Pronto!
+```
