@@ -189,3 +189,61 @@ Dir. mem hex self: 0x1d9d1a74b90
 Dir. mem persona2: 2035036933008
 Dir. mem hex persona2: 0x1d9d1a74b90
 ```
+
+### Clase Aritmética
+
+![img_1.png](img_1.png)
+
+**📄 Código :**
+
+```python
+class Aritmetica:
+    def __init__(self, operando1, operando2):
+        self.operando1 = operando1
+        self.operando2 = operando2
+
+    def sumar(self):
+        resultado = self.operando1 + self.operando2
+        print(f"Resultado de la suma: {resultado}")
+
+    def restar(self):
+        resultado = self.operando1 - self.operando2
+        print(f"Resultado de la resta: {resultado}")
+
+    def multiplicar(self):
+        resultado = self.operando1 * self.operando2
+        print(f"Resultado de la multiplicación: {resultado}")
+
+    def dividir(self):
+        resultado = self.operando1 / self.operando2
+        print(f"Resultado de la división: {resultado}")
+
+
+# Programa principal
+if __name__ == "__main__":
+    print("*** Ejemplo clase Aritmética ***")
+    aritmetica1 = Aritmetica(5, 7)
+    aritmetica1.sumar()
+    aritmetica1.restar()
+    aritmetica1.multiplicar()
+    aritmetica1.dividir()
+    # Segundo objeto
+    aritmetica2 = Aritmetica(12, 16)
+    print()
+    aritmetica2.sumar()
+    aritmetica2.restar()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Ejemplo clase Aritmética ***
+Resultado de la suma: 12
+Resultado de la resta: -2
+Resultado de la multiplicación: 35
+Resultado de la división: 0.7142857142857143
+
+Resultado de la suma: 28
+Resultado de la resta: -4
+```
