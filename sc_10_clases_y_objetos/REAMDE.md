@@ -333,3 +333,68 @@ Resultado de la suma: 10
 Quinto objeto
 Resultado de la suma: 7
 ```
+
+### Encapsulamiento
+
+El encapsulamiento nos permite ocultar la información que almacena un objeto, también conocido como el estado del
+objeto.
+
+Para aplicar el concepto de encapsulamiento se deben aplicar dos características:
+
+1. **Atributos protegidos o privados**
+
+    ````python
+    self._nombre # Atributo protegido
+    self.__apellido # Atributo privado
+    ````
+
+2. **Crear los métodos conocidos como `get` (leer) y `set` (modificar)**
+
+![img_2.png](img_2.png)
+
+**📄 Código :**
+
+```python
+# Definimos la clase coche
+class Coche:
+    def __init__(self, marca, modelo, color):
+        self.marca = marca  # atributo publico
+        self._modelo = modelo  # Atributo Protegido
+        self.__color = color  # Atributo Privado
+
+    def conducir(self):
+        print(
+            f"""Conduciendo el coche:
+        Marca: {self.marca}
+        Modelo: {self._modelo}
+        Color: {self.__color}"""
+        )
+
+
+# Programa principal
+if __name__ == "__main__":
+    print("*** Encapsulamiento ***")
+    # Creación de un primer objeto coche
+    coche1 = Coche("Toyota", "Yaris", "Azul")
+    coche1.conducir()
+    coche1.marca = "Toyota 2"
+    coche1._modelo = "Yaris 2"  # Esto no es una buena práctica
+    coche1.__color = "Azul 2"  # Ignoro la modificación
+    coche1._Coche__color = "Azul 3"  # Es una mala práctica
+    coche1.conducir()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Encapsulamiento ***
+Conduciendo el coche:
+        Marca: Toyota
+        Modelo: Yaris
+        Color: Azul
+Conduciendo el coche:
+        Marca: Toyota 2
+        Modelo: Yaris 2
+        Color: Azul 3
+```
