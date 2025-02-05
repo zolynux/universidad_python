@@ -734,3 +734,63 @@ Valor operando2 del objeto aritmética2: 16
 Resultado de la suma: 28
 Resultado de la resta: -4
 ```
+
+#### Atributos de Clase
+
+Persona:
+
+````python
+atributo_clase = 0
+atributo_instancia = 0
+````
+
+Objetos:
+
+````python
+# persona1
+atributo_instancia = 0
+# persona2
+atributo_instancia = 0
+````
+
+**📄 Código :**
+
+```python
+class Persona:
+    atributo_clase = 0
+
+    def __init__(self, atributo_instancia):
+        self.atributo_instancia = atributo_instancia
+
+
+#  Programa principal
+if __name__ == "__main__":
+    print(f"*** Atributo de Clase ***")
+    print(f"Atributo de Clase: {Persona.atributo_clase}")
+    # Modificamos el atributo de clase
+    Persona.atributo_clase = 10
+    print(f"Atributo de Clase: {Persona.atributo_clase}")
+
+    # Creamos un objeto persona1
+    persona1 = Persona(15)
+    print(f"Atributo de Clase desde persona1:  {persona1.atributo_clase}")
+    print(f"Atributo de Instancia desde persona1:  {persona1.atributo_instancia}")
+
+    # Creamos un objeto persona2
+    persona2 = Persona(30)
+    print(f"Atributo de Clase desde persona2:  {persona2.atributo_clase}")
+    print(f"Atributo de Instancia desde persona2:  {persona2.atributo_instancia}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Atributo de Clase ***
+Atributo de Clase: 0
+Atributo de Clase: 10
+Atributo de Clase desde persona1:  10
+Atributo de Instancia desde persona1:  15
+Atributo de Clase desde persona2:  10
+Atributo de Instancia desde persona2:  30
+```
