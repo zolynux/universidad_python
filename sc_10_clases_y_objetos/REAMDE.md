@@ -991,3 +991,123 @@ Contador objetos Persona (static): 2
 Método de clase
 Contador objetos Persona (clase): 2
 ```
+
+### Sistema de Empleados
+
+Crea un sistema de manejo de empleados de una empresa, aplicando la programación orientada a objetos.
+
+La empresa desea saber el total de empleadas así como el total de empleados de un departamento en particular.
+
+Se debe crear la clase de Empleados y Empresa en archivos por separados, así como la creación de objetos en un archivo
+por separado.
+
+![img_4.png](img_4.png)
+
+**📄 Código :**
+
+**Empleado:**
+
+```python
+class Empleado:
+    contador_empleados = 0
+
+    def __init__(self, nombre, departamento):
+        self.nombre = nombre
+        self.departamento = departamento
+        Empleado.contador_empleados += 1
+        self.id = Empleado.contador_empleados
+
+    @classmethod
+    def obtener_total_empleados(cls):
+        return cls.contador_empleados
+
+```
+
+**Empresa:**
+
+```python
+from Empleado import Empleado
+
+
+class Empresa:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.empleados = []
+
+    def contratar_empleado(self, nombre, departamento):
+        empleado = Empleado(nombre, departamento)
+        self.empleados.append(empleado)
+
+    def obtener_numero_empleados_departamento(self, departameto):
+        contador_empleados_por_departamento = 0
+        for empleado in self.empleados:
+            if empleado.departamento == departameto:
+                contador_empleados_por_departamento += 1
+        return contador_empleados_por_departamento
+
+    def obtener_total_empleados(self):
+        print(f"\nTotal de Empleados para la empresa: {self.nombre}")
+        for empleado in self.empleados:
+            print(
+                f"""Empleado {empleado.id}
+            Nombre: {empleado.nombre}
+            Departamento: {empleado.departamento}"""
+            )
+
+```
+
+**sistema_empleados_app:**
+
+```python
+from Empresa import Empresa
+from Empleado import Empleado
+
+print("*** Sistema de Empleados ***")
+
+# Crear una instancia de una empresa
+empresa1 = Empresa("Global Mentoring")
+
+# Contratar algunos empleados
+empresa1.contratar_empleado("Juan", "Ventas")
+empresa1.contratar_empleado("María", "Marketing")
+empresa1.contratar_empleado("Pedro", "Ventas")
+empresa1.contratar_empleado("Ana", "Recursos Humanos")
+
+# Obtener el total de objetos de tipo empleado
+print(f"Total de empleados: {Empleado.obtener_total_empleados()}")
+
+# Obtener el número de empleados en el departamento de venta
+print(
+    f"Empleados en el departamento de Ventas: "
+    f"{empresa1.obtener_numero_empleados_departamento("Ventas")}"
+)
+
+print("\n", "-" * 50)
+# Mostrar todos los empleados de la empresa
+empresa1.obtener_total_empleados()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Sistema de Empleados ***
+Total de empleados: 4
+Empleados en el departamento de Ventas: 2
+
+ --------------------------------------------------
+
+Total de Empleados para la empresa: Global Mentoring
+Empleado 1
+            Nombre: Juan
+            Departamento: Ventas
+Empleado 2
+            Nombre: María
+            Departamento: Marketing
+Empleado 3
+            Nombre: Pedro
+            Departamento: Ventas
+Empleado 4
+            Nombre: Ana
+            Departamento: Recursos Humanos
+```
