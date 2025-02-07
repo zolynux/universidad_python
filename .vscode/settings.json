@@ -56,4 +56,5 @@
     "tuplas",
     "Tuplas"
   ],
+  "CodeGPT.apiKey": "Ollama",
 }

@@ -863,3 +863,131 @@ Persona: 1, Gerardo, Perez
 Persona: 2, Daniel, Sanchez
 Contador objetos Persona: 2
 ```
+
+### Métodos de Clase
+
+Métodos de clases en Python
+Los métodos en Python son una forma de definir funciones en las clases. Los métodos en Python se utilizan para
+implementar el comportamiento y la lógica general de un objeto, así como también para modificarlo.
+Algunos ejemplos de cómo usar métodos en Python:
+
+1. Métodos de Clase:
+   Las clases en Python tienen sus propias funciones (métodos) que se usan para construir objetos y realizar acciones
+   sobre los mismos. Se utiliza el método `__init__()` para inicializar un objeto, y el método `__str__()` para
+   mostrar su representación en pantalla.
+
+   ```python
+   class Persona:
+       def __init__(self, nombre, edad):
+           self.nombre = nombre
+           self.edad = edad
+   
+       def __str__(self):
+           return f"Nombre: {self.nombre}, Edad: {self.edad}"
+   ```
+
+2. Métodos Heredados de Clase:
+   Los métodos heredados (encapsulación) son funciones que se usan en otras clases. Son utilizadas para agregar
+   propiedades y métodos únicos a una clase.
+
+   ```python
+   class Alumno(Persona):
+       def __init__(self, nombre, edad, institucion):
+           self.institucion = institucion
+   
+       def get_institucion(self):
+           return self.__institucion__
+   ```
+
+3. Métodos Definidos:
+   Métodos definidos (no heredados) son funciones que se usan directamente en una clase. No tienen un objeto
+   asociado.
+
+   ```python
+   class CajaElectrica:
+       def __init__(self, marca):
+           self.marca = marca
+   
+       def mostrar(self):
+           return "La caja está encendida."
+   
+   
+   class CajaElectricaSinPantalla(CajaElectrica):
+       pass
+   
+   
+   print(CajaElectricaSinPantalla("Huawei"))
+   ```
+
+Estos ejemplos son solo un par de ejemplos que pueden ayudarte a entender los métodos en Python. Algunas formas
+más comunes de usar métodos en Python incluyen:
+
+1. Crear funciones y métodos directamente dentro de la clase
+2. Utilizar los métodos heredados o definidos en otras clases
+3. Utilizar las propiedades, listas, y diccionarios como métodos
+
+Es importante tener en cuenta que aunque se pueden usar métodos en Python, no todos los objetos deben ser
+declarados con métodos. También es útil conocer cómo usar métodos cuando necesites implementar lógica o
+comportamiento personalizado para tus clases.
+
+**📄 Código :**
+
+```python
+class Persona:
+    # Atributo clase
+    contador_personas = 0
+
+    def __init__(self, nombre, apellido):
+        # Incrementamos el valor del atributo de clase
+        Persona.contador_personas += 1
+        self.id = Persona.contador_personas
+        self.nombre = nombre
+        self.apellido = apellido
+
+    def mostrar_persona(self):
+        print(f"Persona: {self.id}, {self.nombre}, {self.apellido}")
+
+    @staticmethod
+    def get_contador_personas_estatico():
+        print("Método estático")
+        return Persona.contador_personas
+
+    @classmethod
+    def get_contador_personas_clase(cls):
+        print("Método de clase")
+        return cls.contador_personas
+
+
+if __name__ == "__main__":
+    print("*** Métodos de Clase ***")
+    # Primer objeto
+    persona1 = Persona("Gerardo", "Perez")
+    persona1.mostrar_persona()
+
+    # Segundo objeto
+    persona2 = Persona("Daniel", "Sanchez")
+    persona2.mostrar_persona()
+
+    # Imprimir el valor del contador de objetos de Personas
+    print(f"Contador objetos Persona: {Persona.contador_personas}")
+    print(f"Contador objetos Persona (persona1): {persona1.contador_personas}")
+    print(
+        f"Contador objetos Persona (static): {Persona.get_contador_personas_estatico()}"
+    )
+    print(f"Contador objetos Persona (clase): {Persona.get_contador_personas_clase()}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Métodos de Clase ***
+Persona: 1, Gerardo, Perez
+Persona: 2, Daniel, Sanchez
+Contador objetos Persona: 2
+Contador objetos Persona (persona1): 2
+Método estático
+Contador objetos Persona (static): 2
+Método de clase
+Contador objetos Persona (clase): 2
+```
