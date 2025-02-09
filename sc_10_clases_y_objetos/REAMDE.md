@@ -19,7 +19,7 @@ asocian con una clase se les llama métodos.
 
 Una vez que hemos definido nuestra clase, podemos crear objetos, a esto se le llama instancia una clase.
 
-![img.png](img.png)
+![img.png](../screenshot/clases_objetos/img.png)
 
 **📄 Código :**
 
@@ -192,7 +192,7 @@ Dir. mem hex persona2: 0x1d9d1a74b90
 
 ### Clase Aritmética
 
-![img_1.png](img_1.png)
+![img_1.png](../screenshot/clases_objetos/img_1.png)
 
 **📄 Código :**
 
@@ -350,7 +350,7 @@ Para aplicar el concepto de encapsulamiento se deben aplicar dos característica
 
 2. **Crear los métodos conocidos como `get` (leer) y `set` (modificar)**
 
-![img_2.png](img_2.png)
+![img_2.png](../screenshot/clases_objetos/img_2.png)
 
 **📄 Código :**
 
@@ -401,7 +401,7 @@ Conduciendo el coche:
 
 ### Métodos get y set
 
-![img_3.png](img_3.png)
+![img_3.png](../screenshot/clases_objetos/img_3.png)
 
 **📄 Código :**
 
@@ -1001,7 +1001,7 @@ La empresa desea saber el total de empleadas así como el total de empleados de 
 Se debe crear la clase de Empleados y Empresa en archivos por separados, así como la creación de objetos en un archivo
 por separado.
 
-![img_4.png](img_4.png)
+![img_4.png](../screenshot/clases_objetos/img_4.png)
 
 **📄 Código :**
 
@@ -1136,7 +1136,7 @@ Por último, se debe crear un script para poner a prueba las clases creadas.
 
 A continuación veremos un ejemplo:
 
-![img_5.png](img_5.png)
+![img_5.png](../screenshot/clases_objetos/img_5.png)
 
 **📄 Código :**
 
