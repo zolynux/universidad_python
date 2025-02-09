@@ -1111,3 +1111,187 @@ Empleado 4
             Nombre: Ana
             Departamento: Recursos Humanos
 ```
+
+### Sistema Biblioteca
+
+Se les deja crear el siguiente sistema de bibliotecas y cada objeto de biblioteca almacena libros.
+
+Se debe aplicar la programación orientada a objetos para resolver este problema.
+
+Un libro tiene los atributos de título, auto y género. Debe aplicar el concepto de encapsulamiento.
+
+Por otro lado, una biblioteca contiene un nombre, así como una lista de libros.
+
+Además, tiene los siguientes métodos para administrar los libros.
+
+- Agregar libros
+- Buscar libros por autor
+- Buscar libros por género
+- Mostrar todos los libros
+- Mostrar un libro
+
+Además, debe aplicar encapsulamiento.
+
+Por último, se debe crear un script para poner a prueba las clases creadas.
+
+A continuación veremos un ejemplo:
+
+![img_5.png](img_5.png)
+
+**📄 Código :**
+
+**Libro:**
+
+```python
+class Libro:
+    def __init__(self, titulo: str, autor: str, genero: str):
+        self._titulo = titulo
+        self._autor = autor
+        self._genero = genero
+
+    @property
+    def titulo(self):
+        return self._titulo
+
+    @property
+    def autor(self):
+        return self._autor
+
+    @property
+    def genero(self):
+        return self._genero
+
+```
+
+**Biblioteca:**
+
+```python
+class Biblioteca:
+    def __init__(self, nombre):
+        self._nombre = nombre
+        self._libros = []
+
+    def agregar_libro(self, libro):
+        self._libros.append(libro)
+
+    def buscar_libros_por_autor(self, autor):
+        for libro in self._libros:
+            if libro.autor.lower() == autor.lower():
+                self.mostrar_libros(libro)
+
+    def buscar_libros_por_genero(self, genero):
+        for libro in self._libros:
+            if libro.genero.lower() == genero.lower():
+                self.mostrar_libros(libro)
+
+    def mostrar_todos_los_libros(self):
+        print(f"\nTodos los libros de la biblioteca: {self._nombre}")
+        for libro in self._libros:
+            self.mostrar_libros(libro)
+
+    @staticmethod
+    def mostrar_libros(libro):
+        print(
+            f"""{('-' * 50)}
+        Libro -> Título: {libro.titulo}
+        Autor: {libro.autor}
+        Género: {libro.genero}"""
+        )
+
+    @property
+    def nombre(self):
+        return self._nombre
+
+    @nombre.setter
+    def nombre(self, nombre):
+        self._nombre = nombre
+
+```
+
+**Sistema de Bibliotecas App:**
+
+```python
+from biblioteca import Biblioteca
+from libro import Libro
+
+biblioteca_nacional = Biblioteca("Biblioteca Nacional")
+print(f"*** Bienvenido a la {biblioteca_nacional.nombre} ***")
+
+# Definición de libros
+libro1 = Libro("Cien años de soledad", "Gabriel García Márquez", "Ficción")
+libro2 = Libro("Don Quijote de la Mancha", "Miguel de Cervantes", "Comedia")
+libro3 = Libro("El amor en los tiempos del cólera", "Gabriel García Márquez", "Ficción")
+libro4 = Libro("Pedro Páramo", "Juan Rulfo", "Ficción")
+libro5 = Libro("Pantaleón y las visitadores", "Mario Vargas Llosa", "Comedia")
+
+# Agrega los libros a la biblioteca
+libros_lista = [libro1, libro2, libro3, libro4, libro5]
+for libro in libros_lista:
+    biblioteca_nacional.agregar_libro(libro)
+
+# Buscar libros por autor
+autor = "Gabriel García Márquez"
+print(f"\nLibros de: {autor}")
+biblioteca_nacional.buscar_libros_por_autor(autor)
+
+# Buscar libros por género
+genero = "Ficción"
+print(f"\nLibros de {genero}")
+biblioteca_nacional.buscar_libros_por_genero(genero)
+
+# Mostrar todos los libros de la biblioteca
+biblioteca_nacional.mostrar_todos_los_libros()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Bienvenido a la Biblioteca Nacional ***
+
+Libros de: Gabriel García Márquez
+--------------------------------------------------
+        Libro -> Título: Cien años de soledad
+        Autor: Gabriel García Márquez
+        Género: Ficción
+--------------------------------------------------
+        Libro -> Título: El amor en los tiempos del cólera
+        Autor: Gabriel García Márquez
+        Género: Ficción
+
+Libros de Ficción
+--------------------------------------------------
+        Libro -> Título: Cien años de soledad
+        Autor: Gabriel García Márquez
+        Género: Ficción
+--------------------------------------------------
+        Libro -> Título: El amor en los tiempos del cólera
+        Autor: Gabriel García Márquez
+        Género: Ficción
+--------------------------------------------------
+        Libro -> Título: Pedro Páramo
+        Autor: Juan Rulfo
+        Género: Ficción
+
+Todos los libros de la biblioteca: Biblioteca Nacional
+--------------------------------------------------
+        Libro -> Título: Cien años de soledad
+        Autor: Gabriel García Márquez
+        Género: Ficción
+--------------------------------------------------
+        Libro -> Título: Don Quijote de la Mancha
+        Autor: Miguel de Cervantes
+        Género: Comedia
+--------------------------------------------------
+        Libro -> Título: El amor en los tiempos del cólera
+        Autor: Gabriel García Márquez
+        Género: Ficción
+--------------------------------------------------
+        Libro -> Título: Pedro Páramo
+        Autor: Juan Rulfo
+        Género: Ficción
+--------------------------------------------------
+        Libro -> Título: Pantaleón y las visitadores
+        Autor: Mario Vargas Llosa
+        Género: Comedia
+```
