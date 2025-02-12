@@ -318,3 +318,127 @@ Puedo ladrar
 Clase hija - Gato:
 Puedo maullar
 ```
+
+### Duck Typing en Python
+
+El **Duck Typing** es un concepto fundamental en Python que se basa en la idea de que el tipo o la clase de un objeto es
+menos importante que los métodos o atributos que posee. Esta filosofía se resume en la expresión: "Si algo camina como
+un pato y suena como un pato, entonces probablemente sea un pato". citeturn0search0
+
+**Características principales:**
+
+- **Tipado dinámico:** Python no requiere la declaración explícita de tipos; el intérprete determina el tipo de las
+  variables en tiempo de ejecución. citeturn0search3
+
+- **Enfoque en comportamientos:** Lo relevante es si un objeto puede realizar ciertas acciones, independientemente de su
+  tipo específico. citeturn0search0
+
+**Ejemplo de Duck Typing:**
+
+```python
+class Pato:
+    def hablar(self):
+        print("Cuac, cuac")
+
+
+class Ganso:
+    def hablar(self):
+        print("Honk, honk")
+
+
+def hacer_sonar(ave):
+    ave.hablar()
+
+
+pato = Pato()
+ganso = Ganso()
+
+hacer_sonar(pato)  # Imprime "Cuac, cuac"
+hacer_sonar(ganso)  # Imprime "Honk, honk"
+```
+
+En este ejemplo, la función `hacer_sonar` acepta cualquier objeto que tenga un método `hablar`, sin importar su clase.
+Esto demuestra cómo Python utiliza el Duck Typing para permitir una programación más flexible y genérica.
+citeturn0search3
+
+**Ventajas del Duck Typing:**
+
+- **Flexibilidad:** Permite escribir código que puede trabajar con diferentes tipos de objetos, siempre que estos
+  implementen los métodos o atributos esperados. citeturn0search0
+
+- **Menor acoplamiento:** Reduce la dependencia de tipos específicos, facilitando la reutilización y mantenimiento del
+  código. citeturn0search0
+
+- **Código más limpio:** Al no requerir comprobaciones explícitas de tipos, el código es más legible y conciso.
+  citeturn0search2
+
+**Consideraciones:**
+
+- **Manejo de errores:** Es importante asegurarse de que los objetos pasados a funciones o métodos posean los métodos o
+  atributos necesarios para evitar errores en tiempo de ejecución. citeturn0search2
+
+- **Legibilidad:** Aunque el Duck Typing ofrece flexibilidad, se debe tener cuidado para mantener la claridad y
+  comprensión del código, especialmente en proyectos grandes o colaborativos. citeturn0search3
+
+En resumen, el Duck Typing es una característica poderosa de Python que promueve la escritura de código flexible y
+reutilizable, centrándose en los comportamientos de los objetos más que en sus tipos específicos.
+
+**📄 Código :**
+
+```python
+# Polimorfismo
+
+
+class Animal:
+    def hacer_sonido(self):
+        print("Hago un pitido")
+
+
+class Perro(Animal):
+    def hacer_sonido(self):
+        print("Puedo ladrar")
+
+
+class Gato(Animal):
+    def hacer_sonido(self):
+        print("Puedo maullar")
+
+
+# Función polimorfismo (Duck Typing)
+def hacer_sonido_anima(animal):  # DuckTyping
+    animal.hacer_sonido()
+
+
+# Programa principal
+print("*** Ejemplo DuckTyping ***")
+
+# Definimos un objeto de la clase Animal
+print("Clase Padre - Animal:")
+animal1 = Animal()
+hacer_sonido_anima(animal1)  # DuckTyping
+
+# Definimos un objeto de la clase Perro
+print("\nClase hija - Perro:")
+perro1 = Perro()
+hacer_sonido_anima(perro1)  # DuckTyping
+
+# Definimos un objeto de la clase Gato
+print("\nClase hija - Gato:")
+gato1 = Gato()
+hacer_sonido_anima(gato1)  # DuckTyping
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Ejemplo DuckTyping ***
+Clase Padre - Animal:
+Hago un pitido
+
+Clase hija - Perro:
+Puedo ladrar
+
+Clase hija - Gato:
+Puedo maullar
+```
