@@ -178,3 +178,143 @@ Puedo lagdrar
 Duermo 15 Horas al día
 Como muchas veces el día
 ```
+
+### Polimorfismo
+
+El polimorfismo es un concepto fundamental en la Programación Orientada a Objetos (POO) que permite que una misma
+interfaz o función se comporte de diferentes maneras según el objeto que la invoque. En Python, el polimorfismo se
+manifiesta a través de la capacidad de usar un mismo método o función en distintos objetos, obteniendo resultados
+específicos según la clase a la que pertenezcan.
+
+**Ejemplos de polimorfismo en Python:**
+
+- **Funciones incorporadas polimórficas:**
+    - La función `len()` puede aplicarse tanto a cadenas como a listas, devolviendo la longitud correspondiente en cada
+      caso.
+        - `len("Hola")` devuelve `4`.
+        - `len([1, 2, 3])` devuelve `3`.
+
+- **Operadores polimórficos:**
+    - El operador `+` se utiliza para sumar números y para concatenar cadenas.
+        - `5 + 3` resulta en `8`.
+        - `"Hola" + " Mundo"` resulta en `"Hola Mundo"`.
+
+**Polimorfismo con métodos de clase:**
+
+En Python, diferentes clases pueden tener métodos con el mismo nombre, y la ejecución del método dependerá del objeto
+que lo invoque.
+
+```python
+class Perro:
+    def hacer_sonido(self):
+        print("Guau")
+
+
+class Gato:
+    def hacer_sonido(self):
+        print("Miau")
+
+
+def emitir_sonido(animal):
+    animal.hacer_sonido()
+
+
+perro = Perro()
+gato = Gato()
+
+emitir_sonido(perro)  # Salida: Guau
+emitir_sonido(gato)  # Salida: Miau
+```
+
+En este ejemplo, la función `emitir_sonido` acepta cualquier objeto que tenga un método `hacer_sonido`, demostrando el
+polimorfismo al invocar el método correspondiente según el objeto proporcionado.
+
+**Polimorfismo y herencia:**
+
+El polimorfismo también se relaciona con la herencia, donde una clase derivada puede sobrescribir métodos de su clase
+base.
+
+```python
+class Ave:
+    def volar(self):
+        print("La mayoría de las aves pueden volar")
+
+
+class Pinguino(Ave):
+    def volar(self):
+        print("Los pingüinos no pueden volar")
+
+
+def describir_vuelo(ave):
+    ave.volar()
+
+
+ave = Ave()
+pinguino = Pinguino()
+
+describir_vuelo(ave)  # Salida: La mayoría de las aves pueden volar
+describir_vuelo(pinguino)  # Salida: Los pingüinos no pueden volar
+```
+
+Aquí, la clase `Pinguino` sobrescribe el método `volar` de la clase `Ave`, y la función `describir_vuelo` demuestra el
+polimorfismo al llamar al método adecuado según el objeto.
+
+El polimorfismo en Python permite escribir código más flexible y reutilizable, facilitando la interacción con diferentes
+tipos de objetos de manera uniforme.
+
+![img_1.png](img_1.png)
+
+**📄 Código :**
+
+```python
+# Polimorfismo
+
+
+class Animal:
+    def hacer_sonido(self):
+        print("Hago un pitido")
+
+
+class Perro(Animal):
+    def hacer_sonido(self):
+        print("Puedo ladrar")
+
+
+class Gato(Animal):
+    def hacer_sonido(self):
+        print("Puedo maullar")
+
+
+# Programa principal
+print("*** Ejemplo Polimorfismo ***")
+
+# Definimos un objeto de la clase Animal
+print("Clase Padre - Animal:")
+animal1 = Animal()
+animal1.hacer_sonido()
+
+# Definimos un objeto de la clase Perro
+print("\nClase hija - Perro:")
+perro1 = Perro()
+perro1.hacer_sonido()  # Polimorfismo
+
+# Definimos un objeto de la clase Gato
+print("\nClase hija - Gato:")
+gato1 = Gato()
+gato1.hacer_sonido()  # Polimorfismo
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Ejemplo Polimorfismo ***
+Clase Padre - Animal:
+Hago un pitido
+
+Clase hija - Perro:
+Puedo ladrar
+
+Clase hija - Gato:
+Puedo maullar
+```
