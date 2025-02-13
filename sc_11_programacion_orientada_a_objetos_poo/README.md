@@ -442,3 +442,141 @@ Puedo ladrar
 Clase hija - Gato:
 Puedo maullar
 ```
+
+### Clase `Object` en Python
+
+En Python, la clase **`object`** es la clase base de todas las clases. Todas las clases en Python heredan directa o
+indirectamente de `object`, lo que significa que es la raíz de la jerarquía de herencia. Proporciona métodos y
+comportamientos básicos que están disponibles en todos los objetos.
+
+#### Características Principales
+
+1. **Clase Base Universal**: Si no se especifica una clase base al definir una clase, Python automáticamente hereda de
+   `object`.
+   ```python
+   class MiClase:  # Equivalente a: class MiClase(object):
+       pass
+   ```
+
+2. **Métodos Integrados**: La clase `object` define métodos comunes que pueden ser sobrescritos o utilizados por otras
+   clases. Algunos de los más importantes son:
+    - `__init__`: Constructor de la clase.
+    - `__str__`: Devuelve una representación legible del objeto (usado por `print()`).
+    - `__repr__`: Devuelve una representación formal del objeto (usado en la consola).
+    - `__eq__`: Define el comportamiento de igualdad (`==`).
+    - `__hash__`: Devuelve un valor hash para el objeto (usado en diccionarios y conjuntos).
+
+3. **Herencia Implícita**: Incluso si no se especifica, todas las clases heredan de `object`.
+   ```python
+   class MiClase:
+       pass
+
+   print(issubclass(MiClase, object))  # Salida: True
+   ```
+
+#### Métodos Comunes de `object`
+
+- **`__str__`**: Devuelve una cadena legible para humanos.
+  ```python
+  class MiClase:
+      def __str__(self):
+          return "Soy una instancia de MiClase"
+
+  obj = MiClase()
+  print(obj)  # Salida: Soy una instancia de MiClase
+  ```
+
+- **`__repr__`**: Devuelve una cadena que representa el objeto de manera formal.
+  ```python
+  class MiClase:
+      def __repr__(self):
+          return "MiClase()"
+
+  obj = MiClase()
+  print(repr(obj))  # Salida: MiClase()
+  ```
+
+- **`__eq__`**: Define cómo se comparan dos objetos.
+  ```python
+  class MiClase:
+      def __init__(self, valor):
+          self.valor = valor
+
+      def __eq__(self, otro):
+          return self.valor == otro.valor
+
+  obj1 = MiClase(10)
+  obj2 = MiClase(10)
+  print(obj1 == obj2)  # Salida: True
+  ```
+
+- **`__hash__`**: Devuelve un valor hash para el objeto.
+  ```python
+  class MiClase:
+      def __init__(self, valor):
+          self.valor = valor
+
+      def __hash__(self):
+          return hash(self.valor)
+
+  obj = MiClase(10)
+  print(hash(obj))  # Salida: Valor hash de 10
+  ```
+
+#### Importancia de `object`
+
+- **Base de la Jerarquía**: Todas las clases heredan de `object`, lo que garantiza que tengan métodos básicos.
+- **Compatibilidad**: Proporciona una interfaz común para todos los objetos en Python.
+- **Extensibilidad**: Permite personalizar el comportamiento de los objetos sobrescribiendo sus métodos.
+
+#### Ejemplo de Uso
+
+```python
+class MiClase:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def __str__(self):
+        return f"Objeto: {self.nombre}"
+
+
+obj = MiClase("Ejemplo")
+print(obj)  # Salida: Objeto: Ejemplo
+```
+
+En resumen, la clase `object` es la base de todo en Python y proporciona funcionalidades esenciales que pueden ser
+extendidas o modificadas según sea necesario.
+
+**📄 Código :**
+
+```python
+class Persona:
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+
+    # Sobrescribir el metodo __str__
+    def __str__(self):
+        return f"""Persona:
+        Nombre = {self.nombre}
+        Apellido = {self.apellido}
+        Dir. mem. {super.__str__(self)}"""
+
+
+# Programa principal
+print("*** Clase Object ***")
+persona1 = Persona("Ana", "Martinez")
+print(persona1)  # El metodo __str__ se llama automaticamente desde print
+# print(persona1.__str__()) # Esto es opcional
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+*** Clase Object ***
+Persona:
+        Nombre = Ana
+        Apellido = Martinez
+        Dir. mem. <__main__.Persona object at 0x000002849C324EC0>
+```
