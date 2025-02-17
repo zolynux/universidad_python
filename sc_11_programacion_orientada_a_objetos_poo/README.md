@@ -127,7 +127,7 @@ implementación específica de `Pajaro`.
 La sobreescritura de métodos es esencial para adaptar y extender comportamientos en jerarquías de clases, permitiendo
 que las subclases implementen funcionalidades específicas sin alterar el código de las superclases.
 
-![img.png](img.png)
+![img.png](/screenshot/poo/img.png)
 
 **📄 Código :**
 
@@ -189,15 +189,15 @@ específicos según la clase a la que pertenezcan.
 **Ejemplos de polimorfismo en Python:**
 
 - **Funciones incorporadas polimórficas:**
-    - La función `len()` puede aplicarse tanto a cadenas como a listas, devolviendo la longitud correspondiente en cada
+  - La función `len()` puede aplicarse tanto a cadenas como a listas, devolviendo la longitud correspondiente en cada
       caso.
-        - `len("Hola")` devuelve `4`.
-        - `len([1, 2, 3])` devuelve `3`.
+    - `len("Hola")` devuelve `4`.
+    - `len([1, 2, 3])` devuelve `3`.
 
 - **Operadores polimórficos:**
-    - El operador `+` se utiliza para sumar números y para concatenar cadenas.
-        - `5 + 3` resulta en `8`.
-        - `"Hola" + " Mundo"` resulta en `"Hola Mundo"`.
+  - El operador `+` se utiliza para sumar números y para concatenar cadenas.
+    - `5 + 3` resulta en `8`.
+    - `"Hola" + " Mundo"` resulta en `"Hola Mundo"`.
 
 **Polimorfismo con métodos de clase:**
 
@@ -262,7 +262,7 @@ polimorfismo al llamar al método adecuado según el objeto.
 El polimorfismo en Python permite escribir código más flexible y reutilizable, facilitando la interacción con diferentes
 tipos de objetos de manera uniforme.
 
-![img_1.png](img_1.png)
+![img_1.png](/screenshot/poo/img_1.png)
 
 **📄 Código :**
 
@@ -451,6 +451,7 @@ comportamientos básicos que están disponibles en todos los objetos.
 
 1. **Clase Base Universal**: Si no se especifica una clase base al definir una clase, Python automáticamente hereda de
    `object`.
+
    ```python
    class MiClase:  # Equivalente a: class MiClase(object):
        pass
@@ -465,6 +466,7 @@ comportamientos básicos que están disponibles en todos los objetos.
     - `__hash__`: Devuelve un valor hash para el objeto (usado en diccionarios y conjuntos).
 
 3. **Herencia Implícita**: Incluso si no se especifica, todas las clases heredan de `object`.
+
    ```python
    class MiClase:
        pass
@@ -475,6 +477,7 @@ comportamientos básicos que están disponibles en todos los objetos.
 #### Métodos Comunes de `object`
 
 - **`__str__`**: Devuelve una cadena legible para humanos.
+
   ```python
   class MiClase:
       def __str__(self):
@@ -485,6 +488,7 @@ comportamientos básicos que están disponibles en todos los objetos.
   ```
 
 - **`__repr__`**: Devuelve una cadena que representa el objeto de manera formal.
+
   ```python
   class MiClase:
       def __repr__(self):
@@ -495,6 +499,7 @@ comportamientos básicos que están disponibles en todos los objetos.
   ```
 
 - **`__eq__`**: Define cómo se comparan dos objetos.
+
   ```python
   class MiClase:
       def __init__(self, valor):
@@ -509,6 +514,7 @@ comportamientos básicos que están disponibles en todos los objetos.
   ```
 
 - **`__hash__`**: Devuelve un valor hash para el objeto.
+
   ```python
   class MiClase:
       def __init__(self, valor):
@@ -604,7 +610,7 @@ herencia.
 Este diagrama representa una implementación de POO en Python para modelar un sistema de gestión de computadoras, con
 clases bien estructuradas y relaciones claras.
 
-![img_2.png](img_2.png)
+![img_2.png](/screenshot/poo/img_2.png)
 
 **📄 Código :**
 
