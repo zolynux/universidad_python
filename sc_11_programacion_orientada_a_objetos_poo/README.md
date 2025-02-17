@@ -114,7 +114,7 @@ El pájaro vuela
 
 En este ejemplo, la clase `Pajaro` hereda de `Animal` y sobreescribe el método `mover`. Al llamar a `mover` desde una
 instancia de `Pajaro`, primero se ejecuta el método de la superclase gracias a `super().mover()`, y luego la
-implementación específica de `Pajaro`. citeturn0search2
+implementación específica de `Pajaro`.
 
 **Consideraciones:**
 
@@ -323,15 +323,15 @@ Puedo maullar
 
 El **Duck Typing** es un concepto fundamental en Python que se basa en la idea de que el tipo o la clase de un objeto es
 menos importante que los métodos o atributos que posee. Esta filosofía se resume en la expresión: "Si algo camina como
-un pato y suena como un pato, entonces probablemente sea un pato". citeturn0search0
+un pato y suena como un pato, entonces probablemente sea un pato".
 
 **Características principales:**
 
 - **Tipado dinámico:** Python no requiere la declaración explícita de tipos; el intérprete determina el tipo de las
-  variables en tiempo de ejecución. citeturn0search3
+  variables en tiempo de ejecución.
 
 - **Enfoque en comportamientos:** Lo relevante es si un objeto puede realizar ciertas acciones, independientemente de su
-  tipo específico. citeturn0search0
+  tipo específico.
 
 **Ejemplo de Duck Typing:**
 
@@ -359,26 +359,24 @@ hacer_sonar(ganso)  # Imprime "Honk, honk"
 
 En este ejemplo, la función `hacer_sonar` acepta cualquier objeto que tenga un método `hablar`, sin importar su clase.
 Esto demuestra cómo Python utiliza el Duck Typing para permitir una programación más flexible y genérica.
-citeturn0search3
 
 **Ventajas del Duck Typing:**
 
 - **Flexibilidad:** Permite escribir código que puede trabajar con diferentes tipos de objetos, siempre que estos
-  implementen los métodos o atributos esperados. citeturn0search0
+  implementen los métodos o atributos esperados.
 
 - **Menor acoplamiento:** Reduce la dependencia de tipos específicos, facilitando la reutilización y mantenimiento del
-  código. citeturn0search0
+  código.
 
 - **Código más limpio:** Al no requerir comprobaciones explícitas de tipos, el código es más legible y conciso.
-  citeturn0search2
 
 **Consideraciones:**
 
 - **Manejo de errores:** Es importante asegurarse de que los objetos pasados a funciones o métodos posean los métodos o
-  atributos necesarios para evitar errores en tiempo de ejecución. citeturn0search2
+  atributos necesarios para evitar errores en tiempo de ejecución.
 
 - **Legibilidad:** Aunque el Duck Typing ofrece flexibilidad, se debe tener cuidado para mantener la claridad y
-  comprensión del código, especialmente en proyectos grandes o colaborativos. citeturn0search3
+  comprensión del código, especialmente en proyectos grandes o colaborativos.
 
 En resumen, el Duck Typing es una característica poderosa de Python que promueve la escritura de código flexible y
 reutilizable, centrándose en los comportamientos de los objetos más que en sus tipos específicos.
@@ -579,4 +577,251 @@ Persona:
         Nombre = Ana
         Apellido = Martinez
         Dir. mem. <__main__.Persona object at 0x000002849C324EC0>
+```
+
+### Mundo PC
+
+La imagen representa un diagrama de clases en Programación Orientada a Objetos (POO) con Python. Se observan varias
+clases relacionadas con la gestión de computadoras y sus componentes, organizadas mediante relaciones de agregación y
+herencia.
+
+### **Análisis del Diagrama**
+
+1. **Clases principales**
+    - `Computadora`: Contiene atributos como `id_computadora`, `nombre`, `monitor`, `teclado` y `raton`. Está
+      relacionada con `Monitor`, `Teclado` y `Raton` mediante agregación.
+    - `Orden`: Contiene un `id_ordenes` y una lista de `Computadoras`, con un método `agregar_computadora()`.
+
+2. **Componentes de la Computadora**
+    - `Monitor`: Tiene atributos `id_monitor`, `marca` y `tamaño`, y métodos `__init__()` y `__str__()`.
+    - `Raton` y `Teclado` heredan de `DispositivoEntrada`, que define atributos `marca` y `tipo_entrada`.
+
+3. **Relaciones**
+    - **Agregación**: `Computadora` se compone de `Monitor`, `Teclado` y `Raton`, lo que indica que estos objetos pueden
+      existir independientemente.
+    - **Herencia**: `Raton` y `Teclado` heredan de `DispositivoEntrada`, lo que sugiere reutilización de código.
+
+Este diagrama representa una implementación de POO en Python para modelar un sistema de gestión de computadoras, con
+clases bien estructuradas y relaciones claras.
+
+![img_2.png](img_2.png)
+
+**📄 Código :**
+
+**Dispositivo Entrada:**
+
+```python
+class DispositivoEntrada:
+    # Constructor
+    def __init__(self, marca, tipo_entrada):
+        self.marca = marca
+        self.tipo_entrada = tipo_entrada
+
+```
+
+**Clase Ratón:**
+
+```python
+from dispositivo_entrada import DispositivoEntrada
+
+
+class Raton(DispositivoEntrada):
+    contador_ratones = 0
+
+    def __init__(self, marca, tipo_entrada):
+        Raton.contador_ratones += 1
+        self.id_raton = Raton.contador_ratones
+        # self.marca = marca
+        # self.tipo_entrada = tipo_entrada
+        super().__init__(marca, tipo_entrada)
+
+    def __str__(self):
+        return f"Id: {self.id_raton}, Marca: {self.marca}, Tipo Entrada: {self.tipo_entrada}"
+
+
+# Codigo principal
+if __name__ == "__main__":
+    raton1 = Raton("HP", "USB")
+    print(raton1)
+    raton2 = Raton("Acer", "Bluetooth")
+    print(raton2)
+
+```
+
+**Clase Teclado:**
+
+```python
+from dispositivo_entrada import DispositivoEntrada
+
+
+class Teclado(DispositivoEntrada):
+    contador_teclados = 0
+
+    def __init__(self, marca, tipo_entrada):
+        Teclado.contador_teclados += 1
+        self.id_teclado = Teclado.contador_teclados
+        super().__init__(marca, tipo_entrada)
+
+    def __str__(self):
+        return f"ID: {self.id_teclado}, Marca: {self.marca}, Tipo Entrada: {self.tipo_entrada}"
+
+
+# Código principal
+if __name__ == "__main__":
+    teclado1 = Teclado("HP", "Bluetooth")
+    print(teclado1)
+    teclado2 = Teclado("Gamer", "USB")
+
+```
+
+**Clase Monitor:**
+
+```python
+class Monitor:
+    contador_monitores = 0
+
+    def __init__(self, marca, tamanio):
+        Monitor.contador_monitores += 1
+        self.id_monitor = Monitor.contador_monitores
+        self.marca = marca
+        self.tamanio = tamanio
+
+    def __str__(self):
+        return f"ID: {self.id_monitor}, Marca: {self.marca}, Tamaño: {self.tamanio}"
+
+
+if __name__ == "__main__":
+    monitor1 = Monitor("HP", 15)
+    print(monitor1)
+    monitor2 = Monitor("Dell", 27)
+    print(monitor2)
+
+```
+
+**Clase Computadora:**
+
+```python
+from teclado import Teclado
+from monitor import Monitor
+from raton import Raton
+
+
+class Computadora:
+    contador_computadoras = 0
+
+    def __init__(self, nombre, monitor, teclado, raton):
+        Computadora.contador_computadoras += 1
+        self.id_computadora = Computadora.contador_computadoras
+        self.nombre = nombre
+        self.monitor = monitor
+        self.teclado = teclado
+        self.raton = raton
+
+    def __str__(self):
+        return f"""{self.nombre}: {self.id_computadora}
+        Monitor: {self.monitor}
+        Teclado: {self.teclado}
+        Ratón: {self.raton}
+        """
+
+
+if __name__ == "__main__":
+    teclado1 = Teclado("HP", "USB")
+    raton1 = Raton("HP", "USB")
+    monitor1 = Monitor("HP", 27)
+    computadora1 = Computadora("HP", monitor1, teclado1, raton1)
+    print(computadora1)
+
+    teclado2 = Teclado("Gamer", "Bluetooth")
+    raton2 = Raton("Gamer", "Bluetooth")
+    monitor2 = Monitor("Gamer", 34)
+    computadora2 = Computadora("Gamer", monitor2, teclado2, raton2)
+    print(computadora2)
+
+```
+
+**Clase Orden:**
+
+```python
+class Orden:
+    contador_ordenes = 0
+
+    def __init__(self, computadoras):
+        Orden.contador_ordenes += 1
+        self.id_orden = Orden.contador_ordenes
+        # Recibimos la lista de objetos de tipo computadora
+        self.computadoras = computadoras
+
+    def agregar_computadora(self, computadora):
+        self.computadoras.append(computadora)
+
+    def __str__(self):
+        computadoras_str = ""
+        for computadora in self.computadoras:
+            computadoras_str += "\n" + computadora.__str__()
+        return f"""Orden: {self.id_orden}
+        Computadoras: {computadoras_str}"""
+
+```
+
+**Mundo PC *App*:**
+
+```python
+from computadora import Computadora
+from monitor import Monitor
+from teclado import Teclado
+from raton import Raton
+from orden import Orden
+
+print("*** Mundo PC ***")
+
+# Computadora 1
+
+teclado1 = Teclado("HP", "USB")
+raton1 = Raton("HP", "USB")
+monitor1 = Monitor("HP", 27)
+computadora1 = Computadora("HP", monitor1, teclado1, raton1)
+
+# Computadora 2
+teclado2 = Teclado("Gamer", "Bluetooth")
+raton2 = Raton("Gamer", "Bluetooth")
+monitor2 = Monitor("Gamer", 34)
+computadora2 = Computadora("Gamer", monitor2, teclado2, raton2)
+
+# crear la lista de computadora
+computadoras1 = [computadora1, computadora2]
+orden1 = Orden(computadoras1)
+# print(orden1)
+
+# Computadora 3
+teclado3 = Teclado("Dell", "Bluetooth")
+raton3 = Raton("Dell", "Bluetooth")
+monitor3 = Monitor("Dell", 27)
+computadora3 = Computadora("Dell", monitor3, teclado3, raton3)
+orden1.agregar_computadora(computadora3)
+print(orden1)
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+
+*** Mundo PC ***
+Orden: 1
+        Computadoras: 
+HP: 1
+        Monitor: ID: 1, Marca: HP, Tamaño: 27
+        Teclado: ID: 1, Marca: HP, Tipo Entrada: USB
+        Ratón: Id: 1, Marca: HP, Tipo Entrada: USB
+        
+Gamer: 2
+        Monitor: ID: 2, Marca: Gamer, Tamaño: 34
+        Teclado: ID: 2, Marca: Gamer, Tipo Entrada: Bluetooth
+        Ratón: Id: 2, Marca: Gamer, Tipo Entrada: Bluetooth
+        
+Dell: 3
+        Monitor: ID: 3, Marca: Dell, Tamaño: 27
+        Teclado: ID: 3, Marca: Dell, Tipo Entrada: Bluetooth
+        Ratón: Id: 3, Marca: Dell, Tipo Entrada: Bluetooth
 ```
