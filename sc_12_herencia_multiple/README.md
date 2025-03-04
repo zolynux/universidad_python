@@ -66,3 +66,55 @@ objeto.metodo()  # Salida: Método de Clase A (porque ClaseA aparece primero en 
 
 En resumen, la herencia múltiple es una herramienta poderosa en Python, pero debe usarse con precaución para evitar complicaciones en el diseño del código.
 
+
+**📄 Código :**
+
+**FiguraGeometrica:**
+
+```python
+class FiguraGeometrica:
+    def __init__(self, ancho, alto):
+        self.ancho = ancho
+        self.alto = alto
+```
+
+**Color:**
+
+```python
+class Color:
+    def __init__(self, color):
+        self.color = color
+```
+
+**Cuadrado:**
+
+```python
+from FiguraGeometrica import FiguraGeometrica
+from Color import Color
+
+class Cuadrado(FiguraGeometrica, Color):
+    def __init__(self,lado,color):
+        # super().__init__(lado)
+        FiguraGeometrica.__init__(self, lado, lado)
+        Color.__init__(self, color)
+
+    def calcular_area(self):
+        return self.alto * self.ancho
+```
+
+**test_figura_geometrica:**
+
+```python
+from Cuadrado import Cuadrado
+
+cuadrado1 = Cuadrado(5, 'Rojo')
+print(f'Calculo área cuadrado: {cuadrado1.calcular_area()}')
+```
+
+**🟢 Ejecutar:**
+
+```console
+Calculo área cuadrado: 25
+```
+
+
