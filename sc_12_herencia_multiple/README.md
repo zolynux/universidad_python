@@ -234,7 +234,7 @@ Calculo área cuadrado: 25
 
 ### Laboratorio Figura Geométrica
 
-![img.png](img.png)
+![img.png](/screenshot/herencia_multiple/img.png)
 
 
 **📄 Código :**
