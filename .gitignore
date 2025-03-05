@@ -203,3 +203,5 @@ pyrightconfig.json
 .ionide
 
 cspell.json
+
+node_modules/
