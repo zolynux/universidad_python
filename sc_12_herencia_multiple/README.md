@@ -231,3 +231,155 @@ print(Cuadrado.mro())
 Calculo área cuadrado: 25
 [<class 'Cuadrado.Cuadrado'>, <class 'FiguraGeometrica.FiguraGeometrica'>, <class 'Color.Color'>, <class 'object'>]
 ```
+
+### Laboratorio Figura Geométrica
+
+![img.png](img.png)
+
+
+**📄 Código :**
+
+**FiguraGeometrica:**
+
+```python
+class FiguraGeometrica:
+    def __init__(self, alto, ancho):
+        if self._validar_valor(ancho):
+            self._ancho = ancho
+        else:
+            self._ancho = 0
+            print(f"Valor erroneo ancho: {ancho}")
+        if self._validar_valor(alto):
+            self._alto = alto
+        else:
+            self._alto = 0
+            print(f"Valor erroneo alto: {alto}")
+
+    @property
+    def alto(self):
+        return self._alto
+
+    @alto.setter
+    def alto(self, alto):
+        if self._validar_valor(alto):
+            self._alto = alto
+        else:
+            self._alto = 0
+        print(f"Valor erroneo alto: {alto}")
+
+    @property
+    def ancho(self):
+        return self._ancho
+
+    @ancho.setter
+    def ancho(self, ancho):
+        if self._validar_valor(ancho):
+            self._ancho = ancho
+        else:
+            self._ancho = 0
+            print(f"Valor erroneo ancho: {ancho}")
+
+    def __str__(self):
+        return f"FiguraGeometrica [ Alto: {self.alto}, Ancho: {self.ancho} ]"
+
+    def _validar_valor(self, valor):
+        return True if 0 < valor < 10 else False
+
+```
+
+**Color:**
+
+```python
+class Color:
+    def __init__(self, color):
+        self._color = color
+
+    @property
+    def color(self):
+        return self._color
+
+    @color.setter
+    def color(self, color):
+        self._color = color
+
+    def __str__(self):
+        return f"Color [ color: {self._color} ]"
+
+```
+
+**Cuadrado:**
+
+```python
+from FiguraGeometrica import FiguraGeometrica
+from Color import Color
+
+
+class Cuadrado(FiguraGeometrica, Color):
+    def __init__(self, lado, color):
+        FiguraGeometrica.__init__(self, lado, lado)
+        Color.__init__(self, color)
+
+    def calcular_area(self):
+        return self.alto * self.ancho
+
+    def __str__(self):
+        return f"{FiguraGeometrica.__str__(self)} - {Color.__str__(self)}"
+
+```
+
+**Rectangulo:**
+
+```python
+from FiguraGeometrica import FiguraGeometrica
+from Color import Color
+
+
+class Rectangulo(FiguraGeometrica, Color):
+    def __init__(self, alto, ancho, color):
+        FiguraGeometrica.__init__(self, alto, ancho)
+        Color.__init__(self, color)
+
+    def calcular_area(self):
+        return self.alto * self.ancho
+
+    def __str__(self):
+        return f"{FiguraGeometrica.__str__(self)} - {Color.__str__(self)}"
+
+```
+
+**test_figura_geometrica:**
+
+```python
+from Cuadrado import Cuadrado
+from Rectangulo import Rectangulo
+
+
+print("Creación Objeto Cuadrado".center(50, "-"))
+cuadrado1 = Cuadrado(lado=5, color="rojo")
+cuadrado1.alto = 9
+cuadrado1.ancho = 9
+print(f"Calculo área cuadrado: {cuadrado1.calcular_area()}")
+print(cuadrado1)
+
+print("Creación Objeto Rectangulo".center(50, "-"))
+rectangulo1 = Rectangulo(alto=2, ancho=8, color="verde")
+rectangulo1.ancho = 9
+rectangulo1.alto = 8
+
+print(f"Calculo área rectangulo: {rectangulo1.calcular_area()}")
+print(rectangulo1)
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+-------------Creación Objeto Cuadrado-------------
+Valor erroneo alto: 9
+Calculo área cuadrado: 81
+FiguraGeometrica [ Alto: 9, Ancho: 9 ] - Color [ color: rojo ]
+------------Creación Objeto Rectangulo------------
+Valor erroneo alto: 8
+Calculo área rectangulo: 72
+FiguraGeometrica [ Alto: 8, Ancho: 9 ] - Color [ color: verde ]
+```
