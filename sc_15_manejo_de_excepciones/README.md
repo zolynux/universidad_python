@@ -245,3 +245,41 @@ Resultado: None
 Continua...
 ```
 
+### Bloque else y finally al manejar Excepciones
+
+
+**📄 Código :**
+
+```python
+resultado = None
+
+try:
+    a = int(input("Introduce un número de 'a': "))
+    b = int(input("Introduce un número de 'b': "))
+    resultado = a / b
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError - Ocurrió un error: {e}, {type(e)}")
+except TypeError as e:
+    print(f"TypeError - Ocurrió un error: {e}, {type(e)}")
+except Exception as e:
+    print(f"Exception - Ocurrió un error: {e}, {type(e)}")
+else:
+    print("No se arrojó ninguna excepción")
+finally:
+    print("Ejecución del bloque finally...")
+
+print(f"Resultado: {resultado}")
+print("Continua...")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Introduce un número de 'a': 10
+Introduce un número de 'b': 2
+No se arrojó ninguna excepción
+Ejecución del bloque finally...
+Resultado: 5.0
+Continua...
+```
