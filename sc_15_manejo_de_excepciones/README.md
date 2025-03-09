@@ -130,7 +130,7 @@ except MiErrorPersonalizado as e:
 - Puedes capturar excepciones específicas o crear excepciones personalizadas.
 - Es una buena práctica usarlo para evitar que el programa se detenga inesperadamente y para manejar errores de manera adecuada.
 
-![img.png](img.png)
+![img.png](/screenshot/manejo_de_excepciones/img.png)
 
 ### manejo de excepciones o errores
 
