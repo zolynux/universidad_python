@@ -131,3 +131,49 @@ except MiErrorPersonalizado as e:
 - Es una buena práctica usarlo para evitar que el programa se detenga inesperadamente y para manejar errores de manera adecuada.
 
 ![img.png](img.png)
+
+### manejo de excepciones o errores
+
+
+**📄 Código :**
+
+```python
+try:
+    10 / 0
+except ZeroDivisionError as e:
+    print(f"Ocurrió un error: {e}")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Ocurrió un error: division by zero
+```
+
+### Procesamiento de Excepciones
+
+
+**📄 Código :**
+
+```python
+resultado = None
+a = "10"
+b = 0
+try:
+    resultado = a / b
+except Exception as e:
+    print(f"Ocurrió un error: {e}")
+
+print(f"Resultado: {resultado}")
+print("Continua...")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Ocurrió un error: unsupported operand type(s) for /: 'str' and 'int'
+Resultado: None
+Continua...
+```
