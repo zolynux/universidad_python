@@ -209,3 +209,39 @@ TypeError - Ocurrió un error: unsupported operand type(s) for /: 'str' and 'int
 Resultado: None
 Continua...
 ```
+
+### Más de Procesamiento de Excepciones
+
+
+**📄 Código :**
+
+```python
+resultado = None
+
+try:
+    a = int(input("Introduce un número de 'a': "))
+    b = int(input("Introduce un número de 'b': "))
+    resultado = a / b
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError - Ocurrió un error: {e}, {type(e)}")
+except TypeError as e:
+    print(f"TypeError - Ocurrió un error: {e}, {type(e)}")
+
+except Exception as e:
+    print(f"Exception - Ocurrió un error: {e}, {type(e)}")
+
+print(f"Resultado: {resultado}")
+print("Continua...")
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Introduce un número de 'a': 10
+Introduce un número de 'b': 0
+ZeroDivisionError - Ocurrió un error: division by zero, <class 'ZeroDivisionError'>
+Resultado: None
+Continua...
+```
+
