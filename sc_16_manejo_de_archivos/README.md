@@ -113,3 +113,27 @@ El manejo de archivos en Python permite:
 - Trabajar con diferentes formatos (texto, CSV, JSON, etc.).
 - Gestionar errores y recursos de manera eficiente con `with` y excepciones.
 
+### Manejo de Archivos
+
+
+**📄 Código :**
+
+```python
+try:
+    archivo = open("prueba.txt", "w")
+    archivo.write("Agregamos informacion al archivo\n")
+    archivo.write("Adios")
+except Exception as e:
+    print(e)
+finally:
+    archivo.close()
+
+```
+
+**🟢 Ejecutar:**
+
+**prueba.txt:**
+
+```console
+Agregamos informacion al archivoAdios
+```
