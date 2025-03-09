@@ -283,3 +283,58 @@ Ejecución del bloque finally...
 Resultado: 5.0
 Continua...
 ```
+
+### Creación de Clases de Excepción Personalizadas.
+
+
+**📄 Código :**
+
+**Manejo de Excepción**
+
+```python
+from py_06_NumerosIdenticosException import NumerosIdenticosException
+
+resultado = None
+
+try:
+    a = int(input("Introduce un número de 'a': "))
+    b = int(input("Introduce un número de 'b': "))
+    if a == b:
+        raise NumerosIdenticosException("número indénticos")
+    resultado = a / b
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError - Ocurrió un error: {e}, {type(e)}")
+except TypeError as e:
+    print(f"TypeError - Ocurrió un error: {e}, {type(e)}")
+except Exception as e:
+    print(f"Exception - Ocurrió un error: {e}, {type(e)}")
+else:
+    print("No se arrojó ninguna excepción")
+finally:
+    print("Ejecución del bloque finally...")
+
+print(f"Resultado: {resultado}")
+print("Continua...")
+
+```
+
+**Creación de excepción personalizada:**
+
+```python
+class NumerosIdenticosException(Exception):
+
+    def __init__(self, mensaje):
+        self.mensaje = mensaje
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Introduce un número de 'a': 10
+Introduce un número de 'b': 10
+Exception - Ocurrió un error: número indénticos, <class 'py_06_NumerosIdenticosException.NumerosIdenticosException'>
+Ejecución del bloque finally...
+Resultado: None
+Continua...
+```
