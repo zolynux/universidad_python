@@ -143,8 +143,7 @@ El uso de `with` asegura que el archivo se cierre automáticamente, lo que es un
 # "utf-8" es la codificación de caracteres que se usa para leer el archivo correctamente.
 # La función `open()` devuelve un objeto de archivo que se asigna a la variable `archivo`.
 # El uso de `with` asegura que el archivo se cierre automáticamente al salir del bloque.
-with open("prueba.txt", "r", encoding="utf-8") as archivo:
-
+with open("py_01_archivos_con_with/prueba.txt", "r", encoding="utf-8") as archivo:
     # Leer todo el contenido del archivo usando el método `read()`.
     # `archivo.read()` devuelve una cadena con todo el texto del archivo.
     # Luego, este contenido se pasa a la función `print()` para mostrarlo en la consola.
@@ -161,3 +160,46 @@ with open("prueba.txt", "r", encoding="utf-8") as archivo:
 Hola mundo
 Adiós
 ```
+
+### Uso de with y Context Manager con Python
+
+
+**📄 Código :**
+
+**`ManejoArchivos.py`:**
+
+```python
+class ManejoArchivos:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def __enter__(self):
+        print("Obtenemos el recurso".center(50, "-"))
+        self.nombre = open(self.nombre, "r", encoding="utf-8")
+        return self.nombre
+
+    def __exit__(self, tipo_excepcion, valor_excepcion, traza_error):
+        print("Cerramos el recurso".center(50, "-"))
+        if self.nombre:
+            self.nombre.close()
+
+```
+**`archivos_con_with.py`:**
+
+```python
+from ManejoArchivos import ManejoArchivos
+
+with ManejoArchivos("prueba.txt") as archivo:
+    print(archivo.read())
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+---------------Obtenemos el recurso---------------
+Hola mundo
+Adiós
+---------------Cerramos el recurso----------------
+```
+
