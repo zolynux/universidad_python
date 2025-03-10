@@ -9490,7 +9490,6 @@ archivo2.close()
 
 # Mensaje final que indica que el proceso de leer y copiar archivos ha terminado.
 print("Se ha terminado el proceso de leer y copiar archivos")
-
 ```
 
 **🟢 Ejecutar:**
