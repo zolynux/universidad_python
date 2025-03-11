@@ -1,0 +1,11 @@
+docker pull postgres
+docker run --name pgdev -p 5432:5432 -e POSTGRES_PASSWORD=admin -d postgres
+
+-- Azure Data Studio --
+**** Connection Details ****
+Connection Type: PostgresSQL
+Server name: localhost
+Authentication type: Password
+User name: Postgres
+Password: admin
+Name (optional): docker-postgres
