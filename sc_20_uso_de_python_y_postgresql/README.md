@@ -358,7 +358,7 @@ finally:
 Registro Insertado: 1
 ```
 
-![img.png](img.png)
+![img.png](/screenshot/uso_de_python_y_postgres/img.png)
 
 ### Insertar varios registros
 
@@ -406,7 +406,7 @@ finally:
 Registro Insertado: 3
 ```
 
-![img_1.png](img_1.png)
+![img_1.png](/screenshot/uso_de_python_y_postgres/img_1.png)
 
 #### Actualizar un Registro
 
@@ -461,11 +461,11 @@ finally:
 Registro Actualizado: 1
 ```
 
-![img_1.png](img_1.png)
+![img_1.png](/screenshot/uso_de_python_y_postgres/img_1.png)
 
 **Actualizado:**
 
-![img_2.png](img_2.png)
+![img_2.png](/screenshot/uso_de_python_y_postgres/img_2.png)
 
 ### Actualizar Varios Registros
 
@@ -508,11 +508,11 @@ Registro Actualizado: 2
 
 **Antes:**
 
-![img_2.png](img_2.png)
+![img_2.png](/screenshot/uso_de_python_y_postgres/img_2.png)
 
 **Actualizado:**
 
-![img_3.png](img_3.png)
+![img_3.png](/screenshot/uso_de_python_y_postgres/img_3.png)
 
 ### Eliminar un Registro
 
@@ -555,11 +555,11 @@ Registros Eliminados: 1
 
 **Antes:**
 
-![img_3.png](img_3.png)
+![img_3.png](/screenshot/uso_de_python_y_postgres/img_3.png)
 
 **Eliminado:**
 
-![img_4.png](img_4.png)
+![img_4.png](/screenshot/uso_de_python_y_postgres/img_4.png)
 
 ### Eliminar Varios Registros
 
@@ -599,8 +599,8 @@ Registros Eliminados: 2
 
 **Antes:**
 
-![img_4.png](img_4.png)
+![img_4.png](/screenshot/uso_de_python_y_postgres/img_4.png)
 
 **Eliminado:**
 
-![img_5.png](img_5.png)
+![img_5.png](/screenshot/uso_de_python_y_postgres/img_5.png)
