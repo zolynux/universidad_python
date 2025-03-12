@@ -513,3 +513,50 @@ Registro Actualizado: 2
 **Actualizado:**
 
 ![img_3.png](img_3.png)
+
+### Eliminar un Registro
+
+**📄 Código :**
+
+```python
+import psycopg2
+
+# Establecer la conexión con la base de datos
+conexion = psycopg2.connect(
+    database="test_db", user="postgres", password="admin", host="localhost", port="5432"
+)
+
+try:
+    with conexion:
+        with conexion.cursor() as cursor:
+            sentencia = "DELETE FROM persona WHERE id=%s"
+            entrada = input("Proporciona el id a eliminar: ")
+            valores = (entrada,)
+            cursor.execute(sentencia, valores)
+            registro_eliminado = cursor.rowcount
+            print(f"Registros Eliminados: {registro_eliminado}")
+except Exception as e:
+    print(f"Ocurrió un error: {e}")
+finally:
+    # Cerrar la conexión
+    conexion.close()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Proporciona el id a eliminar: 7
+Registros Eliminados: 1
+Proporciona el id a eliminar: 6
+Registros Eliminados: 1
+```
+
+
+**Antes:**
+
+![img_3.png](img_3.png)
+
+**Eliminado:**
+
+![img_4.png](img_4.png)
