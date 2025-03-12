@@ -318,4 +318,46 @@ Proporciona los id's a buscar (separado por comas): 1,2,3
 (2, 'Karla', 'Gomez', 'kgomez@mail.com')
 ```
 
+### Insertar Registro con Psycopg
+
+
+**📄 Código :**
+
+```python
+import psycopg2
+
+conexion = psycopg2.connect(
+    database="test_db", user="postgres", password="admin", host="localhost", port="5432"
+)
+
+try:
+    with conexion:
+        with conexion.cursor() as cursor:
+            setencia = (
+                "INSERT INTO persona(nombre, apellido, email) VALUES (%s, %s, %s)"
+            )
+            valores = (
+                "Carlos",
+                "Lara",
+                "clara@mail.com",
+            )
+            cursor.execute(setencia, valores)
+            # conexion.commit()
+            registro_insertado = cursor.rowcount
+            print(f"Registro Insertado: {registro_insertado}")
+except Exception as e:
+    print(f"Ocurrió un error: {e}")
+finally:
+    conexion.close()
+
+```
+
+**🟢 Ejecutar:**
+
+```console
+Registro Insertado: 1
+```
+
+![img.png](img.png)
+
 
