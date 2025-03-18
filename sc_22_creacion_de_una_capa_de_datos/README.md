@@ -1,6 +1,6 @@
 ## Creación de una Capa de Datos con Python
 
-![img.png](img.png)
+![img.png](/screenshot/creacion_de_una_capa_de_datos/img.png)
 
 ### Manejo de Logging en Python
 
